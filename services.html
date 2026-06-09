@@ -18,21 +18,21 @@ html,body{height:100%;scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--w);color:var(--g7);overflow-x:hidden;display:flex;flex-direction:column;min-height:100vh}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:var(--w);border-bottom:1px solid var(--br)}
-.logo{display:flex;align-items:center;gap:8px;font-size:1rem;font-weight:700;color:var(--g9);text-decoration:none;flex-shrink:0}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:var(--w);border-bottom:1px solid var(--br)}
+.logo{display:flex;align-items:center;gap:9px;font-size:1.15rem;font-weight:700;color:var(--g9);text-decoration:none;flex-shrink:0}
 .lm{width:24px;height:24px;background:var(--b);border-radius:2px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;padding:4px}
 .lm span{background:#fff;border-radius:1px}
 .lm span:nth-child(1),.lm span:nth-child(4){background:#93c5fd}
 .logo em{font-style:normal;color:var(--b)}
 .nl{display:flex;align-items:center;list-style:none;gap:0}
-.nl a{text-decoration:none;color:var(--g5);font-size:0.8rem;font-weight:500;padding:0 10px;height:48px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
+.nl a{text-decoration:none;color:var(--g5);font-size:0.875rem;font-weight:500;padding:0 12px;height:52px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
 .nl a:hover,.nl a.active{color:var(--b);border-bottom-color:var(--b)}
 .nb{background:var(--b)!important;color:#fff!important;border-radius:4px!important;padding:0 14px!important;height:28px!important;margin-left:8px;border-bottom:none!important;font-weight:600!important;font-size:0.78rem!important}
 .nb:hover{background:var(--bd)!important}
 .hb{display:none;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--g7)}
 
 /* LAYOUT */
-main{flex:1;margin-top:48px;display:flex;flex-direction:column}
+main{flex:1;margin-top:52px;display:flex;flex-direction:column}
 
 /* BANNER — slim */
 .ban{background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:24px 32px;display:flex;align-items:center;justify-content:space-between}
@@ -74,11 +74,15 @@ main{flex:1;margin-top:48px;display:flex;flex-direction:column}
 /* DIVIDER */
 .dv{border:none;border-top:1px solid var(--br);margin:28px 0}
 
-/* FOOTER — light */
-footer{background:var(--g1);border-top:1px solid var(--br);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-footer span{font-size:0.75rem;color:var(--g5)}
-footer a{color:var(--b);text-decoration:none}
-footer a:hover{text-decoration:underline}
+/* FOOTER — blue banner style, centered */
+footer{background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:20px 32px}
+.ft-inner{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
+footer span{font-size:0.78rem;color:rgba(255,255,255,0.75)}
+footer a{color:rgba(255,255,255,0.9);text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+.ft-brand{font-size:0.92rem;font-weight:700;color:#fff!important}
+.ft-brand em{font-style:normal;color:#93c5fd}
+.ft-sep{color:rgba(255,255,255,0.3);font-size:0.7rem}
 
 /* MOBILE */
 @media(max-width:900px){
@@ -87,7 +91,7 @@ footer a:hover{text-decoration:underline}
 }
 @media(max-width:600px){
   nav{padding:0 16px}
-  .nl{display:none;flex-direction:column;position:absolute;top:48px;left:0;right:0;background:var(--w);border-bottom:1px solid var(--br);padding:6px 0;z-index:99}
+  .nl{display:none;flex-direction:column;position:absolute;top:52px;left:0;right:0;background:var(--w);border-bottom:1px solid var(--br);padding:6px 0;z-index:99}
   .nl.open{display:flex}
   .nl a{height:40px;padding:0 20px;border-bottom:none;border-left:3px solid transparent}
   .nl a.active,.nl a:hover{border-left-color:var(--b);border-bottom:none}
@@ -110,7 +114,6 @@ footer a:hover{text-decoration:underline}
     <li><a href="services.html" class="active">Services</a></li>
     <li><a href="solutions.html">Solutions</a></li>
     <li><a href="managed.html">Managed Services</a></li>
-    <li><a href="documents.html">Documents</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
     <li><a href="booking.html" class="nb">Book a Meeting</a></li>
@@ -123,9 +126,9 @@ footer a:hover{text-decoration:underline}
 <div class="pg">
   <div class="g3">
     <div class="card"><div class="ci c-blue">🔷</div><h3>D365 Finance &amp; Operations</h3><p>Full lifecycle — implementation, X++ customization, upgrades, data migration, ISV integrations.</p><ul class="fl"><li>Finance, SCM, Manufacturing, WMS</li><li>Custom X++ &amp; data entities</li><li>AX / NAV migration &amp; version upgrades</li></ul></div>
-    <div class="card"><div class="ci c-teal">🔗</div><h3>EDI — TrueCommerce Foundry</h3><p>End-to-end Foundry configuration, map development, and D365 connector integration.</p><ul class="fl"><li>850/855/856/810 &amp; custom transactions</li><li>Retail partner compliance (Walmart, Target, Amazon)</li><li>Error monitoring &amp; exception handling</li></ul></div>
-    <div class="card"><div class="ci c-amber">📦</div><h3>SPS Commerce / Data Mason</h3><p>Full lifecycle SPS Commerce and Data Mason map management.</p><ul class="fl"><li>Data Mason map design &amp; maintenance</li><li>SPS Fulfillment setup &amp; chargeback reduction</li><li>D365 / NetSuite / SAP integration</li></ul></div>
-    <div class="card"><div class="ci c-indigo">🗺️</div><h3>ERP + EDI Solution Architecture</h3><p>Cross-system business mapping and validation — connecting ERP, EDI, and supply chain into a coherent data flow.</p><ul class="fl"><li>End-to-end data flow &amp; field mapping</li><li>Business rule mapping &amp; cross-platform validation</li><li>Gap analysis &amp; integration blueprints</li></ul></div>
+    <div class="card"><div class="ci c-teal">🔗</div><h3>EDI — TrueCommerce Foundry</h3><p>End-to-end Foundry configuration, map development, and D365 connector integration.</p><ul class="fl"><li>850/855/856/810 &amp; custom transactions</li><li>Retail partner compliance</li><li>Error monitoring &amp; exception handling</li></ul></div>
+    <div class="card"><div class="ci c-amber">📦</div><h3>SPS Commerce / Data Mason</h3><p>Full lifecycle SPS Commerce and Data Mason map management.</p><ul class="fl"><li>Data Mason map design &amp; maintenance</li><li>SPS Fulfillment &amp; chargeback reduction</li><li>D365 / NetSuite / SAP integration</li></ul></div>
+    <div class="card"><div class="ci c-indigo">🗺️</div><h3>ERP + EDI Solution Architecture</h3><p>Cross-system business mapping and validation — connecting ERP, EDI, and supply chain into a coherent data flow.</p><ul class="fl"><li>End-to-end data flow &amp; field mapping</li><li>Business rule mapping &amp; validation</li><li>Gap analysis &amp; integration blueprints</li></ul></div>
     <div class="card"><div class="ci c-cyan">☁️</div><h3>Microsoft Azure</h3><p>Cloud strategy, IaC architecture, and DevOps pipelines for enterprise workloads.</p><ul class="fl"><li>Cloud migration &amp; landing zones</li><li>Bicep / Terraform · Azure DevOps</li><li>Security &amp; compliance posture</li></ul></div>
     <div class="card"><div class="ci c-purple">⚡</div><h3>Power Platform</h3><p>Low-code apps, automated workflows, and embedded analytics.</p><ul class="fl"><li>Power Apps canvas &amp; model-driven</li><li>Power Automate · Power BI</li><li>Dataverse modeling</li></ul></div>
     <div class="card"><div class="ci c-blue">🤖</div><h3>AI &amp; Intelligent Automation</h3><p>Azure OpenAI, Copilot Studio, and AI Builder deployments.</p><ul class="fl"><li>Azure OpenAI &amp; Copilot Studio</li><li>AI Builder &amp; document intelligence</li><li>Custom ML integration</li></ul></div>
@@ -136,9 +139,15 @@ footer a:hover{text-decoration:underline}
 </div>
 </main>
 <footer>
-  <span>© 2026 JUA Solution LLC</span>
-  <span><a href="mailto:info@juasolution.com">info@juasolution.com</a></span>
-  <span><a href="https://juasolution.com">juasolution.com</a></span>
+  <div class="ft-inner">
+    <span class="ft-brand">JUA <em>Solution</em> LLC</span>
+    <span class="ft-sep">|</span>
+    <span>© 2026 · All rights reserved</span>
+    <span class="ft-sep">|</span>
+    <span><a href="mailto:info@juasolution.com">info@juasolution.com</a></span>
+    <span class="ft-sep">|</span>
+    <span><a href="https://juasolution.com">juasolution.com</a></span>
+  </div>
 </footer>
 </body>
 </html>

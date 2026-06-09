@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Contact — JUA Solution LLC</title>
+<title>Contact & Documents — JUA Solution LLC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -18,21 +18,21 @@ html,body{height:100%;scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--w);color:var(--g7);overflow-x:hidden;display:flex;flex-direction:column;min-height:100vh}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:var(--w);border-bottom:1px solid var(--br)}
-.logo{display:flex;align-items:center;gap:8px;font-size:1rem;font-weight:700;color:var(--g9);text-decoration:none;flex-shrink:0}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:var(--w);border-bottom:1px solid var(--br)}
+.logo{display:flex;align-items:center;gap:9px;font-size:1.15rem;font-weight:700;color:var(--g9);text-decoration:none;flex-shrink:0}
 .lm{width:24px;height:24px;background:var(--b);border-radius:2px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;padding:4px}
 .lm span{background:#fff;border-radius:1px}
 .lm span:nth-child(1),.lm span:nth-child(4){background:#93c5fd}
 .logo em{font-style:normal;color:var(--b)}
 .nl{display:flex;align-items:center;list-style:none;gap:0}
-.nl a{text-decoration:none;color:var(--g5);font-size:0.8rem;font-weight:500;padding:0 10px;height:48px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
+.nl a{text-decoration:none;color:var(--g5);font-size:0.875rem;font-weight:500;padding:0 12px;height:52px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
 .nl a:hover,.nl a.active{color:var(--b);border-bottom-color:var(--b)}
 .nb{background:var(--b)!important;color:#fff!important;border-radius:4px!important;padding:0 14px!important;height:28px!important;margin-left:8px;border-bottom:none!important;font-weight:600!important;font-size:0.78rem!important}
 .nb:hover{background:var(--bd)!important}
 .hb{display:none;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--g7)}
 
 /* LAYOUT */
-main{flex:1;margin-top:48px;display:flex;flex-direction:column}
+main{flex:1;margin-top:52px;display:flex;flex-direction:column}
 
 /* BANNER — slim */
 .ban{background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:24px 32px;display:flex;align-items:center;justify-content:space-between}
@@ -74,11 +74,15 @@ main{flex:1;margin-top:48px;display:flex;flex-direction:column}
 /* DIVIDER */
 .dv{border:none;border-top:1px solid var(--br);margin:28px 0}
 
-/* FOOTER — light */
-footer{background:var(--g1);border-top:1px solid var(--br);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-footer span{font-size:0.75rem;color:var(--g5)}
-footer a{color:var(--b);text-decoration:none}
-footer a:hover{text-decoration:underline}
+/* FOOTER — blue banner style, centered */
+footer{background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:20px 32px}
+.ft-inner{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
+footer span{font-size:0.78rem;color:rgba(255,255,255,0.75)}
+footer a{color:rgba(255,255,255,0.9);text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+.ft-brand{font-size:0.92rem;font-weight:700;color:#fff!important}
+.ft-brand em{font-style:normal;color:#93c5fd}
+.ft-sep{color:rgba(255,255,255,0.3);font-size:0.7rem}
 
 /* MOBILE */
 @media(max-width:900px){
@@ -87,7 +91,7 @@ footer a:hover{text-decoration:underline}
 }
 @media(max-width:600px){
   nav{padding:0 16px}
-  .nl{display:none;flex-direction:column;position:absolute;top:48px;left:0;right:0;background:var(--w);border-bottom:1px solid var(--br);padding:6px 0;z-index:99}
+  .nl{display:none;flex-direction:column;position:absolute;top:52px;left:0;right:0;background:var(--w);border-bottom:1px solid var(--br);padding:6px 0;z-index:99}
   .nl.open{display:flex}
   .nl a{height:40px;padding:0 20px;border-bottom:none;border-left:3px solid transparent}
   .nl a.active,.nl a:hover{border-left-color:var(--b);border-bottom:none}
@@ -98,10 +102,19 @@ footer a:hover{text-decoration:underline}
   footer{padding:14px 16px}
 }
 
-.lbl{display:block;font-size:0.74rem;font-weight:600;color:#374151;margin-bottom:3px}
+.lbl{display:block;font-size:0.73rem;font-weight:600;color:#374151;margin-bottom:3px}
 .fi{width:100%;font-family:var(--f);font-size:0.82rem;color:#111827;padding:7px 10px;border:1px solid #d1d5db;border-radius:4px;outline:none;transition:border-color .15s;background:#fff}
 .fi:focus{border-color:#1a73e8;box-shadow:0 0 0 2px rgba(26,115,232,0.1)}
 textarea.fi{resize:vertical}
+.drow{display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:14px 16px;transition:box-shadow .2s,border-color .2s}
+.drow:hover{box-shadow:var(--sh);border-color:var(--b)}
+.dico{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dbody{flex:1;min-width:0}
+.dlbl{font-size:0.63rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:2px}
+.dbody strong{font-size:0.84rem;font-weight:600;color:#111827;display:block;margin-bottom:3px}
+.dbody p{font-size:0.76rem;color:#6b7280;line-height:1.5}
+.dbtn{display:inline-flex;align-items:center;gap:7px;background:#1a73e8;color:#fff;font-size:0.82rem;font-weight:600;padding:9px 20px;border-radius:4px;text-decoration:none;transition:background .15s}
+.dbtn:hover{background:#1557b0}
 </style>
 </head>
 <body>
@@ -115,7 +128,6 @@ textarea.fi{resize:vertical}
     <li><a href="services.html">Services</a></li>
     <li><a href="solutions.html">Solutions</a></li>
     <li><a href="managed.html">Managed Services</a></li>
-    <li><a href="documents.html">Documents</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html" class="active">Contact</a></li>
     <li><a href="booking.html" class="nb">Book a Meeting</a></li>
@@ -124,19 +136,11 @@ textarea.fi{resize:vertical}
 </nav>
 <main>
 
-<div class="ban"><div><h1>Contact Us</h1></div></div>
+<div class="ban"><div><h1>Contact &amp; Documents</h1><p>Get in touch or download our engagement templates</p></div></div>
 <div class="pg">
-  <div class="g2" style="align-items:start">
-
-    <!-- EMAIL FORM -->
-    <div style="background:#f6f9ff;border:1px solid #e5e7eb;border-radius:8px;padding:28px">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #e5e7eb">
-        <div style="width:34px;height:34px;background:#dbeafe;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem">✉️</div>
-        <div>
-          <div style="font-size:0.9rem;font-weight:700;color:#111827">Email Us</div>
-          <div style="font-size:0.75rem;color:#6b7280">We respond within 1 business day</div>
-        </div>
-      </div>
+  <div class="g2" style="align-items:start;gap:32px">
+    <div>
+      <div style="font-size:0.8rem;font-weight:700;color:#111827;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #e5e7eb">Contact Us</div>
       <form onsubmit="hf(event)" style="display:flex;flex-direction:column;gap:11px">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:11px">
           <div><label class="lbl">Name</label><input class="fi" type="text" placeholder="Your name" required></div>
@@ -158,42 +162,38 @@ textarea.fi{resize:vertical}
             <option>Other</option>
           </select>
         </div>
-        <div><label class="lbl">Message</label><textarea class="fi" rows="4" placeholder="Tell us about your project..." required></textarea></div>
+        <div><label class="lbl">Message</label><textarea class="fi" rows="5" placeholder="Tell us about your project..." required></textarea></div>
         <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-          <button type="submit" style="background:#1a73e8;color:#fff;font-family:var(--f);font-size:0.84rem;font-weight:600;padding:9px 20px;border-radius:4px;border:none;cursor:pointer">Send Message</button>
-          <a href="mailto:info@juasolution.com" style="font-size:0.8rem;color:#1a73e8;text-decoration:none">info@juasolution.com</a>
+          <button type="submit" style="background:#1a73e8;color:#fff;font-family:var(--f);font-size:0.84rem;font-weight:600;padding:9px 22px;border-radius:4px;border:none;cursor:pointer;transition:background .15s" onmouseover="this.style.background='#1557b0'" onmouseout="this.style.background='#1a73e8'">Send Message</button>
+          <a href="mailto:info@juasolution.com" style="font-size:0.8rem;color:#1a73e8;text-decoration:none;font-weight:500">info@juasolution.com</a>
         </div>
         <div id="fm" style="display:none;font-size:0.79rem;color:#166534;background:#dcfce7;border:1px solid #bbf7d0;border-radius:4px;padding:8px 12px">✓ Sent! We'll be in touch within 1 business day.</div>
       </form>
     </div>
-
-    <!-- BOOKING -->
-    <div style="background:#f6f9ff;border:1px solid #e5e7eb;border-radius:8px;padding:28px">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #e5e7eb">
-        <div style="width:34px;height:34px;background:#dcfce7;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem">📅</div>
-        <div>
-          <div style="font-size:0.9rem;font-weight:700;color:#111827">Book a Meeting</div>
-          <div style="font-size:0.75rem;color:#6b7280">Free 30-min consultation · Microsoft Bookings</div>
-        </div>
+    <div>
+      <div style="font-size:0.8rem;font-weight:700;color:#111827;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #e5e7eb">Engagement Documents · 2026</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px">
+        <div class="drow"><div class="dico" style="background:#dbeafe;color:#1a73e8"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">MSA · 2026</div><strong>Master Services Agreement</strong><p>Governs all engagements — IP, confidentiality, liability, payment (Net 15), non-solicitation. Required before work begins.</p></div></div>
+        <div class="drow"><div class="dico" style="background:#ccfbf1;color:#065f46"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">SOW · 2026</div><strong>Statement of Work</strong><p>Defines scope, deliverables, timeline, billing model, and responsibilities per engagement.</p></div></div>
+        <div class="drow"><div class="dico" style="background:#fef9c3;color:#854d0e"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div><div class="dbody"><div class="dlbl">MNDA · 2026</div><strong>Mutual Non-Disclosure Agreement</strong><p>Mutual confidentiality — recommended before scoping calls.</p></div></div>
       </div>
-      <iframe src="https://outlook.office365.com/owa/calendar/JUAUSA@gocomx.com/bookings/"
-              style="width:100%;height:440px;border:1px solid #e5e7eb;border-radius:6px;display:block"
-              frameborder="0"></iframe>
-      <a href="https://outlook.office365.com/owa/calendar/JUAUSA@gocomx.com/bookings/"
-         target="_blank" rel="noopener"
-         style="display:flex;align-items:center;justify-content:center;gap:7px;background:#1a73e8;color:#fff;font-size:0.84rem;font-weight:600;padding:10px;border-radius:4px;text-decoration:none;margin-top:10px">
-        Open in new window ↗
-      </a>
+      <a href="https://gocomx.sharepoint.com/:f:/g/IgBRgG3EZ3ZNR4pJtexxdb5NAQRYwlKUk6pOY6VYF5ogcWM?e=CkC1Hx" target="_blank" rel="noopener" class="dbtn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Open Documents Folder</a>
+      <div style="margin-top:8px;font-size:0.72rem;color:#9ca3af">All 3 files · SharePoint · gocomx.sharepoint.com</div>
     </div>
-
   </div>
 </div>
 <script>function hf(e){e.preventDefault();var m=document.getElementById('fm');m.style.display='block';e.target.reset();setTimeout(function(){m.style.display='none'},5000)}</script>
 </main>
 <footer>
-  <span>© 2026 JUA Solution LLC</span>
-  <span><a href="mailto:info@juasolution.com">info@juasolution.com</a></span>
-  <span><a href="https://juasolution.com">juasolution.com</a></span>
+  <div class="ft-inner">
+    <span class="ft-brand">JUA <em>Solution</em> LLC</span>
+    <span class="ft-sep">|</span>
+    <span>© 2026 · All rights reserved</span>
+    <span class="ft-sep">|</span>
+    <span><a href="mailto:info@juasolution.com">info@juasolution.com</a></span>
+    <span class="ft-sep">|</span>
+    <span><a href="https://juasolution.com">juasolution.com</a></span>
+  </div>
 </footer>
 </body>
 </html>

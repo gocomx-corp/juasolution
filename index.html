@@ -18,21 +18,21 @@ html,body{height:100%;scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--w);color:var(--g7);overflow-x:hidden;display:flex;flex-direction:column;min-height:100vh}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:var(--w);border-bottom:1px solid var(--br)}
-.logo{display:flex;align-items:center;gap:8px;font-size:1rem;font-weight:700;color:var(--g9);text-decoration:none;flex-shrink:0}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:var(--w);border-bottom:1px solid var(--br)}
+.logo{display:flex;align-items:center;gap:9px;font-size:1.15rem;font-weight:700;color:var(--g9);text-decoration:none;flex-shrink:0}
 .lm{width:24px;height:24px;background:var(--b);border-radius:2px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;padding:4px}
 .lm span{background:#fff;border-radius:1px}
 .lm span:nth-child(1),.lm span:nth-child(4){background:#93c5fd}
 .logo em{font-style:normal;color:var(--b)}
 .nl{display:flex;align-items:center;list-style:none;gap:0}
-.nl a{text-decoration:none;color:var(--g5);font-size:0.8rem;font-weight:500;padding:0 10px;height:48px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
+.nl a{text-decoration:none;color:var(--g5);font-size:0.875rem;font-weight:500;padding:0 12px;height:52px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
 .nl a:hover,.nl a.active{color:var(--b);border-bottom-color:var(--b)}
 .nb{background:var(--b)!important;color:#fff!important;border-radius:4px!important;padding:0 14px!important;height:28px!important;margin-left:8px;border-bottom:none!important;font-weight:600!important;font-size:0.78rem!important}
 .nb:hover{background:var(--bd)!important}
 .hb{display:none;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--g7)}
 
 /* LAYOUT */
-main{flex:1;margin-top:48px;display:flex;flex-direction:column}
+main{flex:1;margin-top:52px;display:flex;flex-direction:column}
 
 /* BANNER — slim */
 .ban{background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:24px 32px;display:flex;align-items:center;justify-content:space-between}
@@ -74,11 +74,15 @@ main{flex:1;margin-top:48px;display:flex;flex-direction:column}
 /* DIVIDER */
 .dv{border:none;border-top:1px solid var(--br);margin:28px 0}
 
-/* FOOTER — light */
-footer{background:var(--g1);border-top:1px solid var(--br);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-footer span{font-size:0.75rem;color:var(--g5)}
-footer a{color:var(--b);text-decoration:none}
-footer a:hover{text-decoration:underline}
+/* FOOTER — blue banner style, centered */
+footer{background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:20px 32px}
+.ft-inner{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
+footer span{font-size:0.78rem;color:rgba(255,255,255,0.75)}
+footer a{color:rgba(255,255,255,0.9);text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+.ft-brand{font-size:0.92rem;font-weight:700;color:#fff!important}
+.ft-brand em{font-style:normal;color:#93c5fd}
+.ft-sep{color:rgba(255,255,255,0.3);font-size:0.7rem}
 
 /* MOBILE */
 @media(max-width:900px){
@@ -87,7 +91,7 @@ footer a:hover{text-decoration:underline}
 }
 @media(max-width:600px){
   nav{padding:0 16px}
-  .nl{display:none;flex-direction:column;position:absolute;top:48px;left:0;right:0;background:var(--w);border-bottom:1px solid var(--br);padding:6px 0;z-index:99}
+  .nl{display:none;flex-direction:column;position:absolute;top:52px;left:0;right:0;background:var(--w);border-bottom:1px solid var(--br);padding:6px 0;z-index:99}
   .nl.open{display:flex}
   .nl a{height:40px;padding:0 20px;border-bottom:none;border-left:3px solid transparent}
   .nl a.active,.nl a:hover{border-left-color:var(--b);border-bottom:none}
@@ -110,7 +114,6 @@ footer a:hover{text-decoration:underline}
     <li><a href="services.html">Services</a></li>
     <li><a href="solutions.html">Solutions</a></li>
     <li><a href="managed.html">Managed Services</a></li>
-    <li><a href="documents.html">Documents</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
     <li><a href="booking.html" class="nb">Book a Meeting</a></li>
@@ -121,7 +124,6 @@ footer a:hover{text-decoration:underline}
 
 <section style="background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:52px 32px 56px;position:relative;overflow:hidden;flex-shrink:0">
   <div style="position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,0.05)"></div>
-  <div style="position:absolute;left:40%;bottom:-80px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.04)"></div>
   <div style="position:relative;max-width:700px">
     <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:0.67rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-bottom:14px"><span style="width:5px;height:5px;background:#93c5fd;border-radius:50%;animation:blink 2s infinite"></span>Microsoft Partner · Irvine, CA</div>
     <h1 style="font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:#fff;letter-spacing:-0.03em;line-height:1.12;margin-bottom:12px">Intelligent Enterprise Solutions<br><span style="color:#93c5fd">D365 · EDI · Azure · AI</span></h1>
@@ -129,7 +131,6 @@ footer a:hover{text-decoration:underline}
     <a href="booking.html" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#1557b0;font-weight:700;font-size:0.88rem;padding:10px 24px;border-radius:4px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,0.15)">📅 Book a Free Consultation</a>
   </div>
 </section>
-
 <div style="background:#f6f9ff;border-bottom:1px solid #e5e7eb;padding:14px 32px;display:flex;justify-content:space-around;flex-wrap:wrap;gap:8px">
   <div style="text-align:center"><div style="font-size:1.4rem;font-weight:700;color:#1a73e8;letter-spacing:-0.02em">20+</div><div style="font-size:0.68rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-top:1px">Yrs D365 F&O</div></div>
   <div style="text-align:center"><div style="font-size:1.4rem;font-weight:700;color:#1a73e8;letter-spacing:-0.02em">15+</div><div style="font-size:0.68rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-top:1px">Yrs EDI</div></div>
@@ -137,7 +138,6 @@ footer a:hover{text-decoration:underline}
   <div style="text-align:center"><div style="font-size:1.4rem;font-weight:700;color:#1a73e8;letter-spacing:-0.02em">98%</div><div style="font-size:0.68rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-top:1px">Satisfaction</div></div>
   <div style="text-align:center"><div style="font-size:1.4rem;font-weight:700;color:#1a73e8;letter-spacing:-0.02em">24/7</div><div style="font-size:0.68rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-top:1px">Support</div></div>
 </div>
-
 <div class="pg">
   <div class="g3">
     <a href="services.html" class="htile"><div class="ci c-blue">🔷</div><strong>D365 Finance &amp; Operations</strong><span>Implementation · Upgrade · Support</span></a>
@@ -151,7 +151,6 @@ footer a:hover{text-decoration:underline}
     <a href="services.html" class="htile"><div class="ci c-amber">📋</div><strong>DevOps PMO &amp; Governance</strong><span>Compliance · Audit readiness</span></a>
   </div>
 </div>
-
 <style>
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
 .htile{display:flex;flex-direction:column;gap:3px;background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:16px;text-decoration:none;transition:box-shadow .2s,border-color .2s}
@@ -161,9 +160,15 @@ footer a:hover{text-decoration:underline}
 </style>
 </main>
 <footer>
-  <span>© 2026 JUA Solution LLC</span>
-  <span><a href="mailto:info@juasolution.com">info@juasolution.com</a></span>
-  <span><a href="https://juasolution.com">juasolution.com</a></span>
+  <div class="ft-inner">
+    <span class="ft-brand">JUA <em>Solution</em> LLC</span>
+    <span class="ft-sep">|</span>
+    <span>© 2026 · All rights reserved</span>
+    <span class="ft-sep">|</span>
+    <span><a href="mailto:info@juasolution.com">info@juasolution.com</a></span>
+    <span class="ft-sep">|</span>
+    <span><a href="https://juasolution.com">juasolution.com</a></span>
+  </div>
 </footer>
 </body>
 </html>
