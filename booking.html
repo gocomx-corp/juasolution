@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Documents — JUA Solution LLC</title>
+<title>Book a Meeting — JUA Solution LLC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -97,18 +97,10 @@ footer{background:#111827;padding:24px 5%;display:flex;align-items:center;justif
   footer{flex-direction:column;align-items:flex-start}
 }
 
-.doc-row{display:flex;align-items:flex-start;gap:16px;background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:20px 22px;transition:box-shadow .2s,border-color .2s}
-.doc-row:hover{box-shadow:var(--shadow);border-color:var(--blue)}
-.doc-ico{width:46px;height:46px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.doc-body{flex:1;min-width:0}
-.doc-label{font-size:0.67rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#6b7280;margin-bottom:3px}
-.doc-body strong{font-size:0.92rem;font-weight:600;color:#111827;display:block;margin-bottom:5px}
-.doc-body p{font-size:0.81rem;color:#6b7280;line-height:1.65;margin-bottom:8px}
-.doc-meta{display:flex;flex-wrap:wrap;gap:12px}
-.doc-meta span{font-size:0.74rem;color:#9ca3af}
-.doc-meta span::before{content:'· ';color:#d1d5db}
-.doc-meta span:first-child::before{content:''}
-@media(max-width:600px){.doc-row{flex-wrap:wrap}}
+.bk-info{display:flex;align-items:flex-start;gap:12px;background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px}
+.bk-info-icon{font-size:1.2rem;flex-shrink:0}
+.bk-info-label{font-size:0.68rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:2px}
+.bk-info-val{font-size:0.84rem;color:#111827;line-height:1.5}
 </style>
 </head><body>
 <nav>
@@ -120,10 +112,10 @@ footer{background:#111827;padding:24px 5%;display:flex;align-items:center;justif
     <li><a href="services.html">Services</a></li>
     <li><a href="solutions.html">Solutions</a></li>
     <li><a href="managed.html">Managed Services</a></li>
-    <li><a href="documents.html" class="active">Documents</a></li>
+    <li><a href="documents.html">Documents</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="booking.html" class="nav-book">Book a Meeting</a></li>
+    <li><a href="booking.html" class="active" class="nav-book">Book a Meeting</a></li>
   </ul>
   <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
 </nav>
@@ -131,62 +123,31 @@ footer{background:#111827;padding:24px 5%;display:flex;align-items:center;justif
 <div class="banner">
   <div class="banner-inner">
     <div>
-      <h1>Documents</h1>
-      <p>Standard legal templates — 2026 edition · California law · Orange County jurisdiction</p>
+      <h1>Book a Meeting</h1>
+      <p>Free 30-minute consultation — powered by Microsoft Bookings</p>
     </div>
   </div>
 </div>
-<div class="wrap">
-  <div style="display:flex;flex-direction:column;gap:14px;max-width:900px">
-
-    <div class="doc-row">
-      <div class="doc-ico" style="background:#dbeafe;color:#1a73e8">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-      </div>
-      <div class="doc-body">
-        <div class="doc-label">MSA · 2026</div>
-        <strong>Master Services Agreement</strong>
-        <p>Governs all engagements — services, IP ownership, confidentiality, liability, payment terms (Net 15), non-solicitation, and termination. Required before any work begins.</p>
-        <div class="doc-meta"><span>9 pages</span><span>California law</span><span>Required for all engagements</span></div>
-      </div>
+<div class="wrap" style="max-width:900px">
+  <div style="display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="bk-info"><div class="bk-info-icon">🕐</div><div><div class="bk-info-label">Duration</div><div class="bk-info-val">30 minutes</div></div></div>
+      <div class="bk-info"><div class="bk-info-icon">📍</div><div><div class="bk-info-label">Location</div><div class="bk-info-val">Microsoft Teams or phone</div></div></div>
+      <div class="bk-info"><div class="bk-info-icon">💬</div><div><div class="bk-info-label">What to expect</div><div class="bk-info-val">We listen, ask the right questions, and help map a clear path forward.</div></div></div>
+      <div class="bk-info"><div class="bk-info-icon">✅</div><div><div class="bk-info-label">No commitment</div><div class="bk-info-val">Free consultation — no obligation.</div></div></div>
+      <a href="contact.html" style="font-size:0.82rem;color:var(--blue);text-decoration:none;margin-top:4px">Prefer to email us instead →</a>
     </div>
-
-    <div class="doc-row">
-      <div class="doc-ico" style="background:#ccfbf1;color:#065f46">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-      </div>
-      <div class="doc-body">
-        <div class="doc-label">SOW · 2026</div>
-        <strong>Statement of Work</strong>
-        <p>Defines scope, deliverables, timeline, billing model, assumptions, and client responsibilities per engagement. Covers D365 F&amp;O, EDI, and managed services.</p>
-        <div class="doc-meta"><span>6 pages</span><span>Required per project</span></div>
-      </div>
+    <div style="background:#f8faff;border:1px solid #e5e7eb;border-radius:8px;padding:32px;text-align:center">
+      <div style="font-size:0.88rem;color:#6b7280;margin-bottom:20px">Click below to open the scheduling calendar in a new window.</div>
+      <a href="https://outlook.office365.com/owa/calendar/JUAUSA@gocomx.com/bookings/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#1a73e8;color:#fff;font-weight:700;font-size:0.95rem;padding:13px 32px;border-radius:4px;text-decoration:none;box-shadow:0 2px 12px rgba(26,115,232,0.3)">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Open Booking Calendar
+      </a>
+      <div style="margin-top:14px;font-size:0.76rem;color:#9ca3af">Powered by Microsoft Bookings · juasolution.com</div>
+      <hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0">
+      <div style="font-size:0.82rem;color:#6b7280">Or embed below if your browser supports it:</div>
+      <iframe src="https://outlook.office365.com/owa/calendar/JUAUSA@gocomx.com/bookings/" style="width:100%;height:480px;border:1px solid #e5e7eb;border-radius:6px;margin-top:12px" frameborder="0"></iframe>
     </div>
-
-    <div class="doc-row">
-      <div class="doc-ico" style="background:#fef9c3;color:#854d0e">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
-      </div>
-      <div class="doc-body">
-        <div class="doc-label">MNDA · 2026</div>
-        <strong>Mutual Non-Disclosure Agreement</strong>
-        <p>Mutual confidentiality protection for both parties during scoping conversations and information exchange — before a formal engagement begins.</p>
-        <div class="doc-meta"><span>Recommended before scoping calls</span></div>
-      </div>
-    </div>
-
-  </div>
-
-  <div style="margin-top:28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-    <a href="https://gocomx.sharepoint.com/:f:/g/IgBRgG3EZ3ZNR4pJtexxdb5NAQRYwlKUk6pOY6VYF5ogcWM?e=CkC1Hx" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#1a73e8;color:#fff;font-weight:600;font-size:0.88rem;padding:11px 26px;border-radius:4px;text-decoration:none;transition:background .15s" onmouseover="this.style.background='#1557b0'" onmouseout="this.style.background='#1a73e8'">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Open Documents Folder
-    </a>
-    <span style="font-size:0.8rem;color:#6b7280">All 3 files available · SharePoint · Hosted by gocomx.sharepoint.com</span>
-  </div>
-
-  <div style="margin-top:20px;background:#fefce8;border:1px solid #fde68a;border-radius:6px;padding:12px 16px;font-size:0.82rem;color:#854d0e">
-    ⚠️ A signed MSA and SOW are required before services commence. Questions? <a href="contact.html" style="color:#1a73e8;text-decoration:none;font-weight:600">Contact us</a>.
   </div>
 </div>
 <footer>

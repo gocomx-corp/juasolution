@@ -1,548 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JUA Solution LLC — Enterprise Technology Partners</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Home — JUA Solution LLC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1a73e8;--blue-dark:#1557b0;--blue-mid:#2563eb;
+  --blue-light:#e8f0fe;--blue-xlight:#f8faff;
+  --g900:#111827;--g700:#374151;--g500:#6b7280;--g300:#d1d5db;--g100:#f3f4f6;
+  --white:#fff;--border:#e5e7eb;
+  --font:'Inter','Segoe UI',system-ui,sans-serif;
+  --r:6px;--shadow:0 1px 4px rgba(0,0,0,0.08),0 4px 16px rgba(0,0,0,0.06)
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--white);color:var(--g700);line-height:1.6;overflow-x:hidden}
 
-:root {
-  --blue:       #0078d4;
-  --blue-dark:  #005a9e;
-  --blue-light: #deecf9;
-  --blue-xlight:#f0f6fd;
-  --gray-900:   #1b1b1b;
-  --gray-700:   #323130;
-  --gray-500:   #605e5c;
-  --gray-100:   #f3f2f1;
-  --gray-50:    #faf9f8;
-  --border:     #e1dfdd;
-  --white:      #ffffff;
-  --font:       'Inter', 'Segoe UI', system-ui, sans-serif;
-  --radius:     4px;
-  --radius-lg:  8px;
-  --shadow-sm:  0 1px 3px rgba(0,0,0,0.08);
-  --shadow-md:  0 4px 16px rgba(0,0,0,0.09);
-}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:50px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:var(--white);border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:8px;font-size:1.05rem;font-weight:700;color:var(--g900);text-decoration:none;letter-spacing:-0.01em}
+.logo-mark{width:26px;height:26px;background:var(--blue);border-radius:3px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;padding:4px}
+.logo-mark span{background:#fff;border-radius:1px}
+.logo-mark span:nth-child(1),.logo-mark span:nth-child(4){background:#93c5fd}
+.logo em{font-style:normal;color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:0;list-style:none}
+.nav-links a{text-decoration:none;color:var(--g500);font-size:0.82rem;font-weight:500;padding:0 10px;height:50px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);border-bottom-color:var(--blue)}
+.nav-book{background:var(--blue)!important;color:#fff!important;border-radius:4px!important;padding:0 16px!important;height:30px!important;margin-left:8px;border-bottom:none!important;font-weight:600!important}
+.nav-book:hover{background:var(--blue-dark)!important}
+.hamburger{display:none;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--g700)}
 
-html { scroll-behavior: smooth; }
-body {
-  font-family: var(--font);
-  background: var(--white);
-  color: var(--gray-700);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+/* PAGE BANNER — short, sharp */
+.banner{margin-top:50px;background:linear-gradient(100deg,#1a73e8 0%,#2563eb 60%,#1d4ed8 100%);padding:32px 5% 30px;position:relative;overflow:hidden}
+.banner::after{content:'';position:absolute;right:-60px;top:-60px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,0.06);pointer-events:none}
+.banner-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.banner h1{font-size:1.6rem;font-weight:700;color:#fff;letter-spacing:-0.02em;line-height:1.2}
+.banner h1 em{font-style:normal;color:#93c5fd}
+.banner p{font-size:0.88rem;color:rgba(255,255,255,0.75);margin-top:6px;max-width:500px;line-height:1.6}
+.banner-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:0.7rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;padding:4px 10px;border-radius:2px;margin-bottom:8px}
 
-/* ── NAV ── */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0; z-index: 100;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 6%;
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
-}
+/* CONTENT */
+.wrap{max-width:1200px;margin:0 auto;padding:48px 5%}
+.section-title{font-size:1.15rem;font-weight:700;color:var(--g900);letter-spacing:-0.01em;margin-bottom:6px}
+.section-sub{font-size:0.85rem;color:var(--g500);margin-bottom:28px;line-height:1.65;max-width:560px}
+.divider{border:none;border-top:1px solid var(--border);margin:44px 0}
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--gray-900);
-  text-decoration: none;
-  letter-spacing: -0.01em;
-}
-.logo-mark {
-  width: 28px; height: 28px;
-  background: var(--blue);
-  border-radius: 3px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 2px;
-  padding: 5px;
-}
-.logo-mark span { background: #fff; border-radius: 1px; }
-.logo-mark span:nth-child(1) { background: #50e6ff; }
-.logo-mark span:nth-child(4) { background: #50e6ff; }
-.logo em { font-style: normal; color: var(--blue); }
+/* GRID */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:960px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid-3,.grid-2,.grid-4{grid-template-columns:1fr}}
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  list-style: none;
-}
-.nav-links a {
-  text-decoration: none;
-  color: var(--gray-700);
-  font-size: 0.85rem;
-  font-weight: 400;
-  padding: 0 12px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s, border-color 0.15s, background 0.15s;
-  white-space: nowrap;
-}
-.nav-links a:hover {
-  color: var(--blue);
-  border-bottom-color: var(--blue);
-  background: var(--blue-xlight);
-}
-.nav-book {
-  background: var(--blue) !important;
-  color: #fff !important;
-  border-radius: var(--radius) !important;
-  padding: 0 18px !important;
-  height: 34px !important;
-  margin-left: 6px;
-  border-bottom: none !important;
-  font-weight: 600 !important;
-  font-size: 0.83rem !important;
-}
-.nav-book:hover { background: var(--blue-dark) !important; }
+/* CARD */
+.card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:22px 20px;transition:box-shadow .2s,border-color .2s}
+.card:hover{box-shadow:var(--shadow);border-color:var(--blue)}
+.card-icon{width:38px;height:38px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:12px}
+.card h3{font-size:0.9rem;font-weight:600;color:var(--g900);margin-bottom:6px}
+.card p{font-size:0.81rem;color:var(--g500);line-height:1.6}
+.ci-blue{background:#dbeafe}.ci-teal{background:#ccfbf1}.ci-amber{background:#fef9c3}
+.ci-purple{background:#ede9fe}.ci-cyan{background:#cffafe}.ci-green{background:#dcfce7}
+.ci-red{background:#fee2e2}.ci-navy{background:#dbeafe}.ci-indigo{background:#e0e7ff}
 
-/* ── HERO ── */
-.hero {
-  margin-top: 52px;
-  background: linear-gradient(135deg, #0078d4 0%, #005a9e 55%, #003a6c 100%);
-  padding: 88px 6% 96px;
-  position: relative;
-  overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -160px; right: -160px;
-  width: 480px; height: 480px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.05);
-  pointer-events: none;
-}
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: -100px; left: 38%;
-  width: 320px; height: 320px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.04);
-  pointer-events: none;
-}
+/* FEAT LIST */
+.fl{list-style:none;display:flex;flex-direction:column;gap:5px;margin-top:10px}
+.fl li{font-size:0.79rem;color:var(--g700);display:flex;align-items:flex-start;gap:7px;line-height:1.5}
+.fl li::before{content:'✓';color:var(--blue);font-weight:700;font-size:0.75rem;margin-top:1px;flex-shrink:0}
 
-.hero-inner {
-  position: relative;
-  max-width: 780px;
-  margin: 0 auto;
-  text-align: center;
-}
+/* LABEL PILL */
+.pill{display:inline-block;font-size:0.68rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-bottom:10px}
+.pill-blue{background:var(--blue-light);color:var(--blue-dark)}
+.pill-teal{background:#ccfbf1;color:#065f46}
+.pill-amber{background:#fef9c3;color:#854d0e}
+.pill-azure{background:#dbeafe;color:#1e3a8a}
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(255,255,255,0.13);
-  border: 1px solid rgba(255,255,255,0.22);
-  color: #fff;
-  font-size: 0.74rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 5px 14px;
-  border-radius: 2px;
-  margin-bottom: 24px;
-}
-.badge-dot {
-  width: 6px; height: 6px;
-  background: #50e6ff;
-  border-radius: 50%;
-  animation: blink 2s infinite;
-}
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+/* FOOTER */
+footer{background:#111827;padding:24px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:3px solid var(--blue)}
+.footer-logo{display:flex;align-items:center;gap:8px;font-size:0.95rem;font-weight:700;color:#fff;text-decoration:none}
+.footer-logo em{font-style:normal;color:#60a5fa}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-links a{font-size:0.78rem;color:#9ca3af;text-decoration:none;transition:color .15s}
+.footer-links a:hover{color:#fff}
+.footer-copy{font-size:0.75rem;color:#6b7280}
 
-h1 {
-  font-size: clamp(2rem, 4vw, 3.1rem);
-  font-weight: 700;
-  line-height: 1.13;
-  letter-spacing: -0.025em;
-  color: #fff;
-  margin-bottom: 20px;
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:50px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);padding:6px 0;z-index:99}
+  .nav-links.open{display:flex}
+  .nav-links a{height:42px;padding:0 20px;border-bottom:none;border-left:3px solid transparent}
+  .nav-links a.active,.nav-links a:hover{border-left-color:var(--blue);border-bottom:none}
+  .nav-book{margin:6px 20px;height:36px!important;border-radius:4px!important}
+  .hamburger{display:block}
+  .banner-inner{flex-direction:column;align-items:flex-start}
+  footer{flex-direction:column;align-items:flex-start}
 }
-h1 em { font-style: normal; color: #50e6ff; }
-
-.hero-sub {
-  font-size: 1.05rem;
-  color: rgba(255,255,255,0.8);
-  line-height: 1.75;
-  font-weight: 300;
-  margin-bottom: 36px;
-  max-width: 620px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-btns {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #fff;
-  color: var(--blue-dark);
-  font-family: var(--font);
-  font-size: 0.92rem;
-  font-weight: 700;
-  padding: 12px 28px;
-  border-radius: var(--radius);
-  text-decoration: none;
-  transition: background 0.15s, transform 0.15s;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-}
-.btn-primary:hover { background: #e6f2fb; transform: translateY(-1px); }
-
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: transparent;
-  color: #fff;
-  font-family: var(--font);
-  font-size: 0.92rem;
-  font-weight: 500;
-  padding: 12px 28px;
-  border-radius: var(--radius);
-  text-decoration: none;
-  border: 1.5px solid rgba(255,255,255,0.45);
-  transition: background 0.15s, border-color 0.15s;
-}
-.btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
-
-/* trust strip */
-.trust-strip {
-  position: relative;
-  background: rgba(255,255,255,0.08);
-  border-top: 1px solid rgba(255,255,255,0.12);
-  margin-top: 60px;
-  padding: 18px 6%;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-.trust-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: rgba(255,255,255,0.75);
-  font-size: 0.82rem;
-  font-weight: 500;
-  white-space: nowrap;
-}
-.trust-icon { font-size: 1rem; }
-
-/* ── SERVICES ── */
-.services-section {
-  padding: 72px 6%;
-  background: var(--white);
-}
-.sec-wrap { max-width: 1120px; margin: 0 auto; }
-
-.sec-eyebrow {
-  display: inline-block;
-  background: var(--blue-light);
-  color: var(--blue-dark);
-  font-size: 0.71rem;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  border-radius: 2px;
-  margin-bottom: 12px;
-}
-
-h2 {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  font-weight: 700;
-  color: var(--gray-900);
-  letter-spacing: -0.02em;
-  margin-bottom: 10px;
-  line-height: 1.2;
-}
-.sec-sub {
-  font-size: 0.97rem;
-  color: var(--gray-500);
-  max-width: 540px;
-  margin-bottom: 44px;
-  line-height: 1.7;
-}
-
-.svc-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-.svc-card {
-  background: var(--white);
-  padding: 28px 22px;
-  transition: background 0.15s;
-  cursor: default;
-}
-.svc-card:hover { background: var(--blue-xlight); }
-
-.svc-icon {
-  width: 42px; height: 42px;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  margin-bottom: 14px;
-  flex-shrink: 0;
-}
-.si-blue   { background: #dde8f6; }
-.si-teal   { background: #d4ede9; }
-.si-amber  { background: #fef3cc; }
-.si-purple { background: #ede8f5; }
-.si-cyan   { background: #d0ecf5; }
-.si-green  { background: #d8edd8; }
-.si-red    { background: #f8dede; }
-.si-indigo { background: #dfe0f5; }
-.si-navy   { background: #d5dff0; }
-
-.svc-card h3 {
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--gray-900);
-  margin-bottom: 7px;
-  line-height: 1.3;
-}
-.svc-card p {
-  font-size: 0.81rem;
-  color: var(--gray-500);
-  line-height: 1.65;
-}
-
-/* learn more link */
-.svc-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  margin-top: 12px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--blue);
-  text-decoration: none;
-  transition: gap 0.15s;
-}
-.svc-more:hover { gap: 7px; }
-
-/* ── BOOKING CTA ── */
-.cta-section {
-  background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%);
-  padding: 72px 6%;
-  text-align: center;
-}
-.cta-section h2 { color: #fff; margin-bottom: 10px; }
-.cta-section p {
-  color: rgba(255,255,255,0.78);
-  font-size: 0.97rem;
-  max-width: 480px;
-  margin: 0 auto 30px;
-  line-height: 1.7;
-}
-
-.btn-book {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #fff;
-  color: var(--blue-dark);
-  font-family: var(--font);
-  font-size: 0.95rem;
-  font-weight: 700;
-  padding: 13px 32px;
-  border-radius: var(--radius);
-  text-decoration: none;
-  transition: background 0.15s, transform 0.15s;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-}
-.btn-book:hover { background: #e6f2fb; transform: translateY(-2px); }
-.cta-note {
-  margin-top: 14px;
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.5);
-}
-
-/* ── FOOTER ── */
-footer {
-  background: #1b1b1b;
-  padding: 28px 6%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-  border-top: 3px solid var(--blue);
-}
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-}
-.footer-logo em { font-style: normal; color: #50e6ff; }
-.footer-links {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.footer-links a {
-  font-size: 0.8rem;
-  color: #a19f9d;
-  text-decoration: none;
-  transition: color 0.15s;
-}
-.footer-links a:hover { color: #fff; }
-.footer-copy {
-  font-size: 0.78rem;
-  color: #6e6d6b;
-}
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.hero-badge { animation: fadeUp 0.5s ease 0.05s both; }
-h1          { animation: fadeUp 0.5s ease 0.15s both; }
-.hero-sub   { animation: fadeUp 0.5s ease 0.25s both; }
-.hero-btns  { animation: fadeUp 0.5s ease 0.35s both; }
-.trust-strip{ animation: fadeUp 0.5s ease 0.45s both; }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  .svc-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 600px) {
-  .svc-grid { grid-template-columns: 1fr; }
-  .nav-links li:not(:last-child) { display: none; }
-  footer { flex-direction: column; align-items: flex-start; }
-}
-
-  /* ── DOCUMENTS STRIP ── */
-  .docs-strip {
-    padding: 64px 6%;
-    background: #faf9f8;
-    border-top: 1px solid #e1dfdd;
-    border-bottom: 1px solid #e1dfdd;
-  }
-  .docs-row {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 780px;
-  }
-  .doc-tile {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    background: #fff;
-    border: 1px solid #e1dfdd;
-    border-radius: 8px;
-    padding: 16px 20px;
-    transition: box-shadow 0.2s, border-color 0.2s;
-  }
-  .doc-tile:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    border-color: #0078d4;
-  }
-  .doc-tile-icon {
-    width: 44px; height: 44px;
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .doc-tile-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    min-width: 0;
-  }
-  .doc-tile-label {
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    color: #605e5c;
-  }
-  .doc-tile-body strong {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #1b1b1b;
-  }
-  .doc-tile-meta {
-    font-size: 0.77rem;
-    color: #a19f9d;
-  }
-  .doc-tile-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    flex-shrink: 0;
-    background: #0078d4;
-    color: #fff;
-    font-family: var(--font);
-    font-size: 0.82rem;
-    font-weight: 600;
-    padding: 8px 18px;
-    border-radius: 4px;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background 0.15s;
-  }
-  .doc-tile-btn:hover { background: #005a9e; }
-  .doc-tile-btn-amber { background: #7a5c00 !important; }
-  .doc-tile-btn-amber:hover { background: #5a4200 !important; }
-  @media (max-width: 600px) {
-    .doc-tile { flex-wrap: wrap; }
-    .doc-tile-btn { width: 100%; justify-content: center; }
-  }
-
 </style>
-</head>
-<body>
-
-<!-- ── NAV ── -->
+</head><body>
 <nav>
-  <a href="#" class="logo">
-    <div class="logo-mark">
-      <span></span><span></span><span></span><span></span>
-    </div>
+  <a href="index.html" class="logo">
+    <div class="logo-mark"><span></span><span></span><span></span><span></span></div>
     JUA <em>Solution</em>
   </a>
   <ul class="nav-links">
@@ -551,263 +109,81 @@ h1          { animation: fadeUp 0.5s ease 0.15s both; }
     <li><a href="managed.html">Managed Services</a></li>
     <li><a href="documents.html">Documents</a></li>
     <li><a href="about.html">About</a></li>
-    <li>
-      <a href="https://outlook.office365.com/owa/calendar/JUAUSA@gocomx.com/bookings/"
-         target="_blank" rel="noopener" class="nav-book">
-        Book a Meeting
-      </a>
-    </li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="booking.html" class="nav-book">Book a Meeting</a></li>
   </ul>
+  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
 </nav>
 
-<!-- ── HERO ── -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-badge">
-      <span class="badge-dot"></span>
-      Microsoft Partner &nbsp;·&nbsp; Enterprise Consulting
+<section style="margin-top:50px;background:linear-gradient(100deg,#1a73e8 0%,#2563eb 60%,#1d4ed8 100%);padding:60px 5% 64px;position:relative;overflow:hidden">
+  <div style="position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,0.05)"></div>
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:4px 12px;border-radius:2px;margin-bottom:16px">
+      <span style="width:6px;height:6px;background:#93c5fd;border-radius:50%;animation:blink 2s infinite"></span>
+      Microsoft Partner · Irvine, CA
     </div>
-
-    <h1>Your Partner for<br><em>Intelligent Enterprise</em><br>Technology</h1>
-
-    <p class="hero-sub">
-      JUA Solution LLC specializes in Microsoft Dynamics 365 F&amp;O, EDI integrations,
-      Azure cloud, Power Platform, and AI — delivering the governance, structure,
-      and technology that moves your business forward.
-    </p>
-
-    <div class="hero-btns">
-      <a href="https://outlook.office365.com/owa/calendar/JUAUSA@gocomx.com/bookings/"
-         target="_blank" rel="noopener" class="btn-primary">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Book a Free Consultation
-      </a>
-      <a href="#services" class="btn-outline">
-        Explore Our Services
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-    </div>
-
-    <div class="trust-strip">
-      <div class="trust-item"><span class="trust-icon">✅</span> 10+ Years Experience</div>
-      <div class="trust-item"><span class="trust-icon">📦</span> 150+ Projects Delivered</div>
-      <div class="trust-item"><span class="trust-icon">⭐</span> 98% Client Satisfaction</div>
-      <div class="trust-item"><span class="trust-icon">🕐</span> 24/7 Managed Support</div>
+    <h1 style="font-size:clamp(2rem,4vw,3rem);font-weight:700;color:#fff;letter-spacing:-0.03em;line-height:1.12;margin-bottom:16px;max-width:680px">Intelligent Enterprise Solutions<br><span style="color:#93c5fd">D365 · EDI · Azure · AI</span></h1>
+    <p style="font-size:1rem;color:rgba(255,255,255,0.8);max-width:540px;line-height:1.7;margin-bottom:32px;font-weight:300">JUA Solution LLC delivers Microsoft Dynamics 365 F&amp;O, EDI integrations, Azure cloud, Power Platform, and AI-powered automation — backed by 15–20 years of hands-on expertise.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="booking.html" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#1557b0;font-weight:700;font-size:0.9rem;padding:11px 26px;border-radius:4px;text-decoration:none;box-shadow:0 2px 12px rgba(0,0,0,0.15)">📅 Book a Free Consultation</a>
+      <a href="services.html" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-weight:500;font-size:0.9rem;padding:11px 26px;border-radius:4px;text-decoration:none;border:1.5px solid rgba(255,255,255,0.4)">Explore Services →</a>
     </div>
   </div>
 </section>
 
-<!-- ── SERVICES ── -->
-<section class="services-section" id="services">
-  <div class="sec-wrap">
-    <div class="sec-eyebrow">What We Do</div>
-    <h2>Enterprise Services</h2>
-    <p class="sec-sub">
-      A focused set of capabilities built around the Microsoft ecosystem —
-      from ERP and EDI to AI, governance, and around-the-clock managed support.
-    </p>
+<div style="background:#f8faff;border-bottom:1px solid #e5e7eb;padding:18px 5%">
+  <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:space-around;flex-wrap:wrap;gap:12px">
+    <div style="text-align:center"><div style="font-size:1.6rem;font-weight:700;color:#1a73e8">20+</div><div style="font-size:0.75rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em">Years D365 F&amp;O</div></div>
+    <div style="text-align:center"><div style="font-size:1.6rem;font-weight:700;color:#1a73e8">15+</div><div style="font-size:0.75rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em">Years EDI</div></div>
+    <div style="text-align:center"><div style="font-size:1.6rem;font-weight:700;color:#1a73e8">150+</div><div style="font-size:0.75rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em">Projects Delivered</div></div>
+    <div style="text-align:center"><div style="font-size:1.6rem;font-weight:700;color:#1a73e8">98%</div><div style="font-size:0.75rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em">Client Satisfaction</div></div>
+    <div style="text-align:center"><div style="font-size:1.6rem;font-weight:700;color:#1a73e8">24/7</div><div style="font-size:0.75rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em">Managed Support</div></div>
+  </div>
+</div>
 
-    <div class="svc-grid">
+<div class="wrap">
+  <div class="grid-3">
+    <a href="services.html" class="home-tile"><div class="ht-icon ci-blue">🔷</div><strong>D365 Finance &amp; Operations</strong><span>Implementation · Upgrade · Support</span></a>
+    <a href="services.html" class="home-tile"><div class="ht-icon ci-teal">🔗</div><strong>EDI — TrueCommerce &amp; SPS</strong><span>Foundry · Data Mason · Trading Partners</span></a>
+    <a href="solutions.html" class="home-tile"><div class="ht-icon ci-indigo">🗺️</div><strong>ERP + EDI Solution Architecture</strong><span>Cross-system mapping · Business validation</span></a>
+    <a href="services.html" class="home-tile"><div class="ht-icon ci-cyan">☁️</div><strong>Microsoft Azure</strong><span>Cloud migration · DevOps · Infrastructure</span></a>
+    <a href="services.html" class="home-tile"><div class="ht-icon ci-purple">⚡</div><strong>Power Platform &amp; AI</strong><span>Power Apps · Copilot · Automation</span></a>
+    <a href="managed.html" class="home-tile"><div class="ht-icon ci-navy">🛡️</div><strong>Managed Services</strong><span>24/7 support · Monitoring · Help desk</span></a>
+    <a href="services.html" class="home-tile"><div class="ht-icon ci-green">📄</div><strong>SharePoint &amp; M365</strong><span>Intranet · Teams · Governance</span></a>
+    <a href="services.html" class="home-tile"><div class="ht-icon ci-red">🎫</div><strong>Ticket &amp; Help Desk</strong><span>ServiceNow · ITSM · SLA management</span></a>
+    <a href="services.html" class="home-tile"><div class="ht-icon ci-amber">📋</div><strong>DevOps PMO &amp; IT Governance</strong><span>Compliance · Audit readiness · Policy</span></a>
+  </div>
 
-      <!-- D365 F&O -->
-      <div class="svc-card">
-        <div class="svc-icon si-blue">🔷</div>
-        <h3>Microsoft Dynamics 365 F&amp;O</h3>
-        <p>End-to-end implementation, customization, and support for D365 Finance &amp; Operations — aligned to your processes, not the other way around.</p>
-        <a href="#" class="svc-more">Learn more →</a>
-      </div>
-
-      <!-- TrueCommerce EDI -->
-      <div class="svc-card">
-        <div class="svc-icon si-teal">🔗</div>
-        <h3>EDI — TrueCommerce Foundry</h3>
-        <p>Connect trading partners, automate order workflows, and eliminate manual data entry with expert TrueCommerce Foundry configuration and D365 integration.</p>
-        <a href="#" class="svc-more">Learn more →</a>
-      </div>
-
-      <!-- SPS Commerce -->
-      <div class="svc-card">
-        <div class="svc-icon si-amber">📦</div>
-        <h3>SPS Commerce / Data Mason</h3>
-        <p>Full lifecycle management of SPS Commerce and Data Mason EDI platforms — streamlining retailer compliance and reducing chargebacks across your supply chain.</p>
-        <a href="#" class="svc-more">Learn more →</a>
-      </div>
-
-      <!-- Azure -->
-      <div class="svc-card">
-        <div class="svc-icon si-cyan">☁️</div>
-        <h3>Microsoft Azure</h3>
-        <p>Cloud strategy, secure infrastructure design, and DevOps pipelines — migrating on-premises workloads with zero disruption and long-term scalability.</p>
-        <a href="#" class="svc-more">Learn more →</a>
-      </div>
-
-      <!-- Power Platform -->
-      <div class="svc-card">
-        <div class="svc-icon si-purple">⚡</div>
-        <h3>Power Platform</h3>
-        <p>Low-code applications, automated workflows, and embedded analytics built on Power Apps, Power Automate, Power BI, and Dataverse — all within your M365 environment.</p>
-        <a href="#" class="svc-more">Learn more →</a>
-      </div>
-
-      <!-- AI -->
-      <div class="svc-card">
-        <div class="svc-icon si-blue">🤖</div>
-        <h3>AI &amp; Intelligent Automation</h3>
-        <p>Azure OpenAI, Copilot Studio, and AI Builder deployments that automate intelligent tasks, extract document insights, and reduce manual effort across your operations.</p>
-        <a href="#" class="svc-more">Learn more →</a>
-      </div>
-
-      <!-- SharePoint -->
-      <div class="svc-card">
-        <div class="svc-icon si-green">📄</div>
-        <h3>SharePoint &amp; Microsoft 365</h3>
-        <p>Modern intranet design, document management, and Teams integrations — backed by governance frameworks that keep your digital workplace secure and well-organized.</p>
-        <a href="#" class="svc-more">Learn more →</a>
-      </div>
-
-      <!-- Ticket System -->
-      <div class="svc-card">
-        <div class="svc-icon si-red">🎫</div>
-        <h3>Ticket &amp; Help Desk System</h3>
-        <p>Enterprise ticketing solutions — ServiceNow, Zendesk, or custom-built on Power Platform — fully integrated with your tech stack for faster, measurable resolution times.</p>
-        <a href="#" class="svc-more">Learn more →</a>
-      </div>
-
-      <!-- DevOps PMO Governance — NEW -->
-      <div class="svc-card">
-        <div class="svc-icon si-navy">📋</div>
-        <h3>DevOps PMO &amp; IT Governance</h3>
-        <p>
-          We bring structure to how your technology work gets planned, tracked, and delivered.
-          Our PMO practice establishes the frameworks, standards, and oversight processes
-          that keep projects on schedule and within scope — while our IT governance
-          work ensures your controls, audit trails, and compliance posture are
-          ready for internal review or external scrutiny. From defining release
-          pipelines and change management procedures to building RACI matrices,
-          risk registers, and policy documentation, we help your organization
-          operate with clarity, accountability, and confidence.
-        </p>
-        <a href="#" class="svc-more">Learn more →</a>
-      </div>
-
+  <div style="margin-top:40px;background:#f8faff;border:1px solid #e5e7eb;border-radius:8px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+    <div>
+      <div style="font-size:1rem;font-weight:700;color:#111827;margin-bottom:4px">Ready to get started?</div>
+      <div style="font-size:0.85rem;color:#6b7280">Book a free 30-min consultation — no commitment required.</div>
     </div>
+    <a href="booking.html" style="display:inline-flex;align-items:center;gap:8px;background:#1a73e8;color:#fff;font-weight:600;font-size:0.88rem;padding:10px 24px;border-radius:4px;text-decoration:none;white-space:nowrap">📅 Book a Meeting</a>
   </div>
-</section>
-
-<!-- ── DOCUMENTS STRIP ── -->
-<section class="docs-strip">
-  <div class="sec-wrap">
-    <div class="sec-eyebrow">Client Resources</div>
-    <h2>Engagement Documents</h2>
-    <p class="sec-sub">Download our standard legal templates. A signed MSA and SOW are required prior to commencement of services.</p>
-    <div class="docs-row">
-
-      <div class="doc-tile">
-        <div class="doc-tile-icon" style="background:#dde8f6;color:#0078d4;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        </div>
-        <div class="doc-tile-body">
-          <span class="doc-tile-label">MSA &middot; 2026</span>
-          <strong>Master Services Agreement</strong>
-          <span class="doc-tile-meta">9 pages &middot; PDF &middot; California law &middot; Orange County jurisdiction</span>
-        </div>
-        <a href="https://gocomx.sharepoint.com/:b:/g/IgBRgG3EZ3ZNR4pJtexxdb5NAQRYwlKUk6pOY6VYF5ogcWM?file=Master_Services_Agreement_JUA.pdf&download=1"
-           class="doc-tile-btn" target="_blank" rel="noopener">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download
-        </a>
-      </div>
-
-      <div class="doc-tile">
-        <div class="doc-tile-icon" style="background:#d4ede9;color:#008272;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        </div>
-        <div class="doc-tile-body">
-          <span class="doc-tile-label">SOW &middot; 2026</span>
-          <strong>Statement of Work</strong>
-          <span class="doc-tile-meta">6 pages &middot; PDF &middot; Covers D365 F&amp;O, EDI, Managed Services</span>
-        </div>
-        <a href="https://gocomx.sharepoint.com/:b:/g/IgBRgG3EZ3ZNR4pJtexxdb5NAQRYwlKUk6pOY6VYF5ogcWM?file=Statement_of_Work_JUA.pdf&download=1"
-           class="doc-tile-btn" target="_blank" rel="noopener">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download
-        </a>
-      </div>
-
-      <div class="doc-tile">
-        <div class="doc-tile-icon" style="background:#fef3cc;color:#7a5c00;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
-        </div>
-        <div class="doc-tile-body">
-          <span class="doc-tile-label">MNDA &middot; 2026</span>
-          <strong>Mutual Non-Disclosure Agreement</strong>
-          <span class="doc-tile-meta">PDF &middot; Mutual confidentiality protection for both parties</span>
-        </div>
-        <a href="https://gocomx.sharepoint.com/:b:/g/IgBRgG3EZ3ZNR4pJtexxdb5NAQRYwlKUk6pOY6VYF5ogcWM?file=Mutual_Non-Disclosure_Agreement_JUA.pdf&download=1"
-           class="doc-tile-btn doc-tile-btn-amber" target="_blank" rel="noopener">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── BOOKING CTA ── -->
-<section class="cta-section">
-  <div class="sec-eyebrow" style="background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.22)">
-    Get Started
-  </div>
-  <h2>Let's Talk About Your Project</h2>
-  <p>
-    Book a free 30-minute consultation with our team.
-    We'll listen, ask the right questions, and help you map a clear path forward.
-  </p>
-  <a href="https://outlook.office365.com/owa/calendar/JUAUSA@gocomx.com/bookings/"
-     target="_blank" rel="noopener" class="btn-book">
-    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-    Book a Free Consultation
-  </a>
-  <div class="cta-note">Powered by Microsoft Bookings &nbsp;·&nbsp; juasolution.com</div>
-</section>
-
-<!-- ── FOOTER ── -->
+</div>
+<style>
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.home-tile{display:flex;flex-direction:column;gap:4px;background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:20px 18px;text-decoration:none;transition:box-shadow .2s,border-color .2s}
+.home-tile:hover{box-shadow:var(--shadow);border-color:var(--blue)}
+.ht-icon{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem;margin-bottom:8px}
+.home-tile strong{font-size:0.88rem;font-weight:600;color:var(--g900)}
+.home-tile span{font-size:0.78rem;color:var(--g500);line-height:1.5}
+</style>
 <footer>
-  <a href="#" class="footer-logo">
-    <div class="logo-mark" style="width:22px;height:22px;padding:4px;">
-      <span></span><span></span><span></span><span></span>
-    </div>
+  <a href="index.html" class="footer-logo">
+    <div class="logo-mark" style="width:22px;height:22px;padding:4px;"><span></span><span></span><span></span><span></span></div>
     JUA <em>Solution</em> LLC
   </a>
   <div class="footer-links">
-    <a href="#services">Services</a>
+    <a href="services.html">Services</a>
     <a href="solutions.html">Solutions</a>
     <a href="managed.html">Managed Services</a>
     <a href="documents.html">Documents</a>
-    <a href="https://outlook.office365.com/owa/calendar/JUAUSA@gocomx.com/bookings/" target="_blank" rel="noopener">Book a Meeting</a>
-    <a href="mailto:info@juasolution.com">info@juasolution.com</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="booking.html">Book a Meeting</a>
   </div>
-  <div class="footer-copy">© 2026 JUA Solution LLC</div>
+  <div class="footer-copy">© 2026 JUA Solution LLC · <a href="https://juasolution.com" style="color:#60a5fa;text-decoration:none">juasolution.com</a></div>
 </footer>
-
-<script>
-  /* Scroll-in animation for service cards */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.style.opacity = '1';
-        e.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.07 });
-
-  document.querySelectorAll('.svc-card').forEach((el, i) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(14px)';
-    el.style.transition = `opacity 0.4s ease ${i * 0.04}s, transform 0.4s ease ${i * 0.04}s, background 0.15s`;
-    observer.observe(el);
-  });
-</script>
-</body>
-</html>
+</body></html>
