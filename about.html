@@ -19,8 +19,8 @@ body{font-family:var(--f);background:var(--w);color:var(--g7);overflow-x:hidden;
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:var(--w);border-bottom:1px solid var(--br)}
-.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
-.logo-img{height:36px;width:auto;display:block}
+.logo{display:flex;align-items:center;gap:0;font-size:1.15rem;font-weight:800;color:var(--g9);text-decoration:none;flex-shrink:0;letter-spacing:-0.01em}
+.logo em{font-style:normal;color:var(--b)}
 .nl{display:flex;align-items:center;list-style:none;gap:0}
 .nl a{text-decoration:none;color:var(--g5);font-size:0.875rem;font-weight:500;padding:0 12px;height:52px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
 .nl a:hover,.nl a.active{color:var(--b);border-bottom-color:var(--b)}
@@ -106,9 +106,7 @@ footer a:hover{color:#fff;text-decoration:underline}
 </head>
 <body>
 <nav>
-  <a href="index.html" class="logo">
-    <img src="logo.svg" alt="JUA Solution LLC" class="logo-img">
-  </a>
+  <a href="index.html" class="logo">JUA <em>Solution</em></a>
   <ul class="nl">
     <li><a href="index.html">Home</a></li>
     <li><a href="services.html">Services</a></li>

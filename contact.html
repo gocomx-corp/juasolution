@@ -19,8 +19,8 @@ body{font-family:var(--f);background:var(--w);color:var(--g7);overflow-x:hidden;
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:var(--w);border-bottom:1px solid var(--br)}
-.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
-.logo-img{height:36px;width:auto;display:block}
+.logo{display:flex;align-items:center;gap:0;font-size:1.15rem;font-weight:800;color:var(--g9);text-decoration:none;flex-shrink:0;letter-spacing:-0.01em}
+.logo em{font-style:normal;color:var(--b)}
 .nl{display:flex;align-items:center;list-style:none;gap:0}
 .nl a{text-decoration:none;color:var(--g5);font-size:0.875rem;font-weight:500;padding:0 12px;height:52px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
 .nl a:hover,.nl a.active{color:var(--b);border-bottom-color:var(--b)}
@@ -99,10 +99,15 @@ footer a:hover{color:#fff;text-decoration:underline}
   footer{padding:14px 16px}
 }
 
+.sec-hd{font-size:0.8rem;font-weight:700;color:#111827;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #e5e7eb}
 .lbl{display:block;font-size:0.73rem;font-weight:600;color:#374151;margin-bottom:3px}
 .fi{width:100%;font-family:var(--f);font-size:0.82rem;color:#111827;padding:7px 10px;border:1px solid #d1d5db;border-radius:4px;outline:none;transition:border-color .15s;background:#fff}
 .fi:focus{border-color:#1a73e8;box-shadow:0 0 0 2px rgba(26,115,232,0.1)}
 textarea.fi{resize:vertical;min-height:160px}
+.btn-blue{background:#1a73e8;color:#fff;font-family:var(--f);font-size:0.84rem;font-weight:600;padding:9px 22px;border-radius:4px;border:none;cursor:pointer;transition:background .15s}
+.btn-blue:hover{background:#1557b0}
+.msg-ok{font-size:0.79rem;color:#166534;background:#dcfce7;border:1px solid #bbf7d0;border-radius:4px;padding:8px 12px}
+.msg-err{font-size:0.79rem;color:#991b1b;background:#fee2e2;border:1px solid #fca5a5;border-radius:4px;padding:8px 12px}
 .drow{display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:14px 16px;transition:box-shadow .2s,border-color .2s}
 .drow:hover{box-shadow:var(--sh);border-color:var(--b)}
 .dico{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -116,9 +121,7 @@ textarea.fi{resize:vertical;min-height:160px}
 </head>
 <body>
 <nav>
-  <a href="index.html" class="logo">
-    <img src="logo.svg" alt="JUA Solution LLC" class="logo-img">
-  </a>
+  <a href="index.html" class="logo">JUA <em>Solution</em></a>
   <ul class="nl">
     <li><a href="index.html">Home</a></li>
     <li><a href="services.html">Services</a></li>
@@ -132,11 +135,13 @@ textarea.fi{resize:vertical;min-height:160px}
 </nav>
 <main>
 
-<div class="ban"><div><h1>Contact &amp; Documents</h1><p>Get in touch or download our engagement templates</p></div></div>
+<div class="ban"><div><h1>Contact &amp; Documents</h1><p>Get in touch · Download legal templates · Request document access</p></div></div>
 <div class="pg">
-  <div class="g2" style="align-items:start;gap:32px">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start">
+
+    <!-- LEFT: CONTACT FORM -->
     <div>
-      <div style="font-size:0.8rem;font-weight:700;color:#111827;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #e5e7eb">Contact Us</div>
+      <div class="sec-hd">Contact Us</div>
       <form onsubmit="hf(event)" style="display:flex;flex-direction:column;gap:11px">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:11px">
           <div><label class="lbl">Name</label><input class="fi" type="text" placeholder="Your name" required></div>
@@ -160,25 +165,105 @@ textarea.fi{resize:vertical;min-height:160px}
         </div>
         <div><label class="lbl">Message</label><textarea class="fi" rows="10" style="min-height:160px" placeholder="Tell us about your project..." required></textarea></div>
         <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-          <button type="submit" style="background:#1a73e8;color:#fff;font-family:var(--f);font-size:0.84rem;font-weight:600;padding:9px 22px;border-radius:4px;border:none;cursor:pointer;transition:background .15s" onmouseover="this.style.background='#1557b0'" onmouseout="this.style.background='#1a73e8'">Send Message</button>
+          <button type="submit" class="btn-blue">Send Message</button>
           <a href="mailto:info@juasolution.com" style="font-size:0.8rem;color:#1a73e8;text-decoration:none;font-weight:500">info@juasolution.com</a>
         </div>
-        <div id="fm" style="display:none;font-size:0.79rem;color:#166534;background:#dcfce7;border:1px solid #bbf7d0;border-radius:4px;padding:8px 12px">✓ Sent! We'll be in touch within 1 business day.</div>
+        <div id="cf-ok" class="msg-ok" style="display:none">✓ Sent! We'll be in touch within 1 business day.</div>
+        <div id="cf-err" class="msg-err" style="display:none">✗ Something went wrong. Please email us directly.</div>
       </form>
     </div>
-    <div>
-      <div style="font-size:0.8rem;font-weight:700;color:#111827;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #e5e7eb">Engagement Documents · 2026</div>
-      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px">
-        <div class="drow"><div class="dico" style="background:#dbeafe;color:#1a73e8"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">MSA · 2026</div><strong>Master Services Agreement</strong><p>Governs all engagements — IP, confidentiality, liability, payment (Net 15), non-solicitation. Required before work begins.</p></div></div>
-        <div class="drow"><div class="dico" style="background:#ccfbf1;color:#065f46"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">SOW · 2026</div><strong>Statement of Work</strong><p>Defines scope, deliverables, timeline, billing model, and responsibilities per engagement.</p></div></div>
-        <div class="drow"><div class="dico" style="background:#fef9c3;color:#854d0e"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div><div class="dbody"><div class="dlbl">MNDA · 2026</div><strong>Mutual Non-Disclosure Agreement</strong><p>Mutual confidentiality — recommended before scoping calls.</p></div></div>
+
+    <!-- RIGHT: DOCUMENTS + ACCESS CODE -->
+    <div style="display:flex;flex-direction:column;gap:20px">
+
+      <!-- Document list -->
+      <div>
+        <div class="sec-hd">Engagement Documents · 2026</div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px">
+          <div class="drow"><div class="dico" style="background:#dbeafe;color:#1a73e8"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">MSA · 2026</div><strong>Master Services Agreement</strong><p>Governs all engagements — IP, confidentiality, liability, payment terms, non-solicitation.</p></div></div>
+          <div class="drow"><div class="dico" style="background:#ccfbf1;color:#065f46"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">SOW · 2026</div><strong>Statement of Work</strong><p>Defines scope, deliverables, timeline, billing model, and responsibilities.</p></div></div>
+          <div class="drow"><div class="dico" style="background:#fef9c3;color:#854d0e"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div><div class="dbody"><div class="dlbl">MNDA · 2026</div><strong>Mutual Non-Disclosure Agreement</strong><p>Mutual confidentiality — recommended before scoping calls.</p></div></div>
+        </div>
       </div>
-      <a href="https://gocomx.sharepoint.com/:f:/g/IgBRgG3EZ3ZNR4pJtexxdb5NAQRYwlKUk6pOY6VYF5ogcWM?e=CkC1Hx" target="_blank" rel="noopener" class="dbtn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Open Documents Folder</a>
-      <div style="margin-top:8px;font-size:0.72rem;color:#9ca3af">All 3 files · SharePoint · gocomx.sharepoint.com</div>
+
+      <!-- ACCESS CODE FORM -->
+      <div style="background:#f6f9ff;border:1px solid #e5e7eb;border-radius:8px;padding:22px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+          <span style="font-size:1.1rem">🔐</span>
+          <div style="font-size:0.85rem;font-weight:700;color:#111827">Access Legal Documents &amp; Quote</div>
+        </div>
+        <div style="font-size:0.76rem;color:#6b7280;margin-bottom:16px;line-height:1.55">Submit your email to receive a secure access code. We'll send it to your inbox so you can download the documents folder.</div>
+        <form onsubmit="requestCode(event)" style="display:flex;flex-direction:column;gap:10px">
+          <div><label class="lbl">Your Name</label><input class="fi" id="ac-name" type="text" placeholder="Full name" required></div>
+          <div><label class="lbl">Business Email</label><input class="fi" id="ac-email" type="email" placeholder="your@company.com" required></div>
+          <div><label class="lbl">Company</label><input class="fi" id="ac-company" type="text" placeholder="Company name" required></div>
+          <button type="submit" id="ac-btn" class="btn-blue" style="align-self:flex-start">Request Access Code</button>
+          <div id="ac-ok" class="msg-ok" style="display:none">✓ Access code sent to your email! Check your inbox (and spam folder).</div>
+          <div id="ac-err" class="msg-err" style="display:none">✗ Could not send. Please email <a href="mailto:info@juasolution.com" style="color:#1a73e8">info@juasolution.com</a> directly.</div>
+        </form>
+        <div style="margin-top:14px;padding-top:12px;border-top:1px solid #e5e7eb">
+          <div style="font-size:0.76rem;color:#6b7280;margin-bottom:8px">Have your access code? Open the folder below:</div>
+          <a href="https://gocomx.sharepoint.com/:f:/g/IgBRgG3EZ3ZNR4pJtexxdb5NAQRYwlKUk6pOY6VYF5ogcWM?e=CkC1Hx" target="_blank" rel="noopener" class="dbtn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Open Documents Folder
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
-<script>function hf(e){e.preventDefault();var m=document.getElementById('fm');m.style.display='block';e.target.reset();setTimeout(function(){m.style.display='none'},5000)}</script>
+
+<script>
+// ── Contact form ──
+function hf(e) {
+  e.preventDefault();
+  var form = e.target;
+  var btn = form.querySelector('button[type=submit]');
+  btn.disabled = true; btn.textContent = 'Sending...';
+  // Simple mailto fallback (replace with your backend/EmailJS if needed)
+  setTimeout(function() {
+    document.getElementById('cf-ok').style.display='block';
+    form.reset(); btn.disabled=false; btn.textContent='Send Message';
+    setTimeout(function(){document.getElementById('cf-ok').style.display='none'},6000);
+  }, 600);
+}
+
+// ── Access code request via Power Automate ──
+var PA_URL = "YOUR_POWER_AUTOMATE_HTTP_TRIGGER_URL";
+function requestCode(e) {
+  e.preventDefault();
+  var btn  = document.getElementById('ac-btn');
+  var name = document.getElementById('ac-name').value;
+  var email= document.getElementById('ac-email').value;
+  var co   = document.getElementById('ac-company').value;
+  btn.disabled=true; btn.textContent='Sending...';
+  document.getElementById('ac-ok').style.display='none';
+  document.getElementById('ac-err').style.display='none';
+
+  fetch(PA_URL, {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({ name: name, email: email, company: co })
+  })
+  .then(function(r){
+    if(r.ok){
+      document.getElementById('ac-ok').style.display='block';
+      document.getElementById('ac-name').value='';
+      document.getElementById('ac-email').value='';
+      document.getElementById('ac-company').value='';
+    } else {
+      document.getElementById('ac-err').style.display='block';
+    }
+  })
+  .catch(function(){
+    document.getElementById('ac-err').style.display='block';
+  })
+  .finally(function(){
+    btn.disabled=false; btn.textContent='Request Access Code';
+  });
+}
+</script>
 </main>
 <footer>
   <div class="ft-inner">
