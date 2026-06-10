@@ -228,14 +228,14 @@ function hf(e){
   e.target.reset();
   setTimeout(function(){document.getElementById('cf-ok').style.display='none';},6000);
 }
-var PA_URL="YOUR_POWER_AUTOMATE_HTTP_TRIGGER_URL";
+var PA_URL="https://default11381263c1064d27b8fea2ec4f780e.4d.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/c0c5077da0c140d699a88377538bd6fe/triggers/manual/paths/invoke?api-version=1YOUR_POWER_AUTOMATE_HTTP_TRIGGER_URLsp=%2Ftriggers%2Fmanual%2FrunYOUR_POWER_AUTOMATE_HTTP_TRIGGER_URLsv=1.0YOUR_POWER_AUTOMATE_HTTP_TRIGGER_URLsig=lYtsZ891gkb8lNBSCFygy4z-30ww72PkVwoo-EaAg8U";
 function requestCode(e){
   e.preventDefault();
   var btn=document.getElementById('ac-btn');
   btn.disabled=true; btn.textContent='Sending...';
   document.getElementById('ac-ok').style.display='none';
   document.getElementById('ac-err').style.display='none';
-  if(PA_URL==='YOUR_POWER_AUTOMATE_HTTP_TRIGGER_URL'){
+  if(PA_URL==='https://default11381263c1064d27b8fea2ec4f780e.4d.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/c0c5077da0c140d699a88377538bd6fe/triggers/manual/paths/invoke?api-version=1YOUR_POWER_AUTOMATE_HTTP_TRIGGER_URLsp=%2Ftriggers%2Fmanual%2FrunYOUR_POWER_AUTOMATE_HTTP_TRIGGER_URLsv=1.0YOUR_POWER_AUTOMATE_HTTP_TRIGGER_URLsig=lYtsZ891gkb8lNBSCFygy4z-30ww72PkVwoo-EaAg8U'){
     document.getElementById('ac-err').style.display='block';
     btn.disabled=false; btn.textContent='Request Access Code';
     return;
