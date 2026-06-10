@@ -98,6 +98,18 @@ footer a:hover{color:#fff;text-decoration:underline}
   .ban,.pg{padding-left:16px;padding-right:16px}
   footer{padding:14px 16px}
 }
+
+.sp{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:14px 16px;transition:box-shadow .15s,border-color .15s;flex-shrink:0}
+.sp:hover{box-shadow:0 2px 8px rgba(0,0,0,0.07);border-color:#1a73e8}
+.sp h3{font-size:0.83rem;font-weight:600;color:#111827;margin-bottom:4px}
+.sp p{font-size:0.77rem;color:#6b7280;line-height:1.55}
+.sp .fl{margin-top:6px}
+.sp .fl li{font-size:0.74rem}
+@media(max-width:900px){
+  .pg > div{grid-template-columns:1fr!important;height:auto!important}
+  .pg > div > div{border-right:none!important;border-bottom:1px solid #e5e7eb;max-height:400px}
+  .pg > div > div:last-child{border-bottom:none}
+}
 </style>
 </head>
 <body>
@@ -118,31 +130,56 @@ footer a:hover{color:#fff;text-decoration:underline}
 </nav>
 <main>
 
-<div class="ban"><div><h1>Solutions</h1><p>Deep platform expertise — D365, EDI, Azure, Power Platform</p></div></div>
-<div class="pg">
-  <span class="pill pb">D365 Finance &amp; Operations</span>
-  <div class="g3" style="margin-bottom:28px">
-    <div class="card"><h3>Finance &amp; Accounting</h3><p>GL, AP/AR, fixed assets, budgeting, financial reporting, multi-entity consolidation.</p></div>
-    <div class="card"><h3>Supply Chain Management</h3><p>Procurement, vendor management, inventory, demand forecasting, supplier portals.</p></div>
-    <div class="card"><h3>Manufacturing &amp; WMS</h3><p>Production orders, BOMs, routings, capacity planning, warehouse strategies, 3PL.</p></div>
-    <div class="card"><h3>Custom Development</h3><p>X++ extensions, data entities, batch jobs, third-party API integrations.</p></div>
-    <div class="card"><h3>Upgrades &amp; Migration</h3><p>AX 2009/2012, NAV, or other ERP — data migration, code upgrade, UAT support.</p></div>
-    <div class="card"><h3>ISV &amp; Integration</h3><p>Third-party ISV config, OData &amp; REST integrations, Power Platform connectors.</p></div>
-  </div>
-  <hr class="dv">
-  <span class="pill pt">ERP + EDI Solution Architecture</span>
-  <div class="g2" style="margin-bottom:28px">
-    <div class="card"><h3>Cross-System Business Mapping</h3><p>End-to-end data flow between ERP, EDI, WMS, and trading partners — business rules enforced consistently across every system boundary.</p><ul class="fl"><li>Source-to-target field mapping across platforms</li><li>Business rule definition &amp; enforcement</li><li>Data transformation &amp; normalization design</li></ul></div>
-    <div class="card"><h3>Validation &amp; Exception Management</h3><p>How bad data is caught, logged, and resolved — validation rules, error codes, exception queues, and escalation paths built into the integration layer.</p><ul class="fl"><li>Inbound &amp; outbound validation rules</li><li>Exception queue design &amp; alerting</li><li>Reconciliation reporting between ERP &amp; EDI</li></ul></div>
-    <div class="card"><h3>TrueCommerce Foundry</h3><p>Map development, trading partner testing, D365 connector setup, transaction monitoring.</p><ul class="fl"><li>All major 850/855/856/810 document types</li><li>100+ retail trading partners</li></ul></div>
-    <div class="card"><h3>SPS Commerce &amp; Data Mason</h3><p>Full map lifecycle for any X12 or EDIFACT requirement.</p><ul class="fl"><li>Data Mason custom translation maps</li><li>Chargeback root cause &amp; remediation</li></ul></div>
-  </div>
-  <hr class="dv">
-  <span class="pill pp">Azure + Power Platform</span>
-  <div class="g3">
-    <div class="card"><h3>Azure Architecture</h3><p>Landing zones, subscription governance, Bicep/Terraform IaC, cloud-native patterns.</p></div>
-    <div class="card"><h3>Power Apps &amp; Automate</h3><p>Canvas and model-driven apps, end-to-end workflow automation across M365 and D365.</p></div>
-    <div class="card"><h3>Power BI &amp; AI Builder</h3><p>Interactive dashboards, document processing, form recognition, Copilot Studio agents.</p></div>
+<div class="ban"><div><h1>Solutions</h1><p>D365 F&amp;O · ERP+EDI Architecture · Azure &amp; Power Platform</p></div></div>
+<div class="pg" style="padding-top:24px;padding-bottom:24px">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;height:calc(100vh - 200px);min-height:520px">
+
+    <!-- PANEL 1: D365 -->
+    <div style="border-right:1px solid #e5e7eb;display:flex;flex-direction:column;overflow:hidden">
+      <div style="background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:16px 20px;flex-shrink:0">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#93c5fd;margin-bottom:4px">D365 Finance &amp; Operations</div>
+        <div style="font-size:1rem;font-weight:700;color:#fff;line-height:1.2">ERP Platform</div>
+      </div>
+      <div style="flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px">
+        <div class="sp"><h3>Finance &amp; Accounting</h3><p>GL, AP/AR, fixed assets, budgeting, financial reporting, multi-entity consolidation.</p></div>
+        <div class="sp"><h3>Supply Chain Management</h3><p>Procurement, vendor management, inventory, demand forecasting, supplier portals.</p></div>
+        <div class="sp"><h3>Manufacturing &amp; WMS</h3><p>Production orders, BOMs, routings, capacity planning, warehouse strategies, 3PL.</p></div>
+        <div class="sp"><h3>Custom Development</h3><p>X++ extensions, data entities, batch jobs, third-party API integrations.</p></div>
+        <div class="sp"><h3>Upgrades &amp; Migration</h3><p>AX 2009/2012, NAV, or other ERP — data migration, code upgrade, UAT support.</p></div>
+        <div class="sp"><h3>ISV &amp; Integration</h3><p>Third-party ISV config, OData &amp; REST integrations, Power Platform connectors.</p></div>
+      </div>
+    </div>
+
+    <!-- PANEL 2: ERP+EDI -->
+    <div style="border-right:1px solid #e5e7eb;display:flex;flex-direction:column;overflow:hidden">
+      <div style="background:linear-gradient(105deg,#065f46,#047857);padding:16px 20px;flex-shrink:0">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6ee7b7;margin-bottom:4px">ERP + EDI Solution Architecture</div>
+        <div style="font-size:1rem;font-weight:700;color:#fff;line-height:1.2">Integration &amp; EDI</div>
+      </div>
+      <div style="flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px">
+        <div class="sp"><h3>Cross-System Business Mapping</h3><p>End-to-end data flow between ERP, EDI, WMS, and trading partners — business rules enforced across every system boundary.</p><ul class="fl"><li>Source-to-target field mapping</li><li>Business rule definition &amp; enforcement</li><li>Data transformation &amp; normalization</li></ul></div>
+        <div class="sp"><h3>Validation &amp; Exception Management</h3><p>Validation rules, error codes, exception queues, and escalation paths built into the integration layer.</p><ul class="fl"><li>Inbound &amp; outbound validation rules</li><li>Exception queue design &amp; alerting</li><li>Reconciliation reporting ERP &amp; EDI</li></ul></div>
+        <div class="sp"><h3>TrueCommerce Foundry</h3><p>Map development, trading partner testing, D365 connector setup, transaction monitoring.</p><ul class="fl"><li>850/855/856/810 document types</li><li>100+ retail trading partners</li></ul></div>
+        <div class="sp"><h3>SPS Commerce &amp; Data Mason</h3><p>Full map lifecycle for any X12 or EDIFACT requirement.</p><ul class="fl"><li>Data Mason custom translation maps</li><li>Chargeback root cause &amp; remediation</li></ul></div>
+      </div>
+    </div>
+
+    <!-- PANEL 3: Azure + Power Platform -->
+    <div style="display:flex;flex-direction:column;overflow:hidden">
+      <div style="background:linear-gradient(105deg,#5b21b6,#7c3aed);padding:16px 20px;flex-shrink:0">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#c4b5fd;margin-bottom:4px">Azure + Power Platform</div>
+        <div style="font-size:1rem;font-weight:700;color:#fff;line-height:1.2">Cloud &amp; Automation</div>
+      </div>
+      <div style="flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px">
+        <div class="sp"><h3>Azure Architecture</h3><p>Landing zones, subscription governance, Bicep/Terraform IaC, cloud-native patterns.</p></div>
+        <div class="sp"><h3>Power Apps</h3><p>Canvas and model-driven apps replacing paper forms, spreadsheets, and legacy tools.</p></div>
+        <div class="sp"><h3>Power Automate</h3><p>End-to-end workflow automation connecting M365, D365, SharePoint, and third-party systems.</p></div>
+        <div class="sp"><h3>Power BI</h3><p>Interactive dashboards and self-service reporting on top of D365, Azure, or external data.</p></div>
+        <div class="sp"><h3>AI Builder &amp; Copilot Studio</h3><p>Document processing, form recognition, and custom Copilot agents inside your M365 environment.</p></div>
+        <div class="sp"><h3>SharePoint &amp; Teams</h3><p>Modern portals, document libraries, Teams integrations, and governance frameworks.</p></div>
+      </div>
+    </div>
+
   </div>
 </div>
 </main>
