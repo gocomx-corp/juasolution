@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Home — JUA Solution LLC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --b:#1a73e8;--bd:#1557b0;--bl:#e8f0fe;--bx:#f6f9ff;
+  --g9:#111827;--g7:#374151;--g5:#6b7280;--g3:#d1d5db;--g1:#f9fafb;
+  --w:#fff;--br:#e5e7eb;
+  --f:'Inter','Segoe UI',system-ui,sans-serif;
+  --r:6px;--sh:0 1px 3px rgba(0,0,0,0.07),0 4px 12px rgba(0,0,0,0.05)
+}
+html,body{height:100%;scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--w);color:var(--g7);overflow-x:hidden;display:flex;flex-direction:column;min-height:100vh}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:var(--w);border-bottom:1px solid var(--br)}
+.nav-brand{font-size:1.05rem;font-weight:800;color:var(--g9);text-decoration:none;flex-shrink:0;letter-spacing:-0.01em}
+.nav-brand em{font-style:normal;color:var(--b)}
+.nl{display:flex;align-items:center;list-style:none;gap:0}
+.nl a{text-decoration:none;color:var(--g5);font-size:0.875rem;font-weight:500;padding:0 12px;height:52px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
+.nl a:hover,.nl a.active{color:var(--b);border-bottom-color:var(--b)}
+.nb{background:var(--b)!important;color:#fff!important;border-radius:4px!important;padding:0 14px!important;height:28px!important;margin-left:8px;border-bottom:none!important;font-weight:600!important;font-size:0.78rem!important}
+.nb:hover{background:var(--bd)!important}
+.hb{display:none;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--g7)}
+
+/* LAYOUT */
+main{flex:1;margin-top:52px;display:flex;flex-direction:column}
+
+/* BANNER — slim */
+.ban{background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:24px 32px;display:flex;align-items:center;justify-content:space-between}
+.ban h1{font-size:1.4rem;font-weight:700;color:#fff;letter-spacing:-0.02em}
+.ban h1 em{font-style:normal;color:#93c5fd}
+.ban p{font-size:0.82rem;color:rgba(255,255,255,0.72);margin-top:4px}
+
+/* CONTENT AREA — full width */
+.pg{flex:1;padding:32px 32px 40px}
+
+/* GRID */
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.g32{display:grid;grid-template-columns:2fr 1fr;gap:14px}
+
+/* CARD */
+.card{background:var(--w);border:1px solid var(--br);border-radius:var(--r);padding:20px;transition:box-shadow .2s,border-color .2s}
+.card:hover{box-shadow:var(--sh);border-color:var(--b)}
+.ci{width:34px;height:34px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:1rem;margin-bottom:10px}
+.card h3{font-size:0.85rem;font-weight:600;color:var(--g9);margin-bottom:5px}
+.card p{font-size:0.78rem;color:var(--g5);line-height:1.55}
+.c-blue{background:#dbeafe}.c-teal{background:#ccfbf1}.c-amber{background:#fef9c3}
+.c-purple{background:#ede9fe}.c-cyan{background:#cffafe}.c-green{background:#dcfce7}
+.c-red{background:#fee2e2}.c-navy{background:#dbeafe}.c-indigo{background:#e0e7ff}
+
+/* FEAT LIST */
+.fl{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:4px}
+.fl li{font-size:0.75rem;color:var(--g7);display:flex;gap:6px;line-height:1.45}
+.fl li::before{content:'✓';color:var(--b);font-weight:700;font-size:0.72rem;flex-shrink:0;margin-top:1px}
+
+/* PILL */
+.pill{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:2px 9px;border-radius:2px;margin-bottom:10px}
+.pb{background:var(--bl);color:var(--bd)}
+.pt{background:#ccfbf1;color:#065f46}
+.pa{background:#fef9c3;color:#854d0e}
+.pp{background:#ede9fe;color:#5b21b6}
+
+/* DIVIDER */
+.dv{border:none;border-top:1px solid var(--br);margin:28px 0}
+
+/* FOOTER — blue banner style, centered */
+footer{background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:20px 32px}
+.ft-inner{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
+footer span{font-size:0.78rem;color:rgba(255,255,255,0.75)}
+footer a{color:rgba(255,255,255,0.9);text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+.ft-brand{font-size:0.92rem;font-weight:700;color:#fff!important}
+.ft-brand em{font-style:normal;color:#93c5fd}
+.ft-sep{color:rgba(255,255,255,0.3);font-size:0.7rem}
+
+/* MOBILE */
+@media(max-width:900px){
+  .g3,.g4{grid-template-columns:repeat(2,1fr)}
+  .g32{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  nav{padding:0 16px}
+  .nl{display:none;flex-direction:column;position:absolute;top:52px;left:0;right:0;background:var(--w);border-bottom:1px solid var(--br);padding:6px 0;z-index:99}
+  .nl.open{display:flex}
+  .nl a{height:40px;padding:0 20px;border-bottom:none;border-left:3px solid transparent}
+  .nl a.active,.nl a:hover{border-left-color:var(--b);border-bottom:none}
+  .nb{margin:6px 20px;height:34px!important;border-radius:4px!important}
+  .hb{display:block}
+  .g3,.g2,.g4,.g32{grid-template-columns:1fr}
+  .ban,.pg{padding-left:16px;padding-right:16px}
+  footer{padding:14px 16px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-brand">JUA <em>Solution</em></a>
+  <ul class="nl">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="solutions.html">Solutions</a></li>
+    <li><a href="managed.html">Managed Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="booking.html" class="nb">Book a Meeting</a></li>
+  </ul>
+  <button class="hb" onclick="document.querySelector('.nl').classList.toggle('open')">&#9776;</button>
+</nav>
+<main>
+
+<section style="background:linear-gradient(105deg,#1a73e8,#1d4ed8);flex-shrink:0;display:flex;align-items:stretch;min-height:220px">
+
+  <!-- LOGO PANEL — full hero height, left side -->
+  <div style="width:180px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-right:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.07);padding:20px">
+    <img src="logo.svg" alt="JUA Solution LLC" style="width:140px;height:auto;display:block">
+  </div>
+
+  <!-- HERO CONTENT -->
+  <div style="flex:1;padding:36px 28px 40px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:0.67rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-bottom:16px">
+        <span style="width:5px;height:5px;background:#93c5fd;border-radius:50%;animation:blink 2s infinite"></span>
+        Microsoft Partner · Irvine, CA
+      </div>
+      <h1 style="font-size:clamp(1.6rem,2.6vw,2.3rem);font-weight:700;color:#fff;letter-spacing:-0.03em;line-height:1.15;margin-bottom:12px">
+        Intelligent Enterprise Solutions<br>
+        <span style="color:#93c5fd">D365 · EDI · Azure · AI</span>
+      </h1>
+      <p style="font-size:0.88rem;color:rgba(255,255,255,0.78);line-height:1.7;font-weight:300">
+        End-to-end Microsoft consulting backed by 20+ years in D365 F&amp;O and 15+ years in EDI — ERP, supply chain, cloud, and AI automation.
+      </p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:14px 16px">
+        <div style="font-size:0.68rem;font-weight:600;color:#93c5fd;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px">D365 F&amp;O</div>
+        <div style="font-size:0.82rem;color:#fff;font-weight:500">Finance · SCM<br>Manufacturing · WMS</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:14px 16px">
+        <div style="font-size:0.68rem;font-weight:600;color:#93c5fd;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px">EDI</div>
+        <div style="font-size:0.82rem;color:#fff;font-weight:500">TrueCommerce<br>SPS · Data Mason</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:14px 16px">
+        <div style="font-size:0.68rem;font-weight:600;color:#93c5fd;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px">Azure + AI</div>
+        <div style="font-size:0.82rem;color:#fff;font-weight:500">Cloud · DevOps<br>Copilot · OpenAI</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:14px 16px">
+        <div style="font-size:0.68rem;font-weight:600;color:#93c5fd;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px">Managed</div>
+        <div style="font-size:0.82rem;color:#fff;font-weight:500">24/7 Support<br>Monitoring · ITSM</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div style="background:#f6f9ff;border-bottom:1px solid #e5e7eb;padding:13px 32px;display:flex;justify-content:space-around;flex-wrap:wrap;gap:6px">
+  <div style="text-align:center"><div style="font-size:1.2rem;font-weight:700;color:#1a73e8">20+</div><div style="font-size:0.6rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-top:1px">Yrs D365 F&O</div></div>
+  <div style="text-align:center"><div style="font-size:1.2rem;font-weight:700;color:#1a73e8">15+</div><div style="font-size:0.6rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-top:1px">Yrs EDI</div></div>
+  <div style="text-align:center"><div style="font-size:1.2rem;font-weight:700;color:#1a73e8">70+</div><div style="font-size:0.6rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-top:1px">N. American Retail Integrations</div></div>
+  <div style="text-align:center"><div style="font-size:1.2rem;font-weight:700;color:#1a73e8">60+</div><div style="font-size:0.6rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-top:1px">EDI Trading Partners</div></div>
+  <div style="text-align:center"><div style="font-size:1.2rem;font-weight:700;color:#1a73e8">150+</div><div style="font-size:0.6rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-top:1px">Projects</div></div>
+  <div style="text-align:center"><div style="font-size:1.2rem;font-weight:700;color:#1a73e8">98%</div><div style="font-size:0.6rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-top:1px">Satisfaction</div></div>
+  <div style="text-align:center"><div style="font-size:1.2rem;font-weight:700;color:#1a73e8">300+</div><div style="font-size:0.6rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-top:1px">EDI Maps Go-Live</div></div>
+  <div style="text-align:center"><div style="font-size:1.2rem;font-weight:700;color:#1a73e8">24/7</div><div style="font-size:0.6rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-top:1px">Support</div></div>
+</div>
+
+<div class="pg">
+  <div class="g3">
+    <a href="services.html" class="htile"><div class="ci c-blue">🔷</div><strong>D365 Finance &amp; Operations</strong><span>Implementation · Upgrade · Support</span></a>
+    <a href="services.html" class="htile"><div class="ci c-teal">🔗</div><strong>EDI — TrueCommerce &amp; SPS</strong><span>Foundry · Data Mason · Partners</span></a>
+    <a href="solutions.html" class="htile"><div class="ci c-indigo">🗺️</div><strong>ERP + EDI Architecture</strong><span>Cross-system mapping · Validation</span></a>
+    <a href="services.html" class="htile"><div class="ci c-cyan">☁️</div><strong>Microsoft Azure</strong><span>Cloud · DevOps · Infrastructure</span></a>
+    <a href="services.html" class="htile"><div class="ci c-purple">⚡</div><strong>Power Platform &amp; AI</strong><span>Power Apps · Copilot · Automation</span></a>
+    <a href="managed.html" class="htile"><div class="ci c-navy">🛡️</div><strong>Managed Services</strong><span>24/7 support · Monitoring</span></a>
+    <a href="services.html" class="htile"><div class="ci c-green">📄</div><strong>SharePoint &amp; M365</strong><span>Intranet · Teams · Governance</span></a>
+    <a href="services.html" class="htile"><div class="ci c-red">🎫</div><strong>Ticket &amp; Help Desk</strong><span>ServiceNow · ITSM · SLA</span></a>
+    <a href="services.html" class="htile"><div class="ci c-amber">📋</div><strong>DevOps PMO &amp; Governance</strong><span>Compliance · Audit readiness</span></a>
+  </div>
+</div>
+
+<style>
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.htile{display:flex;flex-direction:column;gap:3px;background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:16px;text-decoration:none;transition:box-shadow .2s,border-color .2s}
+.htile:hover{box-shadow:0 2px 10px rgba(0,0,0,0.08);border-color:#1a73e8}
+.htile strong{font-size:0.83rem;font-weight:600;color:#111827}
+.htile span{font-size:0.74rem;color:#6b7280}
+</style>
+</main>
+<footer>
+  <div class="ft-inner">
+    <span class="ft-brand">JUA <em>Solution</em> LLC</span>
+    <span class="ft-sep">|</span>
+    <span>© 2026 · All rights reserved</span>
+    <span class="ft-sep">|</span>
+    <span><a href="mailto:info@juasolution.com">info@juasolution.com</a></span>
+    <span class="ft-sep">|</span>
+    <span><a href="https://juasolution.com">juasolution.com</a></span>
+  </div>
+</footer>
+</body>
+</html>
