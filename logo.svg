@@ -1,27 +1,20 @@
-<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="700" fill="#FFFFFF"/>
+<svg width="500" height="620" viewBox="350 30 500 620" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g stroke="#0B63CE" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
-    <!-- governance hub -->
-    <circle cx="600" cy="210" r="44" fill="#FFFFFF"/>
+    <circle cx="600" cy="210" r="44" fill="#ffffff"/>
     <circle cx="600" cy="210" r="13" fill="#0B63CE" stroke="none"/>
-    <!-- four clean domain nodes -->
     <line x1="568" y1="178" x2="480" y2="90"/>
     <line x1="632" y1="178" x2="720" y2="90"/>
     <line x1="568" y1="242" x2="480" y2="330"/>
     <line x1="632" y1="242" x2="720" y2="330"/>
-    <rect x="435" y="45" width="70" height="70" rx="10" fill="#FFFFFF"/>
-    <rect x="695" y="45" width="70" height="70" rx="10" fill="#FFFFFF"/>
-    <rect x="435" y="305" width="70" height="70" rx="10" fill="#FFFFFF"/>
-    <rect x="695" y="305" width="70" height="70" rx="10" fill="#FFFFFF"/>
+    <rect x="435" y="45" width="70" height="70" rx="10" fill="#ffffff"/>
+    <rect x="695" y="45" width="70" height="70" rx="10" fill="#ffffff"/>
+    <rect x="435" y="305" width="70" height="70" rx="10" fill="#ffffff"/>
+    <rect x="695" y="305" width="70" height="70" rx="10" fill="#ffffff"/>
   </g>
-
-  <!-- subtle architecture frame -->
   <path d="M420 210H510" stroke="#55A7FF" stroke-width="10" stroke-linecap="round"/>
   <path d="M690 210H780" stroke="#55A7FF" stroke-width="10" stroke-linecap="round"/>
   <path d="M600 80V140" stroke="#55A7FF" stroke-width="10" stroke-linecap="round"/>
   <path d="M600 280V340" stroke="#55A7FF" stroke-width="10" stroke-linecap="round"/>
-
-  <!-- wordmark -->
-  <text x="600" y="520" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="150" font-weight="800" letter-spacing="14" fill="#0B63CE">JUA</text>
-  <text x="600" y="605" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="600" letter-spacing="18" fill="#0B63CE">SOLUTIONS LLC</text>
+  <text x="600" y="510" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="148" font-weight="800" letter-spacing="10" fill="#0B63CE">JUA</text>
+  <text x="600" y="590" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="600" letter-spacing="10" fill="#0B63CE">SOLUTIONS LLC</text>
 </svg>
