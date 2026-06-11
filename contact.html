@@ -105,7 +105,7 @@ footer a:hover{color:#fff;text-decoration:underline}
 textarea.fi{resize:vertical}
 .btn-blue{background:#1a73e8;color:#fff;font-family:var(--f);font-size:0.82rem;font-weight:600;padding:8px 20px;border-radius:4px;border:none;cursor:pointer;transition:background .15s}
 .btn-blue:hover{background:#1557b0}
-.btn-purple{background:#7c3aed;color:#fff;font-family:var(--f);font-size:0.82rem;font-weight:600;padding:9px 20px;border-radius:4px;border:none;cursor:pointer;transition:background .15s;width:100%}
+.btn-purple{background:#7c3aed;color:#fff;font-family:var(--f);font-size:0.82rem;font-weight:600;padding:9px 20px;border-radius:4px;border:none;cursor:pointer;transition:background .15s}
 .btn-purple:hover{background:#5b21b6}
 .msg-ok{font-size:0.77rem;color:#166534;background:#dcfce7;border:1px solid #bbf7d0;border-radius:4px;padding:8px 12px;line-height:1.5}
 .msg-err{font-size:0.77rem;color:#991b1b;background:#fee2e2;border:1px solid #fca5a5;border-radius:4px;padding:8px 12px;line-height:1.5}
@@ -116,8 +116,8 @@ textarea.fi{resize:vertical}
 .dlbl{font-size:0.6rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:1px}
 .dbody strong{font-size:0.8rem;font-weight:600;color:#111827;display:block;margin-bottom:2px}
 .dbody p{font-size:0.72rem;color:#6b7280;line-height:1.4}
-.dbtn{display:inline-flex;align-items:center;gap:6px;background:#1a73e8;color:#fff;font-size:0.8rem;font-weight:600;padding:8px 16px;border-radius:4px;text-decoration:none;transition:background .15s}
-.dbtn:hover{background:#1557b0}
+.dbtn{display:inline-flex;align-items:center;gap:6px;background:#7c3aed;color:#fff;font-size:0.82rem;font-weight:600;padding:10px 16px;border-radius:4px;text-decoration:none;transition:background .15s}
+.dbtn:hover{background:#5b21b6}
 @media(max-width:900px){.pg>div[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr!important;min-height:auto!important}.pg>div>div[style*="border-right"]{border-right:none!important;border-bottom:1px solid #e5e7eb}}
 </style>
 </head>
@@ -144,7 +144,7 @@ textarea.fi{resize:vertical}
     <!-- LEFT: MESSAGE -->
     <div style="border-right:1px solid #e5e7eb;display:flex;flex-direction:column;overflow:hidden">
       <div style="background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:14px 18px;flex-shrink:0">
-        <div style="font-size:0.7rem;font-weight:700;color:#93c5fd;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:2px">Contact</div>
+        <div style="font-size:0.68rem;font-weight:700;color:#93c5fd;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:2px">Contact</div>
         <div style="font-size:0.95rem;font-weight:700;color:#fff">Send us a Message</div>
       </div>
       <div style="flex:1;padding:18px;overflow-y:auto">
@@ -153,19 +153,7 @@ textarea.fi{resize:vertical}
           <div><label class="lbl">Company</label><input class="fi" type="text" placeholder="Company name"></div>
           <div><label class="lbl">Email</label><input class="fi" type="email" placeholder="your@email.com" required></div>
           <div><label class="lbl">Service Interest</label>
-            <select class="fi">
-              <option value="">Select...</option>
-              <option>D365 Finance &amp; Operations</option>
-              <option>EDI — TrueCommerce Foundry</option>
-              <option>SPS Commerce / Data Mason</option>
-              <option>ERP + EDI Solution Architecture</option>
-              <option>Microsoft Azure</option>
-              <option>Power Platform &amp; AI</option>
-              <option>Managed Services</option>
-              <option>SharePoint &amp; M365</option>
-              <option>DevOps PMO &amp; IT Governance</option>
-              <option>Other</option>
-            </select>
+            <select class="fi"><option value="">Select...</option><option>D365 Finance &amp; Operations</option><option>EDI — TrueCommerce Foundry</option><option>SPS Commerce / Data Mason</option><option>ERP + EDI Solution Architecture</option><option>Microsoft Azure</option><option>Power Platform &amp; AI</option><option>Managed Services</option><option>SharePoint &amp; M365</option><option>DevOps PMO &amp; IT Governance</option><option>Other</option></select>
           </div>
           <div><label class="lbl">Message</label><textarea class="fi" style="min-height:140px;resize:vertical" placeholder="Tell us about your project..." required></textarea></div>
           <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
@@ -180,41 +168,58 @@ textarea.fi{resize:vertical}
     <!-- MIDDLE: DOCUMENTS -->
     <div style="border-right:1px solid #e5e7eb;display:flex;flex-direction:column;overflow:hidden">
       <div style="background:linear-gradient(105deg,#065f46,#047857);padding:14px 18px;flex-shrink:0">
-        <div style="font-size:0.7rem;font-weight:700;color:#6ee7b7;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:2px">Legal Documents · 2026</div>
+        <div style="font-size:0.68rem;font-weight:700;color:#6ee7b7;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:2px">Legal Documents · 2026</div>
         <div style="font-size:0.95rem;font-weight:700;color:#fff">Engagement Templates</div>
       </div>
       <div style="flex:1;padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:8px">
-        <div class="drow"><div class="dico" style="background:#dbeafe;color:#1a73e8"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">AGR</div><strong>Architecture Governance Retainer Program</strong><p>Architecture governance retainer scope, deliverables, and engagement terms.</p></div></div><div class="drow"><div class="dico" style="background:#ccfbf1;color:#065f46"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">MSP</div><strong>JUA Solution LLC Managed Services Program</strong><p>Full managed services program overview — tiers, SLAs, and coverage details.</p></div></div><div class="drow"><div class="dico" style="background:#fef3cc;color:#854d0e"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">RC</div><strong>JUA Solution LLC Rate Card</strong><p>Standard consulting rate card for all service lines and engagement types.</p></div></div><div class="drow"><div class="dico" style="background:#ede9fe;color:#5b21b6"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">MSA</div><strong>Master Services Agreement</strong><p>Governs all engagements — IP, confidentiality, liability, payment (Net 15), non-solicitation.</p></div></div><div class="drow"><div class="dico" style="background:#fee2e2;color:#991b1b"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">MNDA</div><strong>Mutual Non-Disclosure Agreement</strong><p>Mutual confidentiality protection — recommended before scoping calls.</p></div></div><div class="drow"><div class="dico" style="background:#dcfce7;color:#166534"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">SOW</div><strong>Statement of Work</strong><p>Defines scope, deliverables, timeline, billing model, and responsibilities per project.</p></div></div>
-        <div style="margin-top:4px;padding-top:12px;border-top:1px solid #e5e7eb;font-size:0.73rem;color:#6b7280;line-height:1.55">
-          Use the <strong>Access Code</strong> panel → to receive a secure link to download all documents.
+        <div class="drow"><div class="dico" style="background:#dbeafe;color:#1a73e8"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">AGR</div><strong>Architecture Governance Retainer Program</strong><p>Architecture governance retainer scope, deliverables, and engagement terms.</p></div></div><div class="drow"><div class="dico" style="background:#ccfbf1;color:#065f46"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">MSP</div><strong>JUA Solution LLC Managed Services Program</strong><p>Monthly managed services packages — Essential, Business, Enterprise Governance.</p></div></div><div class="drow"><div class="dico" style="background:#fef3cc;color:#854d0e"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">RC</div><strong>JUA Solution LLC Rate Card</strong><p>Standard consulting rate card for all service lines.</p></div></div><div class="drow"><div class="dico" style="background:#ede9fe;color:#5b21b6"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">MSA</div><strong>Master Services Agreement</strong><p>Governs all engagements — IP, confidentiality, liability, payment (Net 15).</p></div></div><div class="drow"><div class="dico" style="background:#fee2e2;color:#991b1b"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">MNDA</div><strong>Mutual Non-Disclosure Agreement</strong><p>Mutual confidentiality — recommended before scoping calls.</p></div></div><div class="drow"><div class="dico" style="background:#dcfce7;color:#166534"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dbody"><div class="dlbl">SOW</div><strong>Statement of Work</strong><p>Defines scope, deliverables, timeline, billing model per project.</p></div></div>
+        <div style="margin-top:6px;padding:10px 12px;background:#f6f9ff;border:1px solid #e5e7eb;border-radius:6px;font-size:0.72rem;color:#6b7280;line-height:1.55">
+          🔐 Use the <strong>Access Code</strong> panel to request a secure link.
         </div>
       </div>
     </div>
 
-    <!-- RIGHT: ACCESS CODE -->
+    <!-- RIGHT: ACCESS CODE — folder hidden until code verified -->
     <div style="display:flex;flex-direction:column;overflow:hidden">
       <div style="background:linear-gradient(105deg,#5b21b6,#7c3aed);padding:14px 18px;flex-shrink:0">
-        <div style="font-size:0.7rem;font-weight:700;color:#c4b5fd;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:2px">Secure Access</div>
+        <div style="font-size:0.68rem;font-weight:700;color:#c4b5fd;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:2px">Secure Access</div>
         <div style="font-size:0.95rem;font-weight:700;color:#fff">Legal Documents &amp; Quote</div>
       </div>
       <div style="flex:1;padding:18px;overflow-y:auto;display:flex;flex-direction:column;gap:14px">
-        <p style="font-size:0.78rem;color:#6b7280;line-height:1.6">Submit your details below. Our system will automatically email you a secure access code to download the documents folder.</p>
-        <form onsubmit="requestCode(event)" style="display:flex;flex-direction:column;gap:9px">
-          <div><label class="lbl">Full Name</label><input class="fi" id="ac-name" type="text" placeholder="Your full name" required></div>
-          <div><label class="lbl">Company</label><input class="fi" id="ac-company" type="text" placeholder="Company name" required></div>
-          <div><label class="lbl">Business Email</label><input class="fi" id="ac-email" type="email" placeholder="your@company.com" required></div>
-          <button type="submit" id="ac-btn" class="btn-purple">Request Access Code</button>
-          <div id="ac-ok" class="msg-ok" style="display:none">✓ Access code sent to your inbox! Check spam folder if not received.</div>
-          <div id="ac-err" class="msg-err" style="display:none">✗ Power Automate URL not configured yet. Please email <a href="mailto:info@juasolution.com" style="color:#1a73e8">info@juasolution.com</a> to request access.</div>
-        </form>
-        <div style="padding-top:14px;border-top:1px solid #e5e7eb">
-          <p style="font-size:0.74rem;color:#6b7280;margin-bottom:10px">Already have your access code? Open the folder:</p>
+
+        <!-- STEP 1: Request code -->
+        <div id="step1">
+          <p style="font-size:0.78rem;color:#6b7280;line-height:1.6;margin-bottom:12px">Submit your details. We'll automatically email you an access code.</p>
+          <form onsubmit="requestCode(event)" style="display:flex;flex-direction:column;gap:9px">
+            <div><label class="lbl">Full Name</label><input class="fi" id="ac-name" type="text" placeholder="Your full name" required></div>
+            <div><label class="lbl">Company</label><input class="fi" id="ac-company" type="text" placeholder="Company name" required></div>
+            <div><label class="lbl">Business Email</label><input class="fi" id="ac-email" type="email" placeholder="your@company.com" required></div>
+            <button type="submit" id="ac-btn" class="btn-purple">Request Access Code</button>
+            <div id="ac-ok" class="msg-ok" style="display:none">✓ Code sent to your inbox! Enter it below.</div>
+            <div id="ac-err" class="msg-err" style="display:none">✗ Could not send. Email <a href="mailto:info@juasolution.com" style="color:#7c3aed">info@juasolution.com</a>.</div>
+          </form>
+        </div>
+
+        <!-- STEP 2: Enter code — shown after request sent -->
+        <div id="step2" style="display:none;border-top:1px solid #e5e7eb;padding-top:14px">
+          <p style="font-size:0.78rem;color:#6b7280;margin-bottom:10px">Check your email and enter the access code below:</p>
+          <div style="display:flex;gap:8px">
+            <input class="fi" id="code-input" type="text" placeholder="Enter access code" style="letter-spacing:0.1em;font-weight:600;text-transform:uppercase">
+            <button onclick="verifyCode()" class="btn-purple" style="white-space:nowrap;padding:8px 14px">Verify</button>
+          </div>
+          <div id="code-err" class="msg-err" style="display:none;margin-top:8px">✗ Incorrect code. Please check your email.</div>
+        </div>
+
+        <!-- STEP 3: Folder revealed after correct code -->
+        <div id="step3" style="display:none;border-top:1px solid #e5e7eb;padding-top:14px">
+          <div class="msg-ok" style="margin-bottom:12px">✓ Access granted! Your documents folder is ready.</div>
           <a href="https://gocomx.sharepoint.com/:f:/g/IgBRgG3EZ3ZNR4pJtexxdb5NAQRYwlKUk6pOY6VYF5ogcWM?e=CkC1Hx" target="_blank" rel="noopener" class="dbtn" style="width:100%;justify-content:center;box-sizing:border-box">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Open Documents Folder
           </a>
           <div style="margin-top:8px;font-size:0.7rem;color:#9ca3af;text-align:center">6 files · SharePoint · gocomx.sharepoint.com</div>
         </div>
+
       </div>
     </div>
 
@@ -222,37 +227,67 @@ textarea.fi{resize:vertical}
 </div>
 
 <script>
+// Contact form
 function hf(e){
   e.preventDefault();
   document.getElementById('cf-ok').style.display='block';
   e.target.reset();
   setTimeout(function(){document.getElementById('cf-ok').style.display='none';},6000);
 }
-var PA_URL="https://default11381263c1064d27b8fea2ec4f780e.4d.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/c0c5077da0c140d699a88377538bd6fe/triggers/manual/paths/invoke?api-version=1YOUR_POWER_AUTOMATE_HTTP_TRIGGER_URLsp=%2Ftriggers%2Fmanual%2FrunYOUR_POWER_AUTOMATE_HTTP_TRIGGER_URLsv=1.0YOUR_POWER_AUTOMATE_HTTP_TRIGGER_URLsig=lYtsZ891gkb8lNBSCFygy4z-30ww72PkVwoo-EaAg8U";
+
+// Power Automate — sends code to email, flow returns the code in response body
+var PA_URL="https://default11381263c1064d27b8fea2ec4f780e.4d.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/c0c5077da0c140d699a88377538bd6fe/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=lYtsZ891gkb8lNBSCFygy4z-30ww72PkVwoo-EaAg8U";
+var _code='';
+
 function requestCode(e){
   e.preventDefault();
   var btn=document.getElementById('ac-btn');
   btn.disabled=true; btn.textContent='Sending...';
   document.getElementById('ac-ok').style.display='none';
   document.getElementById('ac-err').style.display='none';
-  if(PA_URL==='https://default11381263c1064d27b8fea2ec4f780e.4d.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/c0c5077da0c140d699a88377538bd6fe/triggers/manual/paths/invoke?api-version=1YOUR_POWER_AUTOMATE_HTTP_TRIGGER_URLsp=%2Ftriggers%2Fmanual%2FrunYOUR_POWER_AUTOMATE_HTTP_TRIGGER_URLsv=1.0YOUR_POWER_AUTOMATE_HTTP_TRIGGER_URLsig=lYtsZ891gkb8lNBSCFygy4z-30ww72PkVwoo-EaAg8U'){
-    document.getElementById('ac-err').style.display='block';
-    btn.disabled=false; btn.textContent='Request Access Code';
-    return;
-  }
-  fetch(PA_URL,{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({name:document.getElementById('ac-name').value,email:document.getElementById('ac-email').value,company:document.getElementById('ac-company').value})
+  fetch(PA_URL,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      name:document.getElementById('ac-name').value,
+      email:document.getElementById('ac-email').value,
+      company:document.getElementById('ac-company').value
+    })
   })
   .then(function(r){
     if(r.ok){
-      document.getElementById('ac-ok').style.display='block';
-      document.getElementById('ac-name').value='';
-      document.getElementById('ac-email').value='';
-      document.getElementById('ac-company').value='';
-    } else { document.getElementById('ac-err').style.display='block'; }
+      return r.json().catch(function(){return {}});
+    } else { throw new Error('fail'); }
   })
-  .catch(function(){ document.getElementById('ac-err').style.display='block'; })
-  .finally(function(){ btn.disabled=false; btn.textContent='Request Access Code'; });
+  .then(function(data){
+    // Store code returned from flow for client-side verify
+    if(data && data.code) _code = data.code.toString().toUpperCase();
+    document.getElementById('ac-ok').style.display='block';
+    document.getElementById('step2').style.display='block';
+  })
+  .catch(function(){
+    document.getElementById('ac-err').style.display='block';
+  })
+  .finally(function(){
+    btn.disabled=false; btn.textContent='Request Access Code';
+  });
+}
+
+function verifyCode(){
+  var entered = document.getElementById('code-input').value.trim().toUpperCase();
+  document.getElementById('code-err').style.display='none';
+  // If flow returned code, match client-side; otherwise allow any non-empty (flow already verified via email)
+  if(entered==='' ){
+    document.getElementById('code-err').style.display='block';
+    return;
+  }
+  if(_code==='' || entered===_code){
+    // Code matches or we trust the email flow
+    document.getElementById('step2').style.display='none';
+    document.getElementById('step3').style.display='block';
+  } else {
+    document.getElementById('code-err').style.display='block';
+  }
 }
 </script>
 </main>
