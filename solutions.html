@@ -99,19 +99,25 @@ footer a:hover{color:#fff;text-decoration:underline}
   footer{padding:14px 16px}
 }
 
-.sl{display:flex;align-items:flex-start;gap:6px;font-size:0.78rem;color:#1e40af;line-height:1.45}
-.sl::before{content:'✓';color:#1a73e8;font-weight:700;font-size:0.72rem;flex-shrink:0;margin-top:1px}
-.sl-g{display:flex;align-items:flex-start;gap:6px;font-size:0.78rem;color:#166534;line-height:1.45}
-.sl-g::before{content:'✓';color:#16a34a;font-weight:700;font-size:0.72rem;flex-shrink:0;margin-top:1px}
-.sl-p{display:flex;align-items:flex-start;gap:6px;font-size:0.78rem;color:#5b21b6;line-height:1.45}
-.sl-p::before{content:'✓';color:#7c3aed;font-weight:700;font-size:0.72rem;flex-shrink:0;margin-top:1px}
+/* SLIDESHOW */
+.slide{min-width:100%;position:relative;flex-shrink:0;background:#000}
+.slide img{width:100%;height:340px;object-fit:contain;object-position:center;display:block}
+.slide-cap{position:absolute;bottom:0;left:0;right:0;background:rgba(17,24,39,0.75);color:#fff;font-size:0.78rem;padding:10px 16px;font-weight:500;backdrop-filter:blur(4px)}
+.sl-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.9);border:none;border-radius:50%;width:36px;height:36px;font-size:1.4rem;line-height:1;cursor:pointer;color:#1a73e8;font-weight:300;z-index:10;transition:background .15s}
+.sl-btn:hover{background:#fff}
+.sl-prev{left:10px}
+.sl-next{right:10px}
+.sl-dots{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:10}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.5);cursor:pointer;transition:background .2s}
+.dot.active{background:#fff}
 
-.case-card{border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;cursor:pointer;transition:box-shadow .2s,transform .2s;background:#fff}
-.case-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.12);transform:translateY(-2px)}
-.case-card img{width:100%;height:140px;object-fit:cover;object-position:top;display:block}
-.case-label{padding:10px 12px;background:#fff}
-.case-title{font-size:0.8rem;font-weight:600;color:#111827;margin-bottom:2px}
-.case-sub{font-size:0.7rem;color:#6b7280}
+/* MICROSOFT CLEAN PANELS */
+.ms-panel{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.ms-panel-header{display:flex;align-items:center;gap:8px;font-size:0.88rem;font-weight:700;color:#111827;padding-bottom:12px;border-bottom:1px solid #f3f4f6}
+.ms-list{list-style:none;display:flex;flex-direction:column;gap:5px;margin:0;padding:0}
+.ms-list li{font-size:0.78rem;color:#374151;padding:4px 0;border-bottom:1px solid #f9fafb;display:flex;align-items:center;gap:8px}
+.ms-list li::before{content:'';width:4px;height:4px;border-radius:50%;background:#1a73e8;flex-shrink:0}
+.ms-note{font-size:0.72rem;color:#6b7280;font-style:italic;line-height:1.5;padding-top:8px;border-top:1px solid #f3f4f6}
 </style>
 </head>
 <body>
@@ -133,140 +139,107 @@ footer a:hover{color:#fff;text-decoration:underline}
 <div class="ban"><div><h1>Solutions</h1><p>Implementation Governance · EDI Program · Architecture Retainer · AI-Ready Design</p></div></div>
 <div class="pg" style="padding-top:20px;padding-bottom:20px">
 
-  <!-- TOP ROW: 3 panels -->
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:16px">
+  <!-- AUTO SLIDESHOW - FULL WIDTH -->
+  <div style="position:relative;width:100%;border-radius:8px;overflow:hidden;margin-bottom:20px;border:1px solid #e5e7eb">
+    <div id="slides" style="display:flex;transition:transform 0.6s cubic-bezier(.4,0,.2,1)">
+      <div class="slide"><img src="case1.png" alt="D365FO-SCM-EDI Go-Live Timeline"><div class="slide-cap">D365FO · SCM · EDI · Foundry — Go-Live Timeline Plan</div></div>
+      <div class="slide"><img src="case2.png" alt="Data Migration Strategy"><div class="slide-cap">Data Migration Strategy — Azure · D365FO · Smart Connect · Power BI</div></div>
+      <div class="slide"><img src="case3.png" alt="D365 Environment Design"><div class="slide-cap">D365FO Environment Design — Golden · Sandbox · DEV Tiers · UAT</div></div>
+      <div class="slide"><img src="case4.png" alt="Go-Live Data Strategy"><div class="slide-cap">Go-Live Data Strategy — Master Data · Smart Connect · Production</div></div>
+      <div class="slide"><img src="case5.png" alt="DevOps Governance"><div class="slide-cap">DevOps Governance — Implementation Methodology · Azure DevOps · Epics · Features</div></div>
+    </div>
+    <!-- Prev / Next -->
+    <button onclick="move(-1)" class="sl-btn sl-prev">&#8249;</button>
+    <button onclick="move(1)" class="sl-btn sl-next">&#8250;</button>
+    <!-- Dots -->
+    <div class="sl-dots">
+      <span class="dot active" onclick="goTo(0)"></span>
+      <span class="dot" onclick="goTo(1)"></span>
+      <span class="dot" onclick="goTo(2)"></span>
+      <span class="dot" onclick="goTo(3)"></span>
+      <span class="dot" onclick="goTo(4)"></span>
+    </div>
+  </div>
 
-    <!-- PANEL 1: Implementation Governance -->
-    <div style="background:#f6f9ff;border:1px solid #dbeafe;border-top:3px solid #1a73e8;border-radius:8px;padding:20px">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
-        <div style="width:32px;height:32px;background:#dbeafe;border-radius:6px;display:flex;align-items:center;justify-content:center">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div style="font-size:0.88rem;font-weight:700;color:#1a73e8">Implementation Governance</div>
+  <!-- 3 CLEAN PANELS - Microsoft style -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+
+    <!-- Implementation Governance -->
+    <div class="ms-panel">
+      <div class="ms-panel-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Implementation Governance</span>
       </div>
-      <ul style="list-style:none;display:flex;flex-direction:column;gap:6px">
-        <li class="sl"><span>Architecture Governance Advisor</span></li>
-        <li class="sl"><span>Business Process Design</span></li>
-        <li class="sl"><span>Functional Design Documentation</span></li>
-        <li class="sl"><span>Upgrade Path Planning</span></li>
-        <li class="sl"><span>Support Cost Modeling</span></li>
-        <li class="sl"><span>Governance from Beginning to End</span></li>
-        <li class="sl"><span>Long-term Maintainability</span></li>
-        <li class="sl"><span>Vendor Billing & Delivery Oversight</span></li>
-        <li class="sl"><span>Vendor Invoice & DevOps State Close</span></li>
-        <li class="sl"><span>Application Lifecycle Success</span></li>
+      <ul class="ms-list">
+        <li>Architecture Governance Advisor</li>
+        <li>Business Process Design</li>
+        <li>Functional Design Documentation</li>
+        <li>Upgrade Path Planning</li>
+        <li>Support Cost Modeling</li>
+        <li>Governance from Beginning to End</li>
+        <li>Long-term Maintainability</li>
+        <li>Vendor Billing &amp; Delivery Oversight</li>
+        <li>Vendor Invoice &amp; DevOps State Close</li>
+        <li>Application Lifecycle Success</li>
       </ul>
-      <div style="margin-top:14px;padding-top:12px;border-top:1px solid #dbeafe;font-size:0.75rem;color:#1a73e8;font-style:italic;line-height:1.5">
-        Not just project success — we design for long-term technical and functional AI-ready future.
-      </div>
+      <div class="ms-note">Not just project success — we design for long-term technical and functional AI-ready future.</div>
     </div>
 
-    <!-- PANEL 2: EDI Governance -->
-    <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-top:3px solid #16a34a;border-radius:8px;padding:20px">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
-        <div style="width:32px;height:32px;background:#dcfce7;border-radius:6px;display:flex;align-items:center;justify-content:center">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
-        <div style="font-size:0.88rem;font-weight:700;color:#16a34a">EDI Governance Program</div>
+    <!-- EDI Governance -->
+    <div class="ms-panel">
+      <div class="ms-panel-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <span>EDI Governance Program</span>
       </div>
-      <ul style="list-style:none;display:flex;flex-direction:column;gap:6px">
-        <li class="sl-g"><span>Operational KPI Target: 90%+</span></li>
-        <li class="sl-g"><span>ACKED Rate: 99.9%</span></li>
-        <li class="sl-g"><span>Strong & Reliable MAP Design</span></li>
-        <li class="sl-g"><span>Real-Time Power BI Monitoring</span></li>
-        <li class="sl-g"><span>Continuous Improvement Program</span></li>
-        <li class="sl-g"><span>Data Quality Standards & Guidelines</span></li>
-        <li class="sl-g"><span>Error Reduction: Thousands → Hundreds/yr</span></li>
-        <li class="sl-g"><span>Stop Silent Failure Before It Costs You</span></li>
+      <ul class="ms-list">
+        <li>Operational KPI Target: 90%+</li>
+        <li>ACKED Rate: 99.9%</li>
+        <li>Strong &amp; Reliable MAP Design</li>
+        <li>Real-Time Power BI Monitoring</li>
+        <li>Continuous Improvement Program</li>
+        <li>Data Quality Standards &amp; Guidelines</li>
+        <li>Error Reduction: Thousands → Hundreds/yr</li>
+        <li>Stop Silent Failure Before It Costs You</li>
       </ul>
-      <div style="margin-top:14px;padding-top:12px;border-top:1px solid #bbf7d0;font-size:0.75rem;color:#16a34a;font-style:italic;line-height:1.5">
-        We don't just connect trading partners — we govern the entire EDI ecosystem for reliability and scale.
-      </div>
+      <div class="ms-note">We govern the entire EDI ecosystem for reliability and scale — not just connectivity.</div>
     </div>
 
-    <!-- PANEL 3: JUA Retainer & AI -->
-    <div style="background:#faf5ff;border:1px solid #e9d5ff;border-top:3px solid #7c3aed;border-radius:8px;padding:20px">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
-        <div style="width:32px;height:32px;background:#ede9fe;border-radius:6px;display:flex;align-items:center;justify-content:center">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-        </div>
-        <div style="font-size:0.88rem;font-weight:700;color:#7c3aed">JUA Governance Retainer</div>
+    <!-- Retainer & AI -->
+    <div class="ms-panel">
+      <div class="ms-panel-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        <span>Governance Retainer &amp; AI</span>
       </div>
-      <ul style="list-style:none;display:flex;flex-direction:column;gap:6px">
-        <li class="sl-p"><span>Architecture Retainer Service</span></li>
-        <li class="sl-p"><span>Fractional Enterprise Architect</span></li>
-        <li class="sl-p"><span>Monthly Governance Review</span></li>
-        <li class="sl-p"><span>Project Risk Assessment</span></li>
-        <li class="sl-p"><span>Vendor Management Support</span></li>
-        <li class="sl-p"><span>D365 F&amp;O Roadmap Planning</span></li>
-        <li class="sl-p"><span>AI Agent Design &amp; Deployment</span></li>
-        <li class="sl-p"><span>Copilot Studio &amp; Azure OpenAI</span></li>
-        <li class="sl-p"><span>Intelligent Automation Strategy</span></li>
+      <ul class="ms-list">
+        <li>Architecture Retainer Service</li>
+        <li>Fractional Enterprise Architect</li>
+        <li>Monthly Governance Review</li>
+        <li>Project Risk Assessment</li>
+        <li>Vendor Management Support</li>
+        <li>D365 F&amp;O Roadmap Planning</li>
+        <li>AI Agent Design &amp; Deployment</li>
+        <li>Copilot Studio &amp; Azure OpenAI</li>
+        <li>Intelligent Automation Strategy</li>
       </ul>
-      <div style="margin-top:14px;padding-top:12px;border-top:1px solid #e9d5ff;font-size:0.75rem;color:#7c3aed;font-style:italic;line-height:1.5">
-        You buy methodology and governance — in order, from beginning to long-term application lifecycle success.
-      </div>
+      <div class="ms-note">You buy methodology and governance — from beginning to long-term application lifecycle success.</div>
     </div>
 
   </div>
-
-  <!-- CASE STUDIES SECTION -->
-  <div style="margin-bottom:10px;font-size:0.78rem;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:0.07em">
-    📊 Real Client Case Studies
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
-
-    <div class="case-card" onclick="openImg('case6.png','Go-Live Timeline')">
-      <img src="case6.png" alt="Go-Live Timeline">
-      <div class="case-label">
-        <div class="case-title">D365FO-SCM-EDI Go-Live Plan</div>
-        <div class="case-sub">D365FO · SCM · EDI · Foundry</div>
-      </div>
-    </div>
-
-    <div class="case-card" onclick="openImg('case2.png','D365FO Data Migration Strategy & Architecture')">
-      <img src="case2.png" alt="Data Migration Strategy">
-      <div class="case-label">
-        <div class="case-title">Data Migration Strategy</div>
-        <div class="case-sub">Azure · D365FO · Smart Connect · Power BI</div>
-      </div>
-    </div>
-
-    <div class="case-card" onclick="openImg('case3.png','D365FO Design & Develop Phase — Environment Architecture')">
-      <img src="case3.png" alt="D365 Environment Design">
-      <div class="case-label">
-        <div class="case-title">D365 Environment Design</div>
-        <div class="case-sub">Golden · Sandbox · DEV Tiers · UAT</div>
-      </div>
-    </div>
-
-    <div class="case-card" onclick="openImg('case4.png','D365FO Go-Live Data Strategy — Master Data & Open Balance')">
-      <img src="case4.png" alt="Go-Live Data Strategy">
-      <div class="case-label">
-        <div class="case-title">Go-Live Data Strategy</div>
-        <div class="case-sub">Master Data · Smart Connect · Production</div>
-      </div>
-    </div>
-
-  </div>
-
-</div>
-
-<!-- LIGHTBOX -->
-<div id="lb" onclick="closeLB()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:999;align-items:center;justify-content:center;flex-direction:column;padding:24px">
-  <div style="color:#fff;font-size:0.82rem;font-weight:600;margin-bottom:12px;text-align:center" id="lb-title"></div>
-  <img id="lb-img" style="max-width:95vw;max-height:85vh;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,0.5)">
-  <div style="color:rgba(255,255,255,0.5);font-size:0.72rem;margin-top:12px">Click anywhere to close</div>
 </div>
 
 <script>
-function openImg(src,title){
-  var lb=document.getElementById('lb');
-  document.getElementById('lb-img').src=src;
-  document.getElementById('lb-title').textContent=title;
-  lb.style.display='flex';
+var cur=0, total=5, timer;
+function goTo(n){
+  cur=n;
+  document.getElementById('slides').style.transform='translateX(-'+cur*100+'%)';
+  document.querySelectorAll('.dot').forEach(function(d,i){d.classList.toggle('active',i===cur)});
 }
-function closeLB(){document.getElementById('lb').style.display='none';}
+function move(d){goTo((cur+d+total)%total);}
+function startAuto(){timer=setInterval(function(){move(1)},4000);}
+function stopAuto(){clearInterval(timer);}
+document.getElementById('slides').parentElement.addEventListener('mouseenter',stopAuto);
+document.getElementById('slides').parentElement.addEventListener('mouseleave',startAuto);
+startAuto();
 </script>
 </main>
 <footer>
