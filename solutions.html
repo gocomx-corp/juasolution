@@ -22,84 +22,109 @@ nav {
 .nav-links a.active { color: #2348C8; border-bottom: 2px solid #2348C8; padding-bottom: 2px; }
 .btn-book { background: #2348C8; color: #fff; font-size: 13px; font-weight: 500; padding: 8px 18px; border-radius: 6px; text-decoration: none; }
 
-.hero-banner { background: #2348C8; padding: 2.25rem 2.5rem; }
+.hero-banner { background: #2348C8; padding: 2rem 2.5rem; }
 .hero-banner h1 { font-size: 30px; font-weight: 600; color: #fff; margin-bottom: 6px; }
 .hero-banner p { font-size: 14px; color: rgba(255,255,255,0.7); letter-spacing: 0.03em; }
 
+/* KEY CHANGE: 55% / 45% split so image panel is much larger */
 .solution-row {
   display: grid;
-  grid-template-columns: 480px 1fr;
-  min-height: 420px;
+  grid-template-columns: 55% 45%;
   border-bottom: 0.5px solid #e8e8e8;
 }
 .solution-row:last-child { border-bottom: none; }
 
 .solution-image {
-  background: #0d0d0d;
-  position: relative;
-  overflow: hidden;
+  background: #111;
   display: flex;
   flex-direction: column;
+  min-height: 480px;
 }
 
-.slider { position: relative; flex: 1; overflow: hidden; }
-.slides { display: flex; height: 100%; transition: transform 0.4s ease; }
+/* Slider fills full panel height */
+.slider { flex: 1; overflow: hidden; position: relative; }
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
 .slide {
-  min-width: 100%; height: 100%;
-  display: flex; align-items: center; justify-content: center;
-  padding: 1.25rem;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
 }
 .slide img {
-  max-width: 100%; max-height: 340px;
-  object-fit: contain; border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 3px;
+}
+
+.slide-caption {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  padding: 8px 1rem;
+  background: #111;
+  letter-spacing: 0.03em;
 }
 
 .slider-controls {
   display: flex; align-items: center; justify-content: center;
-  gap: 10px; padding: 10px 0 12px;
-  background: #0d0d0d;
+  gap: 12px; padding: 10px 0 14px;
+  background: #111;
 }
 .slider-dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: rgba(255,255,255,0.25);
+  width: 8px; height: 8px; border-radius: 50%;
+  background: rgba(255,255,255,0.2);
   border: none; cursor: pointer; padding: 0;
   transition: background 0.2s;
 }
 .slider-dot.active { background: #fff; }
 .slider-btn {
-  background: rgba(255,255,255,0.12);
-  border: none; color: #fff; font-size: 18px;
-  width: 30px; height: 30px; border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff; font-size: 20px;
+  width: 34px; height: 34px; border-radius: 50%;
   cursor: pointer; display: flex; align-items: center; justify-content: center;
   transition: background 0.2s; line-height: 1;
 }
-.slider-btn:hover { background: rgba(255,255,255,0.28); }
+.slider-btn:hover { background: rgba(255,255,255,0.25); }
 
-.slide-caption {
-  font-size: 10px; color: rgba(255,255,255,0.35);
-  text-align: center; padding: 0 1rem 10px;
-  letter-spacing: 0.04em; background: #0d0d0d;
+/* Single image (no slider needed) */
+.single-img {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem;
+}
+.single-img img {
+  width: 100%; height: 100%;
+  object-fit: contain; border-radius: 3px;
+  max-height: 440px;
 }
 
 .solution-content {
-  padding: 2.75rem 3rem;
+  padding: 2.5rem 2.5rem;
   display: flex; flex-direction: column; justify-content: center;
   background: #fff;
+  border-left: 0.5px solid #e8e8e8;
 }
 .solution-tag {
   font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-  text-transform: uppercase; color: #888; margin-bottom: 10px;
+  text-transform: uppercase; color: #aaa; margin-bottom: 10px;
 }
 .solution-title {
-  font-size: 24px; font-weight: 600; color: #111;
+  font-size: 22px; font-weight: 600; color: #111;
   margin-bottom: 10px; line-height: 1.3;
 }
 .solution-tagline {
-  font-size: 14px; color: #666; font-style: italic;
-  margin-bottom: 22px; line-height: 1.6;
+  font-size: 13.5px; color: #666; font-style: italic;
+  margin-bottom: 20px; line-height: 1.6;
   border-left: 3px solid #2348C8; padding-left: 12px;
 }
-.bullet-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 9px 20px; }
+.bullet-list { list-style: none; display: grid; grid-template-columns: 1fr; gap: 8px; }
 .bullet-list li {
   font-size: 13.5px; color: #222; line-height: 1.45;
   display: flex; align-items: flex-start; gap: 8px;
@@ -111,11 +136,10 @@ nav {
 
 @media (max-width: 900px) {
   .solution-row { grid-template-columns: 1fr; }
-  .solution-image { min-height: 300px; }
-  .bullet-list { grid-template-columns: 1fr; }
-  .solution-content { padding: 2rem 1.5rem; }
+  .solution-image { min-height: 320px; }
+  .solution-content { padding: 1.75rem 1.5rem; border-left: none; border-top: 0.5px solid #e8e8e8; }
   nav { padding: 0 1rem; }
-  .nav-links { gap: 1rem; }
+  .nav-links { gap: 1rem; font-size: 13px; }
 }
 </style>
 </head>
@@ -249,17 +273,17 @@ nav {
 <script>
 const state = {};
 const captions = {
-  '1': ['Data Lake & GP2010 Migration Architecture', 'D365FO Environment Design — Golden / Sandbox / DEV Tiers', 'ERP D365FO Go-Live Implementation Flow'],
-  '2': ['D365FO SCM EDI Small Parcel Go-Live Timeline Plan', 'EDI Implementation Flow — CRP & New UAT'],
-  '3': ['Azure DevOps Boards — Shared Queries', 'Azure DevOps Process Rules — BAOAgile Task']
+  '1': ['Data Lake & GP2010 Migration Architecture','D365FO Environment — Golden / Sandbox / DEV Tiers','ERP D365FO Go-Live Implementation Flow'],
+  '2': ['D365FO SCM EDI Small Parcel Go-Live Timeline','EDI Implementation Flow — CRP & New UAT'],
+  '3': ['Azure DevOps Boards — Shared Queries','Azure DevOps Process Rules — BAOAgile Task']
 };
 
 function init(id, total) { state[id] = { cur: 0, total }; }
 
 function updateUI(id) {
   document.getElementById('slides-' + id).style.transform = 'translateX(-' + (state[id].cur * 100) + '%)';
-  const controls = document.getElementById('slider-' + id).parentElement.querySelector('.slider-controls');
-  controls.querySelectorAll('.slider-dot').forEach((d, i) => d.classList.toggle('active', i === state[id].cur));
+  const wrap = document.getElementById('slider-' + id).closest('.solution-image');
+  wrap.querySelectorAll('.slider-dot').forEach((d,i) => d.classList.toggle('active', i === state[id].cur));
   document.getElementById('caption-' + id).textContent = captions[id][state[id].cur];
 }
 
