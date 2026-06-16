@@ -26,7 +26,6 @@ nav {
 .hero-banner h1 { font-size: 30px; font-weight: 600; color: #fff; margin-bottom: 6px; }
 .hero-banner p { font-size: 14px; color: rgba(255,255,255,0.7); letter-spacing: 0.03em; }
 
-/* KEY CHANGE: 55% / 45% split so image panel is much larger */
 .solution-row {
   display: grid;
   grid-template-columns: 55% 45%;
@@ -41,47 +40,28 @@ nav {
   min-height: 480px;
 }
 
-/* Slider fills full panel height */
 .slider { flex: 1; overflow: hidden; position: relative; }
-.slides {
-  display: flex;
-  height: 100%;
-  transition: transform 0.4s ease;
-}
+.slides { display: flex; height: 100%; transition: transform 0.4s ease; }
 .slide {
-  min-width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
   padding: 1.5rem;
 }
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 3px;
-}
+.slide img { width: 100%; height: 100%; object-fit: contain; border-radius: 3px; }
 
 .slide-caption {
-  font-size: 11px;
-  color: rgba(255,255,255,0.4);
-  text-align: center;
-  padding: 8px 1rem;
-  background: #111;
-  letter-spacing: 0.03em;
+  font-size: 11px; color: rgba(255,255,255,0.4);
+  text-align: center; padding: 8px 1rem;
+  background: #111; letter-spacing: 0.03em;
 }
-
 .slider-controls {
   display: flex; align-items: center; justify-content: center;
-  gap: 12px; padding: 10px 0 14px;
-  background: #111;
+  gap: 12px; padding: 10px 0 14px; background: #111;
 }
 .slider-dot {
   width: 8px; height: 8px; border-radius: 50%;
   background: rgba(255,255,255,0.2);
-  border: none; cursor: pointer; padding: 0;
-  transition: background 0.2s;
+  border: none; cursor: pointer; padding: 0; transition: background 0.2s;
 }
 .slider-dot.active { background: #fff; }
 .slider-btn {
@@ -94,22 +74,10 @@ nav {
 }
 .slider-btn:hover { background: rgba(255,255,255,0.25); }
 
-/* Single image (no slider needed) */
-.single-img {
-  flex: 1; display: flex; align-items: center; justify-content: center;
-  padding: 1.5rem;
-}
-.single-img img {
-  width: 100%; height: 100%;
-  object-fit: contain; border-radius: 3px;
-  max-height: 440px;
-}
-
 .solution-content {
-  padding: 2.5rem 2.5rem;
+  padding: 2.5rem;
   display: flex; flex-direction: column; justify-content: center;
-  background: #fff;
-  border-left: 0.5px solid #e8e8e8;
+  background: #fff; border-left: 0.5px solid #e8e8e8;
 }
 .solution-tag {
   font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
@@ -134,10 +102,123 @@ nav {
   background: #2348C8; flex-shrink: 0; margin-top: 5px;
 }
 
+/* ===== LINKEDIN SECTION ===== */
+.linkedin-section {
+  background: #f0f4ff;
+  padding: 3.5rem 2.5rem;
+  border-top: 0.5px solid #e0e6f0;
+}
+.linkedin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.linkedin-title-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.linkedin-icon {
+  width: 44px; height: 44px;
+  background: #0A66C2;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.linkedin-icon svg { width: 24px; height: 24px; fill: #fff; }
+.linkedin-heading { font-size: 22px; font-weight: 600; color: #111; }
+.linkedin-sub { font-size: 13px; color: #666; margin-top: 2px; }
+.linkedin-follow-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #0A66C2; color: #fff;
+  font-size: 14px; font-weight: 500;
+  padding: 10px 20px; border-radius: 24px;
+  text-decoration: none; transition: background 0.2s;
+  white-space: nowrap;
+}
+.linkedin-follow-btn:hover { background: #084fa0; }
+.linkedin-follow-btn svg { width: 16px; height: 16px; fill: #fff; }
+
+/* Post cards grid */
+.linkedin-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+.li-post-card {
+  background: #fff;
+  border: 0.5px solid #dde4f0;
+  border-radius: 10px;
+  padding: 1.25rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+.li-post-card:hover {
+  box-shadow: 0 4px 16px rgba(10,102,194,0.1);
+  border-color: #0A66C2;
+}
+.li-post-meta {
+  display: flex; align-items: center; gap: 10px;
+}
+.li-avatar {
+  width: 36px; height: 36px; border-radius: 6px;
+  background: #2348C8;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; color: #fff;
+  flex-shrink: 0;
+}
+.li-meta-text { flex: 1; }
+.li-company { font-size: 13px; font-weight: 600; color: #111; }
+.li-date { font-size: 11px; color: #999; margin-top: 1px; }
+.li-post-tag {
+  display: inline-block;
+  background: #e8f0fe; color: #2348C8;
+  font-size: 10px; font-weight: 600;
+  padding: 3px 9px; border-radius: 12px;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  align-self: flex-start;
+}
+.li-post-text {
+  font-size: 13.5px; color: #333; line-height: 1.6;
+  flex: 1;
+}
+.li-post-text strong { color: #111; font-weight: 600; }
+.li-read-more {
+  font-size: 12px; color: #0A66C2; font-weight: 500;
+  display: flex; align-items: center; gap: 4px;
+  margin-top: 4px;
+}
+.li-read-more svg { width: 12px; height: 12px; fill: #0A66C2; }
+
+.linkedin-cta {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+.linkedin-view-all {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1.5px solid #0A66C2; color: #0A66C2;
+  font-size: 14px; font-weight: 500;
+  padding: 10px 28px; border-radius: 24px;
+  text-decoration: none; transition: all 0.2s;
+}
+.linkedin-view-all:hover { background: #0A66C2; color: #fff; }
+.linkedin-view-all svg { width: 16px; height: 16px; }
+.linkedin-view-all:hover svg { fill: #fff; }
+.linkedin-view-all svg { fill: #0A66C2; transition: fill 0.2s; }
+
 @media (max-width: 900px) {
   .solution-row { grid-template-columns: 1fr; }
   .solution-image { min-height: 320px; }
   .solution-content { padding: 1.75rem 1.5rem; border-left: none; border-top: 0.5px solid #e8e8e8; }
+  .linkedin-posts { grid-template-columns: 1fr; }
   nav { padding: 0 1rem; }
   .nav-links { gap: 1rem; font-size: 13px; }
 }
@@ -163,7 +244,7 @@ nav {
   <p>Implementation Governance · EDI Program · Architecture Retainer · AI-Ready Design</p>
 </div>
 
-<!-- ROW 1: Implementation Governance — case1, case2, case3 -->
+<!-- ROW 1: Implementation Governance -->
 <div class="solution-row">
   <div class="solution-image">
     <div class="slider" id="slider-1">
@@ -201,7 +282,7 @@ nav {
   </div>
 </div>
 
-<!-- ROW 2: EDI Governance — case5, case7 -->
+<!-- ROW 2: EDI Governance -->
 <div class="solution-row">
   <div class="solution-image">
     <div class="slider" id="slider-2">
@@ -235,7 +316,7 @@ nav {
   </div>
 </div>
 
-<!-- ROW 3: Governance Retainer & AI — case4, case6 -->
+<!-- ROW 3: Governance Retainer & AI -->
 <div class="solution-row">
   <div class="solution-image">
     <div class="slider" id="slider-3">
@@ -267,6 +348,92 @@ nav {
       <li>Copilot Studio &amp; Azure OpenAI</li>
       <li>Intelligent Automation Strategy</li>
     </ul>
+  </div>
+</div>
+
+<!-- ===== LINKEDIN SECTION ===== -->
+<div class="linkedin-section">
+  <div class="linkedin-header">
+    <div class="linkedin-title-group">
+      <div class="linkedin-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="linkedin-heading">JUA Solution on LinkedIn</div>
+        <div class="linkedin-sub">Follow us for insights on D365, EDI, AI governance &amp; enterprise architecture</div>
+      </div>
+    </div>
+    <a href="https://www.linkedin.com/company/jua-solution" target="_blank" rel="noopener" class="linkedin-follow-btn">
+      <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      Follow JUA Solution
+    </a>
+  </div>
+
+  <div class="linkedin-posts">
+
+    <a class="li-post-card" href="https://www.linkedin.com/company/jua-solution" target="_blank" rel="noopener">
+      <div class="li-post-meta">
+        <div class="li-avatar">JS</div>
+        <div class="li-meta-text">
+          <div class="li-company">JUA Solution</div>
+          <div class="li-date">Update this with your post date</div>
+        </div>
+      </div>
+      <span class="li-post-tag">Implementation</span>
+      <p class="li-post-text">
+        Add your latest <strong>LinkedIn post text here</strong>. Paste the first 2–3 sentences from your most recent post about Implementation Governance or D365FO.
+      </p>
+      <div class="li-read-more">
+        Read more
+        <svg viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
+      </div>
+    </a>
+
+    <a class="li-post-card" href="https://www.linkedin.com/company/jua-solution" target="_blank" rel="noopener">
+      <div class="li-post-meta">
+        <div class="li-avatar">JS</div>
+        <div class="li-meta-text">
+          <div class="li-company">JUA Solution</div>
+          <div class="li-date">Update this with your post date</div>
+        </div>
+      </div>
+      <span class="li-post-tag">EDI Governance</span>
+      <p class="li-post-text">
+        Add your latest <strong>LinkedIn post text here</strong>. Paste the first 2–3 sentences from your most recent post about EDI governance or go-live timelines.
+      </p>
+      <div class="li-read-more">
+        Read more
+        <svg viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
+      </div>
+    </a>
+
+    <a class="li-post-card" href="https://www.linkedin.com/company/jua-solution" target="_blank" rel="noopener">
+      <div class="li-post-meta">
+        <div class="li-avatar">JS</div>
+        <div class="li-meta-text">
+          <div class="li-company">JUA Solution</div>
+          <div class="li-date">Update this with your post date</div>
+        </div>
+      </div>
+      <span class="li-post-tag">AI &amp; Architecture</span>
+      <p class="li-post-text">
+        Add your latest <strong>LinkedIn post text here</strong>. Paste the first 2–3 sentences from your most recent post about AI strategy or architecture retainer services.
+      </p>
+      <div class="li-read-more">
+        Read more
+        <svg viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="linkedin-cta">
+    <a href="https://www.linkedin.com/company/jua-solution" target="_blank" rel="noopener" class="linkedin-view-all">
+      <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      View all posts on LinkedIn
+    </a>
   </div>
 </div>
 
