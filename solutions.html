@@ -8,27 +8,31 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #fff; color: #111; }
 
-nav {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 2rem; height: 56px;
-  border-bottom: 0.5px solid #e0e0e0;
-  background: #fff; position: sticky; top: 0; z-index: 100;
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:#fff;border-bottom:1px solid #e5e7eb}
+.nav-brand{font-size:1.05rem;font-weight:800;color:#111827;text-decoration:none;flex-shrink:0;letter-spacing:-0.01em}
+.nav-brand em{font-style:normal;color:#1a73e8}
+.nl{display:flex;align-items:center;list-style:none;gap:0}
+.nl a{text-decoration:none;color:#6b7280;font-size:0.875rem;font-weight:500;padding:0 12px;height:52px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
+.nl a:hover,.nl a.active{color:#1a73e8;border-bottom-color:#1a73e8}
+.nb{background:#1a73e8!important;color:#fff!important;border-radius:4px!important;padding:0 14px!important;height:28px!important;margin-left:8px;border-bottom:none!important;font-weight:600!important;font-size:0.78rem!important}
+.nb:hover{background:#1557b0!important}
+.hb{display:none;background:none;border:none;font-size:1.2rem;cursor:pointer;color:#374151}
+@media(max-width:600px){
+  .nl{display:none;flex-direction:column;position:absolute;top:52px;left:0;right:0;background:#fff;border-bottom:1px solid #e5e7eb;padding:6px 0;z-index:99}
+  .nl.open{display:flex}
+  .nl a{height:40px;padding:0 20px;border-bottom:none;border-left:3px solid transparent}
+  .nl a.active,.nl a:hover{border-left-color:#1a73e8;border-bottom:none}
+  .nb{margin:6px 20px;height:34px!important;border-radius:4px!important}
+  .hb{display:block}
 }
-.nav-logo { font-size: 18px; font-weight: 600; color: #111; text-decoration: none; }
-.nav-logo span { color: #2348C8; }
-.nav-links { display: flex; align-items: center; gap: 1.75rem; }
-.nav-links a { font-size: 14px; color: #444; text-decoration: none; }
-.nav-links a:hover { color: #2348C8; }
-.nav-links a.active { color: #2348C8; border-bottom: 2px solid #2348C8; padding-bottom: 2px; }
-.btn-book { background: #2348C8; color: #fff; font-size: 13px; font-weight: 500; padding: 8px 18px; border-radius: 6px; text-decoration: none; }
 
-.hero-banner { background: #2348C8; padding: 2rem 2.5rem; }
+.hero-banner { background: #2348C8; padding: 2rem 2.5rem; margin-top: 52px; }
 .hero-banner h1 { font-size: 30px; font-weight: 600; color: #fff; margin-bottom: 6px; }
 .hero-banner p { font-size: 14px; color: rgba(255,255,255,0.7); letter-spacing: 0.03em; }
 
 .solution-row {
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 45% 55%;
   border-bottom: 0.5px solid #e8e8e8;
 }
 .solution-row:last-child { border-bottom: none; }
@@ -37,7 +41,7 @@ nav {
   background: #111;
   display: flex;
   flex-direction: column;
-  min-height: 480px;
+  min-height: 340px;
 }
 
 .slider { flex: 1; overflow: hidden; position: relative; }
@@ -45,9 +49,9 @@ nav {
 .slide {
   min-width: 100%; height: 100%;
   display: flex; align-items: center; justify-content: center;
-  padding: 1.5rem;
+  padding: 1rem;
 }
-.slide img { width: 100%; height: 100%; object-fit: contain; border-radius: 3px; }
+.slide img { width: 100%; max-height: 260px; object-fit: contain; border-radius: 3px; }
 
 .slide-caption {
   font-size: 11px; color: rgba(255,255,255,0.4);
@@ -227,16 +231,17 @@ nav {
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">JUA <span>Solution</span></a>
-  <div class="nav-links">
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#" class="active">Solutions</a>
-    <a href="#">Managed Services</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <a href="#" class="btn-book">Book a Meeting</a>
-  </div>
+  <a href="index.html" class="nav-brand">JUA <em>Solution</em></a>
+  <button class="hb" onclick="this.closest('nav').querySelector('.nl').classList.toggle('open')">☰</button>
+  <ul class="nl">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="solutions.html" class="active">Solutions</a></li>
+    <li><a href="managed.html">Managed Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="booking.html" class="nb">Book a Meeting</a></li>
+  </ul>
 </nav>
 
 <div class="hero-banner">
@@ -383,7 +388,7 @@ nav {
       </div>
       <span class="li-post-tag">Implementation</span>
       <p class="li-post-text">
-       <strong>Project Governance - DevOps Process Rule and Billing Query</strong>. D365F&O SCM+EDI implementation methodology and DevOps Governance..
+        Add your latest <strong>LinkedIn post text here</strong>. Paste the first 2–3 sentences from your most recent post about Implementation Governance or D365FO.
       </p>
       <div class="li-read-more">
         Read more
@@ -401,7 +406,7 @@ nav {
       </div>
       <span class="li-post-tag">EDI Governance</span>
       <p class="li-post-text">
-        <strong>EDI implementation with D365F&O </strong>. EDI Governance Program - Result driven EDI Service Program and Governance.
+        Add your latest <strong>LinkedIn post text here</strong>. Paste the first 2–3 sentences from your most recent post about EDI governance or go-live timelines.
       </p>
       <div class="li-read-more">
         Read more
@@ -419,7 +424,7 @@ nav {
       </div>
       <span class="li-post-tag">AI &amp; Architecture</span>
       <p class="li-post-text">
-        <strong> D365F&O, SCM and EDI - GO Live Cut Over Plan </strong>. Post-go live governance and architecture retainer services.
+        Add your latest <strong>LinkedIn post text here</strong>. Paste the first 2–3 sentences from your most recent post about AI strategy or architecture retainer services.
       </p>
       <div class="li-read-more">
         Read more
