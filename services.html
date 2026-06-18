@@ -1,119 +1,161 @@
-<!-- JUA Services Page — Full Detail Section -->
-<!-- Drop this snippet into your services.html where the service cards currently are -->
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Services — JUA Solution LLC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --b:#1a73e8;--bd:#1557b0;--bl:#e8f0fe;--bx:#f6f9ff;
+  --g9:#111827;--g7:#374151;--g5:#6b7280;--g3:#d1d5db;--g1:#f9fafb;
+  --w:#fff;--br:#e5e7eb;
+  --f:'Inter','Segoe UI',system-ui,sans-serif;
+  --r:6px;--sh:0 1px 3px rgba(0,0,0,0.07),0 4px 12px rgba(0,0,0,0.05)
+}
+html,body{height:100%;scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--w);color:var(--g7);overflow-x:hidden;display:flex;flex-direction:column;min-height:100vh}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:var(--w);border-bottom:1px solid var(--br)}
+.logo{display:flex;align-items:center;font-size:1.15rem;font-weight:800;color:var(--g9);text-decoration:none;flex-shrink:0;letter-spacing:-0.01em}
+.logo em{font-style:normal;color:var(--b)}
+.nl{display:flex;align-items:center;list-style:none;gap:0}
+.nl a{text-decoration:none;color:var(--g5);font-size:0.875rem;font-weight:500;padding:0 12px;height:52px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
+.nl a:hover,.nl a.active{color:var(--b);border-bottom-color:var(--b)}
+.nb{background:var(--b)!important;color:#fff!important;border-radius:4px!important;padding:0 14px!important;height:28px!important;margin-left:8px;border-bottom:none!important;font-weight:600!important;font-size:0.78rem!important}
+.nb:hover{background:var(--bd)!important}
+.hb{display:none;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--g7)}
+main{flex:1;margin-top:52px;display:flex;flex-direction:column}
+.ban{background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:24px 32px}
+.ban h1{font-size:1.4rem;font-weight:700;color:#fff;letter-spacing:-0.02em}
+.ban p{font-size:0.82rem;color:rgba(255,255,255,0.72);margin-top:4px}
+.pg{flex:1;padding:32px 32px 40px}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--w);border:1px solid var(--br);border-radius:var(--r);padding:20px;transition:box-shadow .2s,border-color .2s;display:flex;flex-direction:column}
+.card:hover{box-shadow:var(--sh);border-color:var(--b)}
+.ci{width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:14px;color:var(--g5)}
+.card h3{font-size:0.88rem;font-weight:600;color:var(--g9);margin-bottom:6px}
+.card .desc{font-size:0.76rem;color:var(--g5);line-height:1.55;margin-bottom:10px}
+.fl{list-style:none;display:flex;flex-direction:column;gap:4px}
+.fl li{font-size:0.74rem;color:var(--g7);display:flex;gap:6px;line-height:1.45}
+.fl li::before{content:'✓';color:var(--b);font-weight:700;font-size:0.72rem;flex-shrink:0;margin-top:1px}
+footer{background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:20px 32px}
+.ft-inner{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
+footer span{font-size:0.78rem;color:rgba(255,255,255,0.75)}
+footer a{color:rgba(255,255,255,0.9);text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+.ft-brand{font-size:0.92rem;font-weight:700;color:#fff!important}
+.ft-brand em{font-style:normal;color:#93c5fd}
+.ft-sep{color:rgba(255,255,255,0.3);font-size:0.7rem}
+@media(max-width:900px){.sg{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){
+  nav{padding:0 16px}
+  .nl{display:none;flex-direction:column;position:absolute;top:52px;left:0;right:0;background:var(--w);border-bottom:1px solid var(--br);padding:6px 0;z-index:99}
+  .nl.open{display:flex}
+  .nl a{height:40px;padding:0 20px;border-bottom:none;border-left:3px solid transparent}
+  .nl a.active,.nl a:hover{border-left-color:var(--b);border-bottom:none}
+  .nb{margin:6px 20px;height:34px!important;border-radius:4px!important}
+  .hb{display:block}
+  .sg{grid-template-columns:1fr}
+  .ban,.pg{padding-left:16px;padding-right:16px}
+  footer{padding:14px 16px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">JUA <em>Solution</em></a>
+  <ul class="nl">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="solutions.html">Solutions</a></li>
+    <li><a href="managed.html">Managed Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="booking.html" class="nb">Book a Meeting</a></li>
+  </ul>
+  <button class="hb" onclick="document.querySelector('.nl').classList.toggle('open')">&#9776;</button>
+</nav>
+<main>
+<div class="ban"><h1>Services</h1><p>Microsoft ecosystem &middot; EDI &middot; Cloud &middot; AI &middot; Governance</p></div>
+<div class="pg">
+  <div class="sg">
 
-<section style="padding: 3rem 2rem; font-family: inherit; max-width: 1200px; margin: 0 auto;">
-
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
-
-    <!-- D365 Finance & Operations -->
-    <div id="d365" style="background: #fff; border: 1px solid #e8e8e8; border-radius: 16px; padding: 1.75rem 1.5rem;">
-      <i class="ti ti-building-skyscraper" style="font-size: 44px; color: #555; display: block; margin-bottom: 1.25rem;"></i>
-      <p style="font-size: 15px; font-weight: 500; margin: 0 0 6px;">D365 Finance & Operations</p>
-      <p style="font-size: 12px; color: #777; margin: 0 0 1rem; line-height: 1.55;">Full lifecycle — implementation, X++ customization, upgrades, data migration, ISV integrations.</p>
-      <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px;">
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Finance, SCM, Manufacturing, WMS</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Custom X++ & data entities</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>AX / NAV migration & version upgrades</li>
-      </ul>
+    <div class="card" id="d365">
+      <div class="ci"><i class="ti ti-building-skyscraper"></i></div>
+      <h3>D365 Finance &amp; Operations</h3>
+      <p class="desc">Full lifecycle — implementation, X++ customization, upgrades, data migration, ISV integrations.</p>
+      <ul class="fl"><li>Finance, SCM, Manufacturing, WMS</li><li>Custom X++ &amp; data entities</li><li>AX / NAV migration &amp; version upgrades</li></ul>
     </div>
 
-    <!-- EDI TrueCommerce -->
-    <div id="edi" style="background: #fff; border: 1px solid #e8e8e8; border-radius: 16px; padding: 1.75rem 1.5rem;">
-      <i class="ti ti-topology-star-3" style="font-size: 44px; color: #555; display: block; margin-bottom: 1.25rem;"></i>
-      <p style="font-size: 15px; font-weight: 500; margin: 0 0 6px;">EDI — TrueCommerce Foundry</p>
-      <p style="font-size: 12px; color: #777; margin: 0 0 1rem; line-height: 1.55;">End-to-end Foundry configuration, map development, and D365 connector integration.</p>
-      <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px;">
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>850/855/856/810 & custom transactions</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Retail partner compliance</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Error monitoring & exception handling</li>
-      </ul>
+    <div class="card" id="edi">
+      <div class="ci"><i class="ti ti-topology-star-3"></i></div>
+      <h3>EDI — TrueCommerce Foundry</h3>
+      <p class="desc">End-to-end Foundry configuration, map development, and D365 connector integration.</p>
+      <ul class="fl"><li>850/855/856/810 &amp; custom transactions</li><li>Retail partner compliance</li><li>Error monitoring &amp; exception handling</li></ul>
     </div>
 
-    <!-- SPS Commerce -->
-    <div style="background: #fff; border: 1px solid #e8e8e8; border-radius: 16px; padding: 1.75rem 1.5rem;">
-      <i class="ti ti-package" style="font-size: 44px; color: #555; display: block; margin-bottom: 1.25rem;"></i>
-      <p style="font-size: 15px; font-weight: 500; margin: 0 0 6px;">SPS Commerce / Data Mason</p>
-      <p style="font-size: 12px; color: #777; margin: 0 0 1rem; line-height: 1.55;">Full lifecycle SPS Commerce and Data Mason map management.</p>
-      <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px;">
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Data Mason map design & maintenance</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>SPS Fulfillment & chargeback reduction</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>D365 / NetSuite / SAP integration</li>
-      </ul>
+    <div class="card">
+      <div class="ci"><i class="ti ti-package"></i></div>
+      <h3>SPS Commerce / Data Mason</h3>
+      <p class="desc">Full lifecycle SPS Commerce and Data Mason map management.</p>
+      <ul class="fl"><li>Data Mason map design &amp; maintenance</li><li>SPS Fulfillment &amp; chargeback reduction</li><li>D365 / NetSuite / SAP integration</li></ul>
     </div>
 
-    <!-- ERP + EDI Architecture -->
-    <div style="background: #fff; border: 1px solid #e8e8e8; border-radius: 16px; padding: 1.75rem 1.5rem;">
-      <i class="ti ti-vector-triangle" style="font-size: 44px; color: #555; display: block; margin-bottom: 1.25rem;"></i>
-      <p style="font-size: 15px; font-weight: 500; margin: 0 0 6px;">ERP + EDI Solution Architecture</p>
-      <p style="font-size: 12px; color: #777; margin: 0 0 1rem; line-height: 1.55;">Cross-system mapping and validation — ERP, EDI, and supply chain into a coherent data flow.</p>
-      <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px;">
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>End-to-end data flow & field mapping</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Business rule mapping & validation</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Gap analysis & integration blueprints</li>
-      </ul>
+    <div class="card">
+      <div class="ci"><i class="ti ti-vector-triangle"></i></div>
+      <h3>ERP + EDI Solution Architecture</h3>
+      <p class="desc">Cross-system mapping and validation — ERP, EDI, and supply chain into a coherent data flow.</p>
+      <ul class="fl"><li>End-to-end data flow &amp; field mapping</li><li>Business rule mapping &amp; validation</li><li>Gap analysis &amp; integration blueprints</li></ul>
     </div>
 
-    <!-- Microsoft Azure -->
-    <div style="background: #fff; border: 1px solid #e8e8e8; border-radius: 16px; padding: 1.75rem 1.5rem;">
-      <i class="ti ti-cloud-computing" style="font-size: 44px; color: #555; display: block; margin-bottom: 1.25rem;"></i>
-      <p style="font-size: 15px; font-weight: 500; margin: 0 0 6px;">Microsoft Azure</p>
-      <p style="font-size: 12px; color: #777; margin: 0 0 1rem; line-height: 1.55;">Cloud strategy, IaC architecture, and DevOps pipelines for enterprise workloads.</p>
-      <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px;">
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Cloud migration & landing zones</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Bicep / Terraform · Azure DevOps</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Security & compliance posture</li>
-      </ul>
+    <div class="card">
+      <div class="ci"><i class="ti ti-cloud-computing"></i></div>
+      <h3>Microsoft Azure</h3>
+      <p class="desc">Cloud strategy, IaC architecture, and DevOps pipelines for enterprise workloads.</p>
+      <ul class="fl"><li>Cloud migration &amp; landing zones</li><li>Bicep / Terraform &middot; Azure DevOps</li><li>Security &amp; compliance posture</li></ul>
     </div>
 
-    <!-- Power Platform & AI -->
-    <div id="ai" style="background: #fff; border: 1px solid #e8e8e8; border-radius: 16px; padding: 1.75rem 1.5rem;">
-      <i class="ti ti-cpu" style="font-size: 44px; color: #555; display: block; margin-bottom: 1.25rem;"></i>
-      <p style="font-size: 15px; font-weight: 500; margin: 0 0 6px;">Power Platform & AI</p>
-      <p style="font-size: 12px; color: #777; margin: 0 0 1rem; line-height: 1.55;">Low-code apps, automated workflows, and embedded analytics.</p>
-      <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px;">
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Power Apps canvas & model-driven</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Power Automate · Power BI</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Dataverse modeling</li>
-      </ul>
+    <div class="card" id="ai">
+      <div class="ci"><i class="ti ti-cpu"></i></div>
+      <h3>Power Platform &amp; AI</h3>
+      <p class="desc">Low-code apps, automated workflows, and embedded analytics.</p>
+      <ul class="fl"><li>Power Apps canvas &amp; model-driven</li><li>Power Automate &middot; Power BI</li><li>Dataverse modeling</li></ul>
     </div>
 
-    <!-- AI & Intelligent Automation -->
-    <div style="background: #fff; border: 1px solid #e8e8e8; border-radius: 16px; padding: 1.75rem 1.5rem;">
-      <i class="ti ti-brain" style="font-size: 44px; color: #555; display: block; margin-bottom: 1.25rem;"></i>
-      <p style="font-size: 15px; font-weight: 500; margin: 0 0 6px;">AI & Intelligent Automation</p>
-      <p style="font-size: 12px; color: #777; margin: 0 0 1rem; line-height: 1.55;">Azure OpenAI, Copilot Studio, and AI Builder deployments.</p>
-      <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px;">
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Azure OpenAI & Copilot Studio</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>AI Builder & document intelligence</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Custom ML integration</li>
-      </ul>
+    <div class="card">
+      <div class="ci"><i class="ti ti-brain"></i></div>
+      <h3>AI &amp; Intelligent Automation</h3>
+      <p class="desc">Azure OpenAI, Copilot Studio, and AI Builder deployments.</p>
+      <ul class="fl"><li>Azure OpenAI &amp; Copilot Studio</li><li>AI Builder &amp; document intelligence</li><li>Custom ML integration</li></ul>
     </div>
 
-    <!-- SharePoint & M365 -->
-    <div style="background: #fff; border: 1px solid #e8e8e8; border-radius: 16px; padding: 1.75rem 1.5rem;">
-      <i class="ti ti-layout-grid" style="font-size: 44px; color: #555; display: block; margin-bottom: 1.25rem;"></i>
-      <p style="font-size: 15px; font-weight: 500; margin: 0 0 6px;">SharePoint & Microsoft 365</p>
-      <p style="font-size: 12px; color: #777; margin: 0 0 1rem; line-height: 1.55;">Modern intranet, document management, Teams integrations.</p>
-      <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px;">
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Intranet & portal design</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Document retention & governance</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>Teams & M365 integration</li>
-      </ul>
+    <div class="card">
+      <div class="ci"><i class="ti ti-layout-grid"></i></div>
+      <h3>SharePoint &amp; Microsoft 365</h3>
+      <p class="desc">Modern intranet, document management, Teams integrations.</p>
+      <ul class="fl"><li>Intranet &amp; portal design</li><li>Document retention &amp; governance</li><li>Teams &amp; M365 integration</li></ul>
     </div>
 
-    <!-- Help Desk & Governance -->
-    <div style="background: #fff; border: 1px solid #e8e8e8; border-radius: 16px; padding: 1.75rem 1.5rem;">
-      <i class="ti ti-shield-check" style="font-size: 44px; color: #555; display: block; margin-bottom: 1.25rem;"></i>
-      <p style="font-size: 15px; font-weight: 500; margin: 0 0 6px;">Help Desk, DevOps PMO & IT Governance</p>
-      <p style="font-size: 12px; color: #777; margin: 0 0 1rem; line-height: 1.55;">Enterprise ticketing combined with PMO structure, controls, and audit readiness.</p>
-      <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px;">
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>ServiceNow / Zendesk / Power Platform ITSM</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>SLA definition, ticketing & knowledge base</li>
-        <li style="font-size: 12px; color: #777; display: flex; align-items: flex-start; gap: 6px;"><i class="ti ti-check" style="font-size: 13px; margin-top: 1px; flex-shrink: 0;"></i>RACI, risk registers, policy documentation</li>
-      </ul>
+    <div class="card">
+      <div class="ci"><i class="ti ti-shield-check"></i></div>
+      <h3>Help Desk, DevOps PMO &amp; IT Governance</h3>
+      <p class="desc">Enterprise ticketing combined with PMO structure, controls, and audit readiness.</p>
+      <ul class="fl"><li>ServiceNow / Zendesk / Power Platform ITSM</li><li>SLA definition, ticketing &amp; knowledge base</li><li>RACI, risk registers, policy documentation</li></ul>
     </div>
 
   </div>
-</section>
+</div>
+</main>
+<footer>
+  <div class="ft-inner">
+    <span class="ft-brand">JUA <em>Solution</em> LLC</span>
+    <span class="ft-sep">|</span>
+    <span>&copy; 2026 &middot; All rights reserved</span>
+    <span class="ft-sep">|</span>
+    <span><a href="mailto:info@juasolution.com">info@juasolution.com</a></span>
+  </div>
+</footer>
+</body>
+</html>
