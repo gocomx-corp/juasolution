@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="390 30 420 420">
+  <rect width="1200" height="480" fill="none"/>
+  <!-- hub icon only — fills the favicon square -->
+  <g stroke="#0B63CE" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="600" cy="210" r="44" fill="#ffffff"/>
+    <circle cx="600" cy="210" r="13" fill="#0B63CE" stroke="none"/>
+    <line x1="568" y1="178" x2="480" y2="90"/>
+    <line x1="632" y1="178" x2="720" y2="90"/>
+    <line x1="568" y1="242" x2="480" y2="330"/>
+    <line x1="632" y1="242" x2="720" y2="330"/>
+    <rect x="435" y="45" width="70" height="70" rx="10" fill="#0B63CE"/>
+    <rect x="695" y="45" width="70" height="70" rx="10" fill="#0B63CE"/>
+    <rect x="435" y="305" width="70" height="70" rx="10" fill="#0B63CE"/>
+    <rect x="695" y="305" width="70" height="70" rx="10" fill="#0B63CE"/>
+  </g>
+  <path d="M420 210H510" stroke="#55A7FF" stroke-width="10" stroke-linecap="round"/>
+  <path d="M690 210H780" stroke="#55A7FF" stroke-width="10" stroke-linecap="round"/>
+  <path d="M600 80V140" stroke="#55A7FF" stroke-width="10" stroke-linecap="round"/>
+  <path d="M600 280V340" stroke="#55A7FF" stroke-width="10" stroke-linecap="round"/>
+</svg>
