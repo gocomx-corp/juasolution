@@ -21,7 +21,7 @@ body{font-family:var(--f);background:var(--w);color:var(--g7);overflow-x:hidden;
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:var(--w);border-bottom:1px solid var(--br)}
-.nav-brand{font-size:1.05rem;font-weight:800;color:var(--b);text-decoration:none;flex-shrink:0;letter-spacing:-0.01em}
+.nav-brand{display:flex;align-items:center;gap:8px;font-size:1.05rem;font-weight:800;color:var(--b);text-decoration:none;flex-shrink:0;letter-spacing:-0.01em}
 .nav-brand em{font-style:normal;color:var(--g9)}
 .nl{display:flex;align-items:center;list-style:none;gap:0}
 .nl a{text-decoration:none;color:var(--g5);font-size:0.875rem;font-weight:500;padding:0 12px;height:52px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
@@ -106,7 +106,7 @@ footer a:hover{color:#fff;text-decoration:underline}
 </head>
 <body>
 <nav>
-  <a href="index.html" class="nav-brand">JUA <em>Solution</em></a>
+  <a href="index.html" class="nav-brand"><img src="favicon.svg" width="22" height="22" alt="" style="flex-shrink:0">JUA <em>Solution</em></a>
   <ul class="nl">
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="services.html">Services</a></li>
@@ -166,54 +166,102 @@ footer a:hover{color:#fff;text-decoration:underline}
 <div class="pg">
   <div class="g3">
     <a href="services.html" class="htile">
-      <div class="htile-row"><div class="ti-icon">
-        <!-- D365: building/grid outline -->
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
-      </div><strong>D365 Finance &amp; Operations</strong></div>
+      <div class="htile-row">
+        <div style="width:34px;height:34px;flex-shrink:0;display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
+          <div style="background:#1a73e8;border-radius:2px"></div><div style="background:#1a73e8;border-radius:2px"></div><div style="background:#1a73e8;border-radius:2px"></div>
+          <div style="background:#1a73e8;border-radius:2px"></div><div style="background:#fff;border:1px solid #1a73e8;border-radius:2px"></div><div style="background:#1a73e8;border-radius:2px"></div>
+          <div style="background:#1a73e8;border-radius:2px"></div><div style="background:#1a73e8;border-radius:2px"></div><div style="background:#1a73e8;border-radius:2px"></div>
+        </div>
+        <div><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:1px">ERP</div><strong style="color:#1a73e8">D365 Finance &amp; Operations</strong></div>
+      </div>
       <span>Implementation · Upgrade · Support</span>
     </a>
     <a href="services.html" class="htile">
-      <div class="htile-row"><div class="ti-icon"><i class="ti ti-topology-star-3"></i></div><strong>TrueCommerce Foundry &amp; SPS Commerce</strong></div>
+      <div class="htile-row">
+        <div style="width:34px;height:34px;flex-shrink:0;display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
+          <div style="background:#0891b2;border-radius:2px"></div><div style="background:#0891b2;border-radius:2px"></div><div style="background:#0891b2;border-radius:2px"></div>
+          <div style="background:#0891b2;border-radius:2px"></div><div style="background:#fff;border:1px solid #0891b2;border-radius:2px"></div><div style="background:#0891b2;border-radius:2px"></div>
+          <div style="background:#0891b2;border-radius:2px"></div><div style="background:#0891b2;border-radius:2px"></div><div style="background:#0891b2;border-radius:2px"></div>
+        </div>
+        <div><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:1px">EDI</div><strong style="color:#0891b2">TrueCommerce Foundry &amp; SPS Commerce</strong></div>
+      </div>
       <span>EDI Platforms · Trading Partners</span>
     </a>
     <a href="solutions.html" class="htile">
-      <div class="htile-row"><div class="ti-icon"><i class="ti ti-vector-triangle"></i></div><strong>ERP + EDI Architecture</strong></div>
+      <div class="htile-row">
+        <div style="width:34px;height:34px;flex-shrink:0;display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
+          <div style="background:#7c3aed;border-radius:2px"></div><div style="background:#7c3aed;border-radius:2px"></div><div style="background:#7c3aed;border-radius:2px"></div>
+          <div style="background:#7c3aed;border-radius:2px"></div><div style="background:#fff;border:1px solid #7c3aed;border-radius:2px"></div><div style="background:#7c3aed;border-radius:2px"></div>
+          <div style="background:#7c3aed;border-radius:2px"></div><div style="background:#7c3aed;border-radius:2px"></div><div style="background:#7c3aed;border-radius:2px"></div>
+        </div>
+        <div><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:1px">Architecture</div><strong style="color:#7c3aed">ERP + EDI Architecture</strong></div>
+      </div>
       <span>Cross-system mapping · Validation</span>
     </a>
     <a href="services.html" class="htile">
-      <div class="htile-row"><div class="ti-icon">
-        <!-- Azure: triangle "A" outline -->
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><polygon points="12,3 21,20 3,20"/><line x1="7.5" y1="14" x2="14.5" y2="14"/></svg>
-      </div><strong>Microsoft Azure</strong></div>
+      <div class="htile-row">
+        <div style="width:34px;height:34px;flex-shrink:0;display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
+          <div style="background:#b45309;border-radius:2px"></div><div style="background:#b45309;border-radius:2px"></div><div style="background:#b45309;border-radius:2px"></div>
+          <div style="background:#b45309;border-radius:2px"></div><div style="background:#fff;border:1px solid #b45309;border-radius:2px"></div><div style="background:#b45309;border-radius:2px"></div>
+          <div style="background:#b45309;border-radius:2px"></div><div style="background:#b45309;border-radius:2px"></div><div style="background:#b45309;border-radius:2px"></div>
+        </div>
+        <div><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:1px">Cloud</div><strong style="color:#b45309">Microsoft Azure</strong></div>
+      </div>
       <span>Cloud · DevOps · Infrastructure</span>
     </a>
     <a href="services.html" class="htile">
-      <div class="htile-row"><div class="ti-icon">
-        <!-- Power Platform: hexagon outline -->
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7"/><polyline points="12,2 12,22"/><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
-      </div><strong>Power Platform &amp; AI</strong></div>
+      <div class="htile-row">
+        <div style="width:34px;height:34px;flex-shrink:0;display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
+          <div style="background:#059669;border-radius:2px"></div><div style="background:#059669;border-radius:2px"></div><div style="background:#059669;border-radius:2px"></div>
+          <div style="background:#059669;border-radius:2px"></div><div style="background:#fff;border:1px solid #059669;border-radius:2px"></div><div style="background:#059669;border-radius:2px"></div>
+          <div style="background:#059669;border-radius:2px"></div><div style="background:#059669;border-radius:2px"></div><div style="background:#059669;border-radius:2px"></div>
+        </div>
+        <div><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:1px">Low-Code</div><strong style="color:#059669">Power Platform &amp; AI</strong></div>
+      </div>
       <span>Power Apps · Copilot · Automation</span>
     </a>
     <a href="managed.html" class="htile">
-      <div class="htile-row"><div class="ti-icon"><i class="ti ti-shield-check"></i></div><strong>Managed Services</strong></div>
+      <div class="htile-row">
+        <div style="width:34px;height:34px;flex-shrink:0;display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
+          <div style="background:#4338ca;border-radius:2px"></div><div style="background:#4338ca;border-radius:2px"></div><div style="background:#4338ca;border-radius:2px"></div>
+          <div style="background:#4338ca;border-radius:2px"></div><div style="background:#fff;border:1px solid #4338ca;border-radius:2px"></div><div style="background:#4338ca;border-radius:2px"></div>
+          <div style="background:#4338ca;border-radius:2px"></div><div style="background:#4338ca;border-radius:2px"></div><div style="background:#4338ca;border-radius:2px"></div>
+        </div>
+        <div><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:1px">Managed</div><strong style="color:#4338ca">Managed Services</strong></div>
+      </div>
       <span>24/7 support · Monitoring</span>
     </a>
     <a href="services.html" class="htile">
-      <div class="htile-row"><div class="ti-icon">
-        <!-- SharePoint: overlapping circles outline -->
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="10" r="5"/><circle cx="16" cy="14" r="5"/></svg>
-      </div><strong>SharePoint &amp; M365</strong></div>
+      <div class="htile-row">
+        <div style="width:34px;height:34px;flex-shrink:0;display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
+          <div style="background:#0284c7;border-radius:2px"></div><div style="background:#0284c7;border-radius:2px"></div><div style="background:#0284c7;border-radius:2px"></div>
+          <div style="background:#0284c7;border-radius:2px"></div><div style="background:#fff;border:1px solid #0284c7;border-radius:2px"></div><div style="background:#0284c7;border-radius:2px"></div>
+          <div style="background:#0284c7;border-radius:2px"></div><div style="background:#0284c7;border-radius:2px"></div><div style="background:#0284c7;border-radius:2px"></div>
+        </div>
+        <div><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:1px">Collaboration</div><strong style="color:#0284c7">SharePoint &amp; M365</strong></div>
+      </div>
       <span>Intranet · Teams · Governance</span>
     </a>
     <a href="services.html" class="htile">
-      <div class="htile-row"><div class="ti-icon"><i class="ti ti-ticket"></i></div><strong>Ticket &amp; Help Desk</strong></div>
+      <div class="htile-row">
+        <div style="width:34px;height:34px;flex-shrink:0;display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
+          <div style="background:#dc2626;border-radius:2px"></div><div style="background:#dc2626;border-radius:2px"></div><div style="background:#dc2626;border-radius:2px"></div>
+          <div style="background:#dc2626;border-radius:2px"></div><div style="background:#fff;border:1px solid #dc2626;border-radius:2px"></div><div style="background:#dc2626;border-radius:2px"></div>
+          <div style="background:#dc2626;border-radius:2px"></div><div style="background:#dc2626;border-radius:2px"></div><div style="background:#dc2626;border-radius:2px"></div>
+        </div>
+        <div><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:1px">Support</div><strong style="color:#dc2626">Ticket &amp; Help Desk</strong></div>
+      </div>
       <span>ServiceNow · ITSM · SLA</span>
     </a>
     <a href="services.html" class="htile">
-      <div class="htile-row"><div class="ti-icon">
-        <!-- Azure DevOps: pipeline/infinity outline -->
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M4 8 L4 5 L12 2 L20 5 L20 9 L12 12 Z"/><path d="M4 8 L12 12 L12 20 L4 17 Z"/><path d="M12 12 L20 9 L20 17 L12 20 Z"/></svg>
-      </div><strong>DevOps PMO &amp; Governance</strong></div>
+      <div class="htile-row">
+        <div style="width:34px;height:34px;flex-shrink:0;display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
+          <div style="background:#475569;border-radius:2px"></div><div style="background:#475569;border-radius:2px"></div><div style="background:#475569;border-radius:2px"></div>
+          <div style="background:#475569;border-radius:2px"></div><div style="background:#fff;border:1px solid #475569;border-radius:2px"></div><div style="background:#475569;border-radius:2px"></div>
+          <div style="background:#475569;border-radius:2px"></div><div style="background:#475569;border-radius:2px"></div><div style="background:#475569;border-radius:2px"></div>
+        </div>
+        <div><div style="font-size:0.62rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:1px">Governance</div><strong style="color:#475569">DevOps PMO &amp; Governance</strong></div>
+      </div>
       <span>Compliance · Audit readiness</span>
     </a>
   </div>
@@ -253,3 +301,4 @@ footer a:hover{color:#fff;text-decoration:underline}
 </footer>
 </body>
 </html>
+

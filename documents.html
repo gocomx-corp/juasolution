@@ -20,7 +20,7 @@ body{font-family:var(--f);background:var(--w);color:var(--g7);overflow-x:hidden;
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:var(--w);border-bottom:1px solid var(--br)}
-.nav-brand{font-size:1.05rem;font-weight:800;color:var(--b);text-decoration:none;flex-shrink:0;letter-spacing:-0.01em}
+.nav-brand{display:flex;align-items:center;gap:8px;font-size:1.05rem;font-weight:800;color:var(--b);text-decoration:none;flex-shrink:0;letter-spacing:-0.01em}
 .nav-brand em{font-style:normal;color:var(--g9)}
 .lm{width:24px;height:24px;background:var(--b);border-radius:2px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;padding:4px}
 .lm span{background:#fff;border-radius:1px}
@@ -176,9 +176,19 @@ footer a:hover{text-decoration:underline}
 </div>
 </main>
 <footer>
-  <span>© 2026 JUA Solution LLC</span>
-  <span><a href="mailto:info@juasolution.com">info@juasolution.com</a></span>
-  <span><a href="https://juasolution.com">juasolution.com</a></span>
+  <div class="ft-inner">
+    <span class="ft-brand">JUA <em>Solution</em> LLC</span>
+    <span class="ft-sep">|</span>
+    <span>© 2026 · All rights reserved</span>
+    <span class="ft-sep">|</span>
+    <span><a href="mailto:info@juasolution.com">info@juasolution.com</a></span>
+    <span class="ft-sep">|</span>
+    <span><i class="ti ti-map-pin" style="font-size:13px;vertical-align:-1px;margin-right:3px"></i> Irvine, CA, U.S.A</span>
+    <span class="ft-sep">|</span>
+    <span><i class="ti ti-clock" style="font-size:13px;vertical-align:-1px;margin-right:3px"></i> Mon – Fri, 5:00 AM – 5:00 PM PST</span>
+  </div>
 </footer>
 </body>
 </html>
+
+
