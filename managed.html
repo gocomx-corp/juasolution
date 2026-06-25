@@ -33,33 +33,33 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;ali
 main{flex:1;margin-top:52px;display:flex;flex-direction:column}
 
 /* BANNER — slim */
-.ban{background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:24px 32px;display:flex;align-items:center;justify-content:space-between}
-.ban h1{font-size:1.4rem;font-weight:700;color:#fff;letter-spacing:-0.02em}
+.ban{background:linear-gradient(105deg,#1a73e8,#1d4ed8);padding:12px 32px;display:flex;align-items:center;justify-content:space-between}
+.ban h1{font-size:1.1rem;font-weight:700;color:#fff;letter-spacing:-0.02em}
 .ban h1 em{font-style:normal;color:#93c5fd}
-.ban p{font-size:0.82rem;color:rgba(255,255,255,0.72);margin-top:4px}
+.ban p{font-size:0.76rem;color:rgba(255,255,255,0.72);margin-top:2px}
 
 /* CONTENT AREA — full width */
-.pg{flex:1;padding:32px 32px 40px}
+.pg{flex:1;padding:18px 32px 20px}
 
 /* GRID */
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.g32{display:grid;grid-template-columns:2fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.g32{display:grid;grid-template-columns:2fr 1fr;gap:10px}
 
 /* CARD */
-.card{background:var(--w);border:1px solid var(--br);border-radius:var(--r);padding:20px;transition:box-shadow .2s,border-color .2s}
+.card{background:var(--w);border:1px solid var(--br);border-radius:var(--r);padding:12px 16px;transition:box-shadow .2s,border-color .2s}
 .card:hover{box-shadow:var(--sh);border-color:var(--b)}
-.ci{width:34px;height:34px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:1rem;margin-bottom:10px}
-.card h3{font-size:0.85rem;font-weight:600;color:var(--g9);margin-bottom:5px}
-.card p{font-size:0.78rem;color:var(--g5);line-height:1.55}
+.ci{width:34px;height:34px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:1rem;margin-bottom:6px}
+.card h3{font-size:0.85rem;font-weight:600;color:var(--g9);margin-bottom:4px}
+.card p{font-size:0.76rem;color:var(--g5);line-height:1.45}
 .c-blue{background:#dbeafe}.c-teal{background:#ccfbf1}.c-amber{background:#fef9c3}
 .c-purple{background:#ede9fe}.c-cyan{background:#cffafe}.c-green{background:#dcfce7}
 .c-red{background:#fee2e2}.c-navy{background:#dbeafe}.c-indigo{background:#e0e7ff}
 
 /* FEAT LIST */
-.fl{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:4px}
-.fl li{font-size:0.75rem;color:var(--g7);display:flex;gap:6px;line-height:1.45}
+.fl{list-style:none;margin-top:5px;display:flex;flex-direction:column;gap:2px}
+.fl li{font-size:0.72rem;color:var(--g7);display:flex;gap:6px;line-height:1.35}
 .fl li::before{content:'✓';color:var(--b);font-weight:700;font-size:0.72rem;flex-shrink:0;margin-top:1px}
 
 /* PILL */
@@ -123,10 +123,10 @@ footer a:hover{color:#fff;text-decoration:underline}
 
 <div class="ban"><div><h1>Managed Services</h1><p>Monthly retainer programs · 2026 Edition · 3-month minimum term</p></div></div>
 <div class="pg">
-  <div class="g3" style="margin-bottom:28px">
+  <div class="g3" style="margin-bottom:10px">
 
     <div class="card" style="border-top:3px solid #6b7280">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
         <div style="width:36px;height:36px;border-radius:8px;background:#f3f4f6;display:flex;align-items:center;justify-content:center">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
@@ -146,7 +146,7 @@ footer a:hover{color:#fff;text-decoration:underline}
 
     <div class="card" style="border-top:3px solid #1a73e8;box-shadow:0 4px 20px rgba(26,115,232,0.1);position:relative">
       <div style="position:absolute;top:-1px;right:16px;background:#1a73e8;color:#fff;font-size:0.62rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:2px 10px;border-radius:0 0 5px 5px">Most Popular</div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
         <div style="width:36px;height:36px;border-radius:8px;background:#dbeafe;display:flex;align-items:center;justify-content:center">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
         </div>
@@ -166,7 +166,7 @@ footer a:hover{color:#fff;text-decoration:underline}
     </div>
 
     <div class="card" style="border-top:3px solid #7c3aed">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
         <div style="width:36px;height:36px;border-radius:8px;background:#ede9fe;display:flex;align-items:center;justify-content:center">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
         </div>
@@ -187,8 +187,6 @@ footer a:hover{color:#fff;text-decoration:underline}
     </div>
 
   </div>
-
-  <hr class="dv">
 
   <div class="g3">
     <div class="card" style="display:flex;align-items:center;justify-content:center;background:#f6f9ff;padding:20px">
