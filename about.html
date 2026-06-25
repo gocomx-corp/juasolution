@@ -124,46 +124,58 @@ footer a:hover{color:#fff;text-decoration:underline}
 
 <div class="ban"><div><h1>About</h1><p>Practitioners, not generalists — specialized in Microsoft &amp; EDI</p></div></div>
 <div class="pg">
-  <div class="g32" style="margin-bottom:28px;align-items:start">
-    <div>
-      <div class="g2" style="margin-bottom:20px">
-        <div class="card" style="padding:16px 18px">
-          <div><div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b7280;margin-bottom:3px">Expertise</div><h3 style="font-size:1rem;font-weight:600;color:#1a73e8;font-family:'Segoe UI',system-ui,sans-serif;margin-bottom:4px">Deep Specialists</h3><p style="font-size:0.85rem;color:#6b7280;line-height:1.5">D365, Azure, Power Platform, and EDI — people who have actually delivered these systems.</p></div>
-        </div>
-        <div class="card" style="padding:16px 18px">
-          <div><div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b7280;margin-bottom:3px">Delivery</div><h3 style="font-size:1rem;font-weight:600;color:#1a73e8;font-family:'Segoe UI',system-ui,sans-serif;margin-bottom:4px">End-to-End Ownership</h3><p style="font-size:0.85rem;color:#6b7280;line-height:1.5">One partner. Full accountability from architecture through go-live to managed support.</p></div>
-        </div>
-        <div class="card" style="padding:16px 18px">
-          <div><div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b7280;margin-bottom:3px">Transparency</div><h3 style="font-size:1rem;font-weight:600;color:#1a73e8;font-family:'Segoe UI',system-ui,sans-serif;margin-bottom:4px">No Surprises</h3><p style="font-size:0.85rem;color:#6b7280;line-height:1.5">Documented decisions, clear change requests, weekly updates. You always know where things stand.</p></div>
-        </div>
-        <div class="card" style="padding:16px 18px">
-          <div><div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b7280;margin-bottom:3px">Governance</div><h3 style="font-size:1rem;font-weight:600;color:#1a73e8;font-family:'Segoe UI',system-ui,sans-serif;margin-bottom:4px">PMO Discipline</h3><p style="font-size:0.85rem;color:#6b7280;line-height:1.5">Defined milestones, risk registers, audit-ready deliverables from day one.</p></div>
-        </div>
-      </div>
-      <p style="font-size:0.88rem;color:var(--g7);line-height:1.7;margin-bottom:6px">Founded on one principle: consulting led by people who have <em>actually built</em> the systems they advise on — D365, Azure, EDI, and beyond.</p>
 
-      <div style="margin-top:20px;border-top:1px solid #e5e7eb;padding-top:16px">
-        <div style="font-size:1.4rem;font-weight:400;color:#111827;font-family:'Segoe UI',system-ui,sans-serif;letter-spacing:-0.01em;margin-bottom:12px">Global Delivery Team</div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
-          <div style="text-align:center;padding:20px 10px;background:#fff;border:1px solid #e5e7eb;border-top:4px solid #1a73e8;border-radius:8px">
-            <div style="font-size:1.5rem;font-weight:400;color:#111827;font-family:'Segoe UI',system-ui,sans-serif;letter-spacing:-0.01em;line-height:1">China</div>
-            <div style="font-size:0.78rem;color:#6b7280;margin-top:4px">Offshore Team</div>
-          </div>
-          <div style="text-align:center;padding:20px 10px;background:#fff;border:1px solid #e5e7eb;border-top:4px solid #1a73e8;border-radius:8px">
-            <div style="font-size:1.5rem;font-weight:400;color:#111827;font-family:'Segoe UI',system-ui,sans-serif;letter-spacing:-0.01em;line-height:1">Philippines</div>
-            <div style="font-size:0.78rem;color:#6b7280;margin-top:4px">Offshore Team</div>
-          </div>
-          <div style="text-align:center;padding:20px 10px;background:#fff;border:1px solid #e5e7eb;border-top:4px solid #1a73e8;border-radius:8px">
-            <div style="font-size:1.5rem;font-weight:400;color:#111827;font-family:'Segoe UI',system-ui,sans-serif;letter-spacing:-0.01em;line-height:1">Vietnam</div>
-            <div style="font-size:0.78rem;color:#6b7280;margin-top:4px">Offshore Team</div>
-          </div>
-          <div style="text-align:center;padding:20px 10px;background:#fff;border:1px solid #e5e7eb;border-top:4px solid #1a73e8;border-radius:8px">
-            <div style="font-size:1.5rem;font-weight:400;color:#111827;font-family:'Segoe UI',system-ui,sans-serif;letter-spacing:-0.01em;line-height:1">India</div>
-            <div style="font-size:0.78rem;color:#6b7280;margin-top:4px">Offshore Team</div>
-          </div>
+  <!-- OUTER: left (Who We Are) + right (top 2 panels + bottom delivery) -->
+  <div style="display:grid;grid-template-columns:1fr 2fr;gap:14px;align-items:start;margin-bottom:14px">
+
+    <!-- LEFT: Who We Are (full height) -->
+    <div class="card" style="padding:20px">
+      <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b7280;margin-bottom:12px">Who We Are</div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:12px">
+          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b7280;margin-bottom:3px">Expertise</div>
+          <div style="font-size:0.92rem;font-weight:600;color:#1a73e8;font-family:'Segoe UI',system-ui,sans-serif;margin-bottom:3px">Deep Specialists</div>
+          <p style="font-size:0.85rem;color:#6b7280;line-height:1.5">D365, Azure, Power Platform, and EDI — people who have actually delivered these systems.</p>
+        </div>
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:12px">
+          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b7280;margin-bottom:3px">Delivery</div>
+          <div style="font-size:0.92rem;font-weight:600;color:#1a73e8;font-family:'Segoe UI',system-ui,sans-serif;margin-bottom:3px">End-to-End Ownership</div>
+          <p style="font-size:0.85rem;color:#6b7280;line-height:1.5">One partner. Full accountability from architecture through go-live to managed support.</p>
+        </div>
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:12px">
+          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b7280;margin-bottom:3px">Transparency</div>
+          <div style="font-size:0.92rem;font-weight:600;color:#1a73e8;font-family:'Segoe UI',system-ui,sans-serif;margin-bottom:3px">No Surprises</div>
+          <p style="font-size:0.85rem;color:#6b7280;line-height:1.5">Documented decisions, clear change requests, weekly updates. You always know where things stand.</p>
+        </div>
+        <div>
+          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b7280;margin-bottom:3px">Governance</div>
+          <div style="font-size:0.92rem;font-weight:600;color:#1a73e8;font-family:'Segoe UI',system-ui,sans-serif;margin-bottom:3px">PMO Discipline</div>
+          <p style="font-size:0.85rem;color:#6b7280;line-height:1.5">Defined milestones, risk registers, audit-ready deliverables from day one.</p>
         </div>
       </div>
     </div>
+
+    <!-- RIGHT: stacked rows -->
+    <div style="display:flex;flex-direction:column;gap:14px">
+
+      <!-- TOP ROW: Principles + Car side by side, equal height -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch">
+
+        <!-- Principles -->
+        <div class="card" style="padding:20px">
+          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b7280;margin-bottom:12px">Our Values</div>
+          <div style="font-size:1rem;font-weight:600;color:#1a73e8;font-family:'Segoe UI',system-ui,sans-serif;margin-bottom:16px">The JUA Principles</div>
+          <p style="font-size:0.85rem;color:var(--g7);line-height:1.7;margin-bottom:16px">Founded on one principle: consulting led by people who have <em>actually built</em> the systems they advise on — D365, Azure, EDI, and beyond.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+            <li style="display:flex;gap:10px;align-items:baseline;font-size:0.88rem;color:var(--g7)"><span style="color:#1a73e8;font-weight:700;flex-shrink:0">·</span>Fairness over politics.</li>
+            <li style="display:flex;gap:10px;align-items:baseline;font-size:0.88rem;color:var(--g7)"><span style="color:#1a73e8;font-weight:700;flex-shrink:0">·</span>Consistency over convenience.</li>
+            <li style="display:flex;gap:10px;align-items:baseline;font-size:0.88rem;color:var(--g7)"><span style="color:#1a73e8;font-weight:700;flex-shrink:0">·</span>Governance over chaos.</li>
+            <li style="display:flex;gap:10px;align-items:baseline;font-size:0.88rem;color:var(--g7)"><span style="color:#1a73e8;font-weight:700;flex-shrink:0">·</span>Delivery over meetings.</li>
+            <li style="display:flex;gap:10px;align-items:baseline;font-size:0.88rem;color:var(--g7)"><span style="color:#1a73e8;font-weight:700;flex-shrink:0">·</span>Professional trust over personal dependence.</li>
+          </ul>
+        </div>
+
+        <!-- Car SVG -->
     <div style="background:var(--g1);border:1px solid var(--br);border-radius:var(--r);padding:16px">
 <svg width="100%" viewBox="0 0 680 440" style="display:block" role="img" aria-label="Illustration comparing a correctly assembled car to the same parts left unassembled with no plan">
 <defs>
@@ -285,8 +297,37 @@ footer a:hover{color:#fff;text-decoration:underline}
 
     <p style="font-size:1.05rem;font-weight:600;color:var(--g9);letter-spacing:-0.01em;text-align:center;margin-top:14px;font-family:'Segoe UI',system-ui,sans-serif">Resources are not a solution</p>
     <p style="font-size:0.82rem;color:var(--g5);margin-top:4px;text-align:center">Architecture governance is what turns parts into a working system</p>
-    </div>
-  </div>
+    </div><!-- end car panel -->
+
+      </div><!-- end top 2-col row -->
+
+      <!-- BOTTOM: Global Delivery Team spanning full right width -->
+      <div class="card" style="padding:20px">
+        <div style="font-size:1rem;font-weight:600;color:#1a73e8;font-family:'Segoe UI',system-ui,sans-serif;margin-bottom:14px">Global Delivery Team</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+          <div style="text-align:center;padding:20px 10px;background:#f9fafb;border:1px solid #e5e7eb;border-top:4px solid #1a73e8;border-radius:8px">
+            <div style="font-size:1.3rem;font-weight:600;color:#111827;font-family:'Segoe UI',system-ui,sans-serif;line-height:1">China</div>
+            <div style="font-size:0.82rem;color:#6b7280;margin-top:4px">Offshore Team</div>
+          </div>
+          <div style="text-align:center;padding:20px 10px;background:#f9fafb;border:1px solid #e5e7eb;border-top:4px solid #1a73e8;border-radius:8px">
+            <div style="font-size:1.3rem;font-weight:600;color:#111827;font-family:'Segoe UI',system-ui,sans-serif;line-height:1">Philippines</div>
+            <div style="font-size:0.82rem;color:#6b7280;margin-top:4px">Offshore Team</div>
+          </div>
+          <div style="text-align:center;padding:20px 10px;background:#f9fafb;border:1px solid #e5e7eb;border-top:4px solid #1a73e8;border-radius:8px">
+            <div style="font-size:1.3rem;font-weight:600;color:#111827;font-family:'Segoe UI',system-ui,sans-serif;line-height:1">Vietnam</div>
+            <div style="font-size:0.82rem;color:#6b7280;margin-top:4px">Offshore Team</div>
+          </div>
+          <div style="text-align:center;padding:20px 10px;background:#f9fafb;border:1px solid #e5e7eb;border-top:4px solid #1a73e8;border-radius:8px">
+            <div style="font-size:1.3rem;font-weight:600;color:#111827;font-family:'Segoe UI',system-ui,sans-serif;line-height:1">India</div>
+            <div style="font-size:0.82rem;color:#6b7280;margin-top:4px">Offshore Team</div>
+          </div>
+        </div>
+      </div><!-- end delivery -->
+
+    </div><!-- end right column -->
+
+  </div><!-- end outer grid -->
+
 </div>
 </main>
 <footer>
