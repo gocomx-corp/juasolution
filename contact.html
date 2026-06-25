@@ -140,8 +140,8 @@ textarea.fi{resize:vertical}
 <main>
 
 <div class="ban"><div><h1>Contact &amp; Documents</h1><p>Message us · Legal documents · Request access</p></div></div>
-<div class="pg" style="padding-top:20px;padding-bottom:20px">
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;min-height:600px">
+<div class="pg" style="padding-top:16px;padding-bottom:16px;flex:1;display:flex;flex-direction:column">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;flex:1">
 
     <!-- LEFT: MESSAGE -->
     <div style="border-right:1px solid #e5e7eb;display:flex;flex-direction:column;overflow:hidden">
@@ -150,14 +150,14 @@ textarea.fi{resize:vertical}
         <div style="font-size:1.1rem;font-weight:600;color:#1a73e8;font-family:'Segoe UI',system-ui,sans-serif">Send us a Message</div>
       </div>
       <div style="flex:1;padding:18px;overflow-y:auto">
-        <form onsubmit="hf(event)" style="display:flex;flex-direction:column;gap:10px">
+        <form onsubmit="hf(event)" style="display:flex;flex-direction:column;gap:8px">
           <div><label class="lbl">Name</label><input class="fi" type="text" placeholder="Your name" required></div>
           <div><label class="lbl">Company</label><input class="fi" type="text" placeholder="Company name"></div>
           <div><label class="lbl">Email</label><input class="fi" type="email" placeholder="your@email.com" required></div>
           <div><label class="lbl">Service Interest</label>
             <select class="fi"><option value="">Select...</option><option>D365 Finance &amp; Operations</option><option>EDI — TrueCommerce Foundry</option><option>SPS Commerce</option><option>ERP + EDI Solution Architecture</option><option>Microsoft Azure</option><option>Power Platform &amp; AI</option><option>Managed Services</option><option>SharePoint &amp; M365</option><option>DevOps PMO &amp; IT Governance</option><option>Other</option></select>
           </div>
-          <div><label class="lbl">Message</label><textarea class="fi" style="min-height:140px;resize:vertical" placeholder="Tell us about your project..." required></textarea></div>
+          <div><label class="lbl">Message</label><textarea class="fi" style="min-height:100px;resize:vertical" placeholder="Tell us about your project..." required></textarea></div>
           <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
             <button type="submit" class="btn-blue">Send Message</button>
             <a href="mailto:info@juasolution.com" style="font-size:0.9rem;color:#1a73e8;text-decoration:none">info@juasolution.com</a>
@@ -180,9 +180,6 @@ textarea.fi{resize:vertical}
         <div class="drow"><div class="dico"><i class="ti ti-file-description" style="color:#6b7280;font-size:20px"></i></div><div class="dbody"><div class="dlbl">NDA</div><strong>JUA NDA Mutual Non-Disclosure Agreement</strong><p>Mutual confidentiality — recommended before scoping calls.</p></div></div>
         <div class="drow"><div class="dico"><i class="ti ti-file-description" style="color:#6b7280;font-size:20px"></i></div><div class="dbody"><div class="dlbl">RC</div><strong>JUA Rate Card</strong><p>Standard consulting rate card for all service lines.</p></div></div>
         <div class="drow"><div class="dico"><i class="ti ti-file-description" style="color:#6b7280;font-size:20px"></i></div><div class="dbody"><div class="dlbl">SOW</div><strong>JUA SOW Statement of Work</strong><p>Defines scope, deliverables, timeline, billing model per project.</p></div></div>
-        <div style="margin-top:6px;padding:10px 12px;background:#f6f9ff;border:1px solid #e5e7eb;border-radius:6px;font-size:0.9rem;color:#374151;line-height:1.55">
-          <i class="ti ti-lock" style="font-size:14px;vertical-align:-2px;margin-right:4px;color:#6b7280"></i> Use the <strong>Access Code</strong> panel to request a secure link.
-        </div>
       </div>
     </div>
 
@@ -312,6 +309,7 @@ function verifyCode(){
 </footer>
 </body>
 </html>
+
 
 
 
