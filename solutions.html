@@ -242,12 +242,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;ali
   </ul>
 </nav>
 
-<section style="background:#1e3a8a;padding:3rem 2.5rem 2.5rem;margin-top:52px;width:100%">
+<section style="background:#1e3a8a;padding:1.25rem 2.5rem;margin-top:52px;width:100%">
   <div style="max-width:900px;margin:0 auto">
-    <div style="display:inline-block;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#fff;margin-bottom:1rem">JUA Solution LLC · Service Offering</div>
-    <h1 style="font-size:1.6rem;font-weight:700;color:#fff;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;white-space:nowrap">Architecture Governance Retainer Program</h1>
-    <p style="font-size:0.95rem;color:rgba(255,255,255,0.8);line-height:1.7;max-width:640px;margin-bottom:1.5rem">Ongoing executive-level architecture advisory — covering Microsoft Dynamics 365, EDI ecosystems, Azure infrastructure, and enterprise integrations. One governance service. Full-stack oversight.</p>
-    <a href="booking.html" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#1e3a8a;font-size:0.82rem;font-weight:700;padding:10px 22px;border-radius:4px;text-decoration:none">Book a Meeting &rarr;</a>
+    <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:0.4rem">JUA Solution LLC · Service Offering</div>
+    <h1 style="font-size:1.4rem;font-weight:700;color:#fff;line-height:1.2;letter-spacing:-0.02em;margin-bottom:0.5rem;white-space:nowrap">Architecture Governance Retainer Program</h1>
+    <p style="font-size:0.85rem;color:rgba(255,255,255,0.8);line-height:1.6;max-width:700px">Ongoing executive-level architecture advisory — covering Microsoft Dynamics 365, EDI ecosystems, Azure infrastructure, and enterprise integrations. One governance service. Full-stack oversight.</p>
   </div>
 </section>
 
@@ -330,10 +329,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;ali
       </div>
 
     </div>
-    <div style="margin-top:1.25rem;padding:1rem 1.25rem;background:#eff6ff;border-left:3px solid #1e3a8a;border-radius:0 6px 6px 0">
-      <p style="font-size:0.78rem;color:#1e3a8a;font-weight:600;margin-bottom:2px">Pricing &amp; Package Details</p>
-      <a href="contact.html" style="display:inline-flex;align-items:center;gap:8px;background:#1e3a8a;color:#fff;font-size:0.82rem;font-weight:700;padding:10px 22px;border-radius:4px;text-decoration:none">Request Rate Card &amp; Program Document &rarr;</a>
-    </div>
   </div>
 </section>
 
@@ -370,6 +365,11 @@ var rwCur=0,rwTotal=7;
 function rwGo(n){rwCur=n;document.getElementById('rw-track').style.transform='translateX(-'+(n*100)+'%)';document.querySelectorAll('#rw-dots span').forEach(function(d,i){d.style.opacity=i===n?'1':'0.35';});}
 function rwSlide(d){rwGo((rwCur+d+rwTotal)%rwTotal);}
 </script>
+
+<section style="padding:2rem 2.5rem;border-top:1px solid #e2e8f0;text-align:center">
+  <p style="font-size:0.78rem;color:#888;margin-bottom:1rem">Interested in the program? Request our rate card and full program document.</p>
+  <a href="contact.html" style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid #374151;color:#374151;background:#fff;font-size:0.82rem;font-weight:600;padding:10px 24px;border-radius:4px;text-decoration:none">Request Rate Card &amp; Program Document &rarr;</a>
+</section>
 
 <!-- ===== LINKEDIN SECTION ===== -->
 
