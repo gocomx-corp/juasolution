@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -19,8 +19,8 @@
 html,body{height:100%;scroll-behavior:smooth}
 body{font-family:var(--f);background:var(--w);color:var(--g7);overflow-x:hidden;display:flex;flex-direction:column;min-height:100vh}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:var(--w);border-bottom:1px solid var(--br)}
-.logo{display:flex;align-items:center;font-size:1.05rem;font-weight:800;color:var(--g9);text-decoration:none;flex-shrink:0;letter-spacing:-0.01em}
-.logo em{font-style:normal;color:var(--b)}
+.nav-brand{font-size:1.05rem;font-weight:800;color:var(--b);text-decoration:none;flex-shrink:0;letter-spacing:-0.01em}
+.nav-brand em{font-style:normal;color:var(--g9)}
 .nl{display:flex;align-items:center;list-style:none;gap:0}
 .nl a{text-decoration:none;color:var(--g5);font-size:0.875rem;font-weight:500;padding:0 12px;height:52px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
 .nl a:hover,.nl a.active{color:var(--b);border-bottom-color:var(--b)}
@@ -67,7 +67,7 @@ footer a:hover{color:#fff;text-decoration:underline}
 </head>
 <body>
 <nav>
-  <a href="index.html" class="logo">JUA <em>Solution</em></a>
+  <a href="index.html" class="nav-brand">JUA <em>Solution</em></a>
   <ul class="nl">
     <li><a href="index.html">Home</a></li>
     <li><a href="services.html" class="active">Services</a></li>
